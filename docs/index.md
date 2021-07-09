@@ -16,4 +16,14 @@ features:
 footer: 下边没有了
 ---
 
+### 配置文档
+
+[vuepress](https://vuepress.vuejs.org/zh/)
+
 [vitepress](https://github.com/vuejs/vitepress)
+
+### 我的 Git
+
+[Gitee](https://gitee.com/chidiao)
+
+[Github](https://github.com/chidiao)

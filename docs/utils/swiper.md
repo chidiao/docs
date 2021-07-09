@@ -1,5 +1,9 @@
 # Swiper
 
+[Swiper](https://swiperjs.com/)
+
+[vue-awesome-swiper](https://github.surmon.me/vue-awesome-swiper/)
+
 
 
 ## swiper@5.x
