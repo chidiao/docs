@@ -13,8 +13,6 @@ yarn config set registry https://registry.yarnpkg.com
 yarn config set registry https://registry.npm.taobao.org
 ```
 
-
-
 常用命令
 
 ```bash
@@ -23,10 +21,6 @@ yarn init
 yarn add axios
 yarn remove axios
 ```
-
-
-
-
 
 ## npm
 
@@ -39,11 +33,8 @@ npm config set registry https://registry.npmjs.org
 npm config set registry https://registry.npm.taobao.org
 ```
 
-
-
 常用命令
 
 ```bash
 npm list -g --depth 0
 ```
-

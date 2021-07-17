@@ -6,16 +6,14 @@
 
 ```js
 function scrollToTop() {
-  var c = document.documentElement.scrollTop || document.body.scrollTop;
+  var c = document.documentElement.scrollTop || document.body.scrollTop
 
   if (c > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, c - c / 8);
+    window.requestAnimationFrame(scrollToTop)
+    window.scrollTo(0, c - c / 8)
   }
 }
 ```
-
-
 
 ### 元素偏移量
 
@@ -30,21 +28,18 @@ function getOffset(el) {
 }
 ```
 
-
-
 ### 是否在可视区
 
 ```js
 function elementIsVisibleInViewport(el, partiallyVisible = false) {
-	const {
-		top, left, bottom, right
-	} = el.getBoundingClientRect();
+  const { top, left, bottom, right } = el.getBoundingClientRect()
 
-	return partiallyVisible ? ((top > 0 && top < innerHeight) || (bottom > 0 && bottom < innerHeight)) && ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth)) : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+  return partiallyVisible
+    ? ((top > 0 && top < innerHeight) || (bottom > 0 && bottom < innerHeight)) &&
+        ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+    : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth
 }
 ```
-
-
 
 ## 检测
 
@@ -56,38 +51,32 @@ function isMobile() {
 }
 ```
 
-
-
 ### 是否微信
 
 [微信外打开](https://opensupport.alipay.com/support/helpcenter/93/201602621887)
 
 ```js
 function isWeiXin() {
-  let ua = navigator.userAgent.toLowerCase();
-  if (ua.indexOf('micromessenger') != -1) return true;
-  else return false;
+  let ua = navigator.userAgent.toLowerCase()
+  if (ua.indexOf('micromessenger') != -1) return true
+  else return false
 }
 ```
-
-
 
 ### 手机平台
 
 ```js
 function getos() {
-  let ua = navigator.userAgent.toLowerCase();
+  let ua = navigator.userAgent.toLowerCase()
   if (ua.indexOf('iphone') != -1 || ua.indexOf('ipad') != -1 || ua.indexOf('ipod') != -1) {
-    return 'iphone';
+    return 'iphone'
   } else {
-    return 'android';
+    return 'android'
   }
 }
 ```
 
-
-
-## 获取url参数
+## 获取 url 参数
 
 ```js
 function getUrlParams() {
@@ -106,8 +95,6 @@ function getUrlParam(name) {
 }
 ```
 
-
-
 ## 数组切片
 
 ```js
@@ -121,8 +108,6 @@ function arraySlice(array, size = 1) {
 }
 ```
 
-
-
 ## 文本复制
 
 ### textarea
@@ -131,12 +116,12 @@ function arraySlice(array, size = 1) {
 
 ```js
 function copy(str) {
-  let el = document.createElement("textarea")
+  let el = document.createElement('textarea')
   el.value = str
   el.readOnly = true
   document.body.appendChild(el)
   el.select()
-  let result = document.execCommand("copy")
+  let result = document.execCommand('copy')
   if (result) {
     // 成功
   } else {
@@ -153,10 +138,8 @@ el.focus()
 el.setSelectionRange(3, 5)
 
 // 复制
-document.execCommand("copy")
+document.execCommand('copy')
 ```
-
-
 
 ### clipboard
 
@@ -168,12 +151,12 @@ function copyData(data) {
   let clipboard = new ClipboardJS('', {
     text: () => data
   })
-  clipboard.on('success', e => {
+  clipboard.on('success', (e) => {
     clipboard.off('success')
     clipboard.off('error')
     clipboard.destroy()
   })
-  clipboard.on('error', e => {
+  clipboard.on('error', (e) => {
     clipboard.off('success')
     clipboard.off('error')
     clipboard.destroy()
@@ -182,41 +165,32 @@ function copyData(data) {
 }
 ```
 
-
-
 ## 其他
 
 ### 随机获取布尔值
 
 ```js
-const randomBoolean = () => Math.random() >= 0.5;
+const randomBoolean = () => Math.random() >= 0.5
 ```
-
-
 
 ### 反转字符串
 
 ```js
-const reverseStr = str => str.split('').reverse().join('');
+const reverseStr = (str) => str.split('').reverse().join('')
 ```
-
-
 
 ### 判断奇偶数
 
 ```js
 // 奇数
-const isOdd = num => num % 2 !== 0;
+const isOdd = (num) => num % 2 !== 0
 
 // 偶数
-const isEven = num => num % 2 === 0;
+const isEven = (num) => num % 2 === 0
 ```
-
-
 
 ### 二维码
 
 ```js
 https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=
 ```
-
