@@ -2,7 +2,7 @@
 home: true
 heroImage: /imgs/study.jpg
 heroAlt: 沉迷学习
-heroText: (●'◡'●)
+heroText: 笔记
 tagline:
 actionText: 开始
 actionLink: /js/
@@ -21,6 +21,8 @@ footer: 下边没有了
 [vuepress](https://vuepress.vuejs.org/zh/)
 
 [vitepress](https://github.com/vuejs/vitepress)
+
+[pinia](https://github.com/posva/pinia)
 
 ### Git
 

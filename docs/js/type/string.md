@@ -10,8 +10,6 @@ str[0].toUpperCase()
 str[0].toLowerCase()
 ```
 
-
-
 ## 查找
 
 ### indexOf()
@@ -23,8 +21,6 @@ str.lastIndexOf(substr, pos)
 // 返回 索引 或 -1
 ```
 
-
-
 ### includes()
 
 ```js
@@ -35,17 +31,13 @@ str.endsWith(substr)
 // 返回 true/false
 ```
 
-
-
 ## 截取
 
-| 方法                  | 方式             | 参数          |
-| --------------------- | ---------------- | ------------- |
-| slice(start, end)     | [start, end)     | 可以负数      |
-| substring(start, end) | [start, end)     | 负值代表0     |
-| substr(start, length) | [start, +length] | start可以负数 |
-
-
+| 方法                  | 方式             | 参数           |
+| --------------------- | ---------------- | -------------- |
+| slice(start, end)     | [start, end)     | 可以负数       |
+| substring(start, end) | [start, end)     | 负值代表 0     |
+| substr(start, length) | [start, +length] | start 可以负数 |
 
 ## 其他
 

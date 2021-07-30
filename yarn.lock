@@ -1236,7 +1236,7 @@ vite@^2.3.7:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@^0.15.5:
+vitepress@^0.15.6:
   version "0.15.6"
   resolved "https://registry.nlark.com/vitepress/download/vitepress-0.15.6.tgz#b3d2487384f60deb5e0be7da1f1896c1db75025e"
   integrity sha1-s9JIc4T2DeteC+faHxiWwdt1Al4=

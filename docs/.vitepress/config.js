@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'zh',
+  lang: 'zh-CN',
   title: 'chidiao.xin',
   description: '我的文档，学习笔记。',
 
@@ -110,11 +110,11 @@ function getJsSidebar() {
     {
       text: '数据类型',
       children: [
-        { text: '开始', link: 'js/type' },
-        { text: '数字', link: 'js/type-number' },
-        { text: '字符串', link: 'js/type-string' },
-        { text: '对象', link: 'js/type-object' },
-        { text: '数组', link: 'js/type-array' }
+        { text: 'Type', link: 'js/type/index' },
+        { text: 'Array', link: 'js/type/array' },
+        { text: 'Object', link: 'js/type/object' },
+        { text: 'String', link: 'js/type/string' },
+        { text: 'Number', link: 'js/type/number' }
       ]
     },
     {

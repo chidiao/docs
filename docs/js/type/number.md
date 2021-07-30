@@ -15,8 +15,6 @@ num.toString(base)
 // base：进制，默认10
 ```
 
-
-
 ### 舍入
 
 ```js
@@ -27,8 +25,6 @@ num.toFixed(2)
 num.toPrecision(2)
 // 3.1415 => 3.1
 ```
-
-
 
 ## Math
 
@@ -43,8 +39,6 @@ Math.floor(num)
 // -1.1 => -2
 ```
 
-
-
 **Math.ceil**
 
 ```js
@@ -53,8 +47,6 @@ Math.ceil(num)
 // 3.1 => 4
 // -1.1 => -1
 ```
-
-
 
 **Math.round**
 
@@ -65,8 +57,6 @@ Math.round(num)
 // 3.6 => 4
 ```
 
-
-
 **Math.trunc**
 
 ```js
@@ -76,8 +66,6 @@ Math.trunc(num)
 // 3.6 => 3
 ```
 
-
-
 ### 随机数
 
 **Math.random**
@@ -85,7 +73,6 @@ Math.trunc(num)
 ```js
 Math.random()
 // => 一个大于等于0小于1的浮点数
-
 
 // 拓展
 function getRandom(min, max) {
@@ -104,8 +91,6 @@ function getRandomInt(min, max) {
 }
 ```
 
-
-
 ### 数学运算
 
 ```js
@@ -121,4 +106,3 @@ Math.max(x, y, z...)
 Math.min(x, y, z...)
 // => min
 ```
-
