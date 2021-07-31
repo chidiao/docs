@@ -1,115 +1,63 @@
-# 模块化
+# Module
 
-## export
+## ES6
 
-### 具名导出
-
-**单独导出**
+### export
 
 ```js
-// 导出
+// 声明并导出
 export let name = 'John'
-
 export let age = 20
-
 export function sayHi() {
-  console.log('Hi')
+  console.log('Hello~')
 }
 
-// 导入
-import { name, age, sayHi } from './user.js'
-```
-
-
-
-**统一导出**
-
-```js
-// 导出
+// 声明和导出分开
 let name = 'John'
-
 let age = 20
-
 function sayHi() {
-  console.log('Hi')
+  console.log('Hello~')
 }
 
 export { name, age, sayHi }
 
-// 导入
-import { name, age, sayHi } from './user.js'
+// 更名
+export { name as userName }
 ```
 
-
-
-### 默认导出
+### import
 
 ```js
-// 导出
-export default let site = 'chidiao.xin'
+// 明确导入(按需导入)，有利于打包工具进行tree-shaking
+import { name, age, sayHi } from 'john.js'
 
-// 导入
-import baseUrl from './site.js'
+// 通通导入(全部导入)
+import * as john from 'john.js'
+
+// 更名
+import { name as userName } from 'john.js'
 ```
 
+### default
 
+每个文件模块只能有一个 `export default`
 
-### 混合使用
+`export default decreaseAction`
+
+`default` 是一种特殊的系统变量，将 `decreaseAction` 变量赋值给这个特殊的系统变量，并将其导出
+
+因此它后边可以跟变量但不能跟声明，所以跟 `let` `const` 等都会报错
 
 ```js
-// 导出
-export { name, age, sayHi as default }
+// 可以不命名，因为只有一个
+export default {}
 
-// 导入
-import myFun, { name, age } from './user.js'
+// 正确
+let name = 'John'
+export default name
+
+// 错误
+export default let name = 'John'
 ```
 
-
-
-## import
-
-### 合并
-
-所有导出打包为一个对象
-
-```js
-import * as user from './user.js'
-
-user.sayHi()
-```
-
-
-
-### 别名
-
-```js
-import { name as cname } from './user.js'
-```
-
-
-
-## nodejs❓
-
-```js
-// 导出
-module.exports = hello
-
-module.exports = {
-  hello,
-  greet
-}
-
-// 导入
-const hello = require('./hello')
-const { hello, greet } = require('./hello')
-```
-
-
-
-```js
-// 导出
-exports.hello = hello
-
-exports.greet = greet
-```
-
+## Node.js
