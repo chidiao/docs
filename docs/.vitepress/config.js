@@ -100,6 +100,13 @@ function getJsSidebar() {
       ]
     },
     {
+      text: 'Snippets',
+      children: [
+        { text: '开始', link: 'js/snippets/' },
+        { text: 'Browser', link: 'js/snippets/browser' }
+      ]
+    },
+    {
       text: 'Dom',
       children: [
         { text: 'dom', link: 'js/dom' },
