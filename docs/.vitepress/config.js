@@ -55,16 +55,19 @@ function getVueSidebar() {
       ]
     },
     {
-      text: 'Vue3',
-      children: [{ text: 'composition', link: 'vue/composition' }]
+      text: 'Router',
+      children: [{ text: '开始', link: 'vue/router/' }]
     },
     {
-      text: '生态',
+      text: 'Vuex',
+      children: [{ text: '开始', link: 'vue/vuex/' }]
+    },
+    {
+      text: '其他',
       children: [
-        { text: 'router', link: 'vue/router' },
-        { text: 'vuex', link: 'vue/vuex' },
         { text: 'antdv', link: 'vue/antdv' },
-        { text: 'vite', link: 'vue/vite' }
+        { text: 'vite', link: 'vue/vite' },
+        { text: 'vue3', link: 'vue/composition' }
       ]
     }
   ]
