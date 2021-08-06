@@ -12,7 +12,7 @@ module.exports = {
       { text: 'Utils', link: '/utils/' },
       { text: 'Notes', link: '/notes/' },
       {
-        text: 'Nav',
+        text: 'More',
         items: getNavSidebar()[0].children
       }
     ],
@@ -23,7 +23,7 @@ module.exports = {
       '/css/': getCssSidebar(),
       '/utils/': getUtilsSidebar(),
       '/notes/': getNotesSidebar(),
-      '/nav/': getNavSidebar()
+      '/other/': getNavSidebar()
     }
   }
 }
@@ -31,11 +31,13 @@ module.exports = {
 function getNavSidebar() {
   return [
     {
-      title: 'Nav',
+      text: '其他',
       children: [
-        { text: '网址导航', link: 'nav/websites' },
-        { text: '装机必备', link: 'nav/windows' },
-        { text: 'Vue', link: 'nav/vue' }
+        { text: '网址导航', link: 'other/websites' },
+        { text: '装机必备', link: 'other/windows' },
+        { text: '项目经验', link: 'other/projects' },
+        { text: '单词本', link: 'other/words' },
+        // { text: '面试题', link: 'other/qa' }
       ]
     }
   ]
@@ -106,15 +108,15 @@ function getJsSidebar() {
       text: 'Snippets',
       children: [
         { text: '开始', link: 'js/snippets/' },
-        { text: 'Browser', link: 'js/snippets/browser' }
+        { text: 'Browser', link: 'js/snippets/browser' },
+        { text: 'Function', link: 'js/snippets/function' }
       ]
     },
     {
       text: 'Dom',
       children: [
-        { text: 'dom', link: 'js/dom' },
-        { text: 'css', link: 'js/dom-css' },
-        { text: 'xyz', link: 'js/dom-xyz' }
+        { text: '开始', link: 'js/dom/' },
+        { text: '几何学', link: 'js/dom/geometry' }
       ]
     },
     {
@@ -204,9 +206,8 @@ function getNotesSidebar() {
     {
       text: '其他',
       children: [
-        { text: '代码规范', link: 'notes/standard' },
-        { text: 'windows', link: 'notes/windows' },
-        { text: 'words', link: 'notes/words' }
+        { text: 'standard', link: 'notes/standard' },
+        { text: 'windows', link: 'notes/windows' }
       ]
     }
   ]

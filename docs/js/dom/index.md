@@ -10,8 +10,6 @@
 
 `NodeList` 也可以是一个静态集合，文档对象模型的任何改动都不会影响集合的内容。
 
-
-
 ## 选择器
 
 ```js
@@ -33,8 +31,6 @@ let els = elem.getElementBy*()
 let el = document.getElementById(id)
 ```
 
-
-
 ## 修改类
 
 ```js
@@ -50,8 +46,6 @@ el.classList.toggle('class')
 
 el.classList.contains('class')
 ```
-
-
 
 ## 修改样式
 
@@ -70,8 +64,6 @@ el.style.display = ''
 el.style.cssText = 'color: red; font-size: 14px; line-height: 20px;'
 ```
 
-
-
 ## 修改文档
 
 ### 创建
@@ -85,8 +77,6 @@ let div = document.createElement('div')
 div.className = 'box'
 div.innerHtml = 'hello world'
 ```
-
-
 
 ### 插入
 
@@ -103,19 +93,14 @@ node.after(...nodes or strings)
 node.replaceWith(...nodes or strings)
 ```
 
-
-
 ### 移除
 
 ```js
 node.remove()
 ```
 
-
-
 ### 克隆
 
 ```js
 elem.cloneNode(true)
 ```
-

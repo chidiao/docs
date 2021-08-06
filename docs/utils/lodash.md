@@ -46,7 +46,7 @@ let options = {
 
 ```js
 // 每创建一个计时器，结束时执行一次，并清除掉计时器，同时只会有一个计划任务岑在
-export const throttle = (func, wait) => {
+const throttle = (func, wait) => {
   let timer
 
   return function () {
@@ -85,7 +85,7 @@ let options = {
 
 ```js
 // 调用时，如果有计时器，就把他清掉，再建一个计时器，计时器读完就会执行一次
-export const debounce = (func, wait) => {
+const debounce = (func, wait) => {
   let timer
 
   return function () {
@@ -117,11 +117,12 @@ _.chunk(['a', 'b', 'c', 'd'], 3)
 简易版
 
 ```js
-function chunk(array, size = 1) {
-  let tmp = [...array]
+// 数组切片
+const arrayChunk(array, size = 1) {
+  let _array = [...array]
   let result = []
-  while (tmp.length) {
-    result.push(tmp.splice(0, size))
+  while (_array.length) {
+    result.push(_array.splice(0, size))
   }
   return result
 }
