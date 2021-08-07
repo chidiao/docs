@@ -21,4 +21,3 @@ SystemUsesLightTheme
 0	深色
 1 默认
 ```
-

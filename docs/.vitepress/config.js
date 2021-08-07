@@ -36,7 +36,7 @@ function getNavSidebar() {
         { text: '网址导航', link: 'other/websites' },
         { text: '装机必备', link: 'other/windows' },
         { text: '项目经验', link: 'other/projects' },
-        { text: '单词本', link: 'other/words' },
+        { text: '单词本', link: 'other/words' }
         // { text: '面试题', link: 'other/qa' }
       ]
     }
@@ -200,15 +200,13 @@ function getNotesSidebar() {
         { text: '开始', link: 'notes/' },
         { text: 'Git', link: 'notes/git' },
         { text: 'Yarn', link: 'notes/yarn' },
-        { text: 'Config', link: 'notes/config' }
+        { text: '常用配置', link: 'notes/config' },
+        { text: '代码规范', link: 'notes/standard' }
       ]
     },
     {
       text: '其他',
-      children: [
-        { text: 'standard', link: 'notes/standard' },
-        { text: 'windows', link: 'notes/windows' }
-      ]
+      children: [{ text: 'windows', link: 'notes/windows' }]
     }
   ]
 }
