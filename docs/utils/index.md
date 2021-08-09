@@ -1,85 +1,78 @@
 # 编程导航
 
-## 框架
+## 工具网站
 
-[alpinejs](https://alpinejs.dev/)
-
-## 资源素材
-
-[iconpark](https://iconpark.oceanengine.com/)
-
-[picsum](https://picsum.photos/)
-
-[undraw](https://undraw.co/)
-
-## 在线工具
-
-[tool](https://tool.lu/)
-
-[carbon](https://carbon.now.sh/)
+| 备注       | 地址                                              |
+| ---------- | ------------------------------------------------- |
+| 字节图标库 | [iconpark](https://iconpark.oceanengine.com/home) |
+| 占位图     | [picsum](https://picsum.photos/)                  |
+| 矢量图     | [undraw](https://undraw.co/illustrations)         |
+| 在线工具   | [tool](https://tool.lu/)                          |
+| 代码截图   | [carbon](https://carbon.now.sh/)                  |
+| 轻量框架   | [alpinejs](https://alpinejs.dev/)                 |
 
 ## 后台管理
 
-[ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro)
+| 备注 | 项目地址                                                                 |
+| ---- | ------------------------------------------------------------------------ |
+| vue2 | [ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro) |
+| vue3 | [vue-vben-admin](https://github.com/anncwb/vue-vben-admin)               |
 
-[vue-vben-admin](https://github.com/anncwb/vue-vben-admin)
+## 实用插件
 
-## 插件工具
+| 备注            | 插件                                                         |
+| --------------- | ------------------------------------------------------------ |
+| 图片压缩        | [compressorjs](https://github.com/fengyuanchen/compressorjs) |
+| 剪切板          | [vue-clipboard2](https://github.com/Inndy/vue-clipboard2)    |
+| LocalStorage    | [store](https://github.com/marcuswestin/store.js)            |
+| 预渲染/SEO 优化 | [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) |
+| md5             | [node-md5](https://github.com/pvorb/node-md5)                |
+| base64          | [js-base64](https://github.com/dankogai/js-base64)           |
+| 用户代理检测    | [ua-parser-js](https://github.com/faisalman/ua-parser-js)    |
 
-[vue-clipboard2](https://github.com/Inndy/vue-clipboard2)
+## 滚动效果
 
-## 未分类
+| 备注               | 插件                                                          |
+| ------------------ | ------------------------------------------------------------- |
+| BetterScroll       | [better-scroll](https://github.com/ustbhuangyi/better-scroll) |
+| 视差               | [lax.js](https://github.com/alexfoxy/lax.js)                  |
+| 视差               | [rellax](https://github.com/dixonandmoe/rellax)               |
+| 视差               | [parallax](https://github.com/wagerfield/parallax)            |
+| 滚动动画，简单好用 | [aos](https://github.com/michalsnik/aos)                      |
+| 滚动动画           | [scrollreveal](https://github.com/jlmakes/scrollreveal)       |
 
-[ua-parser-js](https://github.com/faisalman/ua-parser-js)
+## 动画插件
 
-[mobile-detect.js](https://github.com/hgoebl/mobile-detect.js)
+| 备注   | 插件                                                  |
+| ------ | ----------------------------------------------------- |
+| 动画   | [animxyz](https://github.com/ingram-projects/animxyz) |
+| 动画   | [anime](https://github.com/juliangarnier/anime)       |
+| 牛逼   | GSAP                                                  |
+| 不会用 | [p5js](https://p5js.org/zh-Hans/)                     |
 
-[enquire.js](https://github.com/WickyNilliams/enquire.js)
+## CSS
 
-[FileSaver.js](https://github.com/eligrey/FileSaver.js)
+| 备注  | 插件                                                      |
+| ----- | --------------------------------------------------------- |
+| reset | [normalize.css](https://github.com/necolas/normalize.css) |
+| hover | [hover.css](https://github.com/IanLunn/Hover)             |
+| 动画  | [animate.css](https://github.com/animate-css/animate.css) |
 
-[PxLoader](https://github.com/thinkpixellab/PxLoader)
+## 花里胡哨
 
-[typed.js](https://github.com/mattboldt/typed.js)
+| 备注       | 插件                                              |
+| ---------- | ------------------------------------------------- |
+| 打字机效果 | [typed.js](https://github.com/mattboldt/typed.js) |
 
-[prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)
+## 收藏为敬
 
-[better-scroll](https://github.com/ustbhuangyi/better-scroll)
+用不用的到，先收藏了再说
 
-[prism](https://github.com/PrismJS/prism)
-
-[lax.js](https://github.com/alexfoxy/lax.js)
-
-[rellax](https://github.com/dixonandmoe/rellax)
-
-[parallax](https://github.com/wagerfield/parallax)
-
-[aos](https://github.com/michalsnik/aos)
-
-[scrollreveal](https://github.com/jlmakes/scrollreveal)
-
-[animxyz](https://github.com/ingram-projects/animxyz)
-
-[anime.js](https://github.com/juliangarnier/anime)
-
-[normalize.css](https://github.com/necolas/normalize.css)
-
-[Hover.css](https://github.com/IanLunn/Hover)
-
-[animate.css](https://github.com/animate-css/animate.css)
-
-[p5.js](https://p5js.org/zh-Hans/)
-
-[store](https://github.com/marcuswestin/store.js)
-
-[滑动解锁](https://github.com/AshleyLv/vue-drag-verify)
-
-[拼图验证](https://github.com/javaLuo/vue-puzzle-vcode)
-
-[md5](https://github.com/pvorb/node-md5)
-
-[js-base64](https://github.com/dankogai/js-base64)
-
-[x-spreadsheet](https://github.com/myliang/x-spreadsheet)
-
-[signature_pad](https://github.com/szimek/signature_pad)
+| 备注     | 插件                                                            |
+| -------- | --------------------------------------------------------------- |
+| 预下载   | [PxLoader](https://github.com/thinkpixellab/PxLoader)           |
+| 文件下载 | [FileSaver](https://github.com/eligrey/FileSaver.js)            |
+| excel    | [x-spreadsheet](https://github.com/myliang/x-spreadsheet)       |
+| 签字板   | [signature_pad](https://github.com/szimek/signature_pad)        |
+| 滑动解锁 | [vue-drag-verify](https://github.com/AshleyLv/vue-drag-verify)  |
+| 拼图验证 | [vue-puzzle-vcode](https://github.com/javaLuo/vue-puzzle-vcode) |

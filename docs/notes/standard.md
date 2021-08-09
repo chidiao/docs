@@ -1,4 +1,6 @@
-# 代码规范
+# 规范标准
+
+## 代码规范
 
 [京东](https://guide.aotu.io/)
 
@@ -11,3 +13,7 @@
 [standard](https://github.com/standard/standard)
 
 [bootcss](https://codeguide.bootcss.com/)
+
+## 其他规范
+
+[语义化版本规范](https://semver.org/lang/zh-CN/)

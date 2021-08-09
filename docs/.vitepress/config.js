@@ -36,7 +36,8 @@ function getNavSidebar() {
         { text: '网址导航', link: 'other/websites' },
         { text: '装机必备', link: 'other/windows' },
         { text: '项目经验', link: 'other/projects' },
-        { text: '单词本', link: 'other/words' }
+        { text: '单词本', link: 'other/words' },
+        { text: '游戏', link: 'other/game' }
         // { text: '面试题', link: 'other/qa' }
       ]
     }
