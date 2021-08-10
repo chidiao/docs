@@ -13,32 +13,31 @@ module.exports = {
       { text: 'Notes', link: '/notes/' },
       {
         text: 'More',
-        items: getNavSidebar()[0].children
+        items: getOtherSidebar()[0].children
       }
     ],
 
     sidebar: {
       '/vue/': getVueSidebar(),
+      '/react/': getReactSidebar(),
       '/js/': getJsSidebar(),
       '/css/': getCssSidebar(),
       '/utils/': getUtilsSidebar(),
       '/notes/': getNotesSidebar(),
-      '/other/': getNavSidebar()
+      '/other/': getOtherSidebar()
     }
   }
 }
 
-function getNavSidebar() {
+function getOtherSidebar() {
   return [
     {
       text: '其他',
       children: [
         { text: '网址导航', link: 'other/websites' },
         { text: '装机必备', link: 'other/windows' },
-        { text: '项目经验', link: 'other/projects' },
         { text: '单词本', link: 'other/words' },
         { text: '游戏', link: 'other/game' }
-        // { text: '面试题', link: 'other/qa' }
       ]
     }
   ]
@@ -114,9 +113,10 @@ function getJsSidebar() {
       ]
     },
     {
-      text: 'Dom',
+      text: 'Browser',
       children: [
-        { text: '开始', link: 'js/dom/' },
+        { text: 'Bom', link: 'js/dom/bom' },
+        { text: 'Dom', link: 'js/dom/dom' },
         { text: '几何学', link: 'js/dom/geometry' }
       ]
     },
