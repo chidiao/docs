@@ -29,6 +29,7 @@
 | md5             | [node-md5](https://github.com/pvorb/node-md5)                |
 | base64          | [js-base64](https://github.com/dankogai/js-base64)           |
 | 用户代理检测    | [ua-parser-js](https://github.com/faisalman/ua-parser-js)    |
+| 表格            | [vxe-table](https://github.com/x-extends/vxe-table)          |
 
 ## 滚动效果
 

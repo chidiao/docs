@@ -8,6 +8,8 @@
 
 ## 开发工具
 
+[dev-sidecar](https://gitee.com/docmirror/dev-sidecar)
+
 [nodejs](https://nodejs.org/en/)
 
 [git](https://git-scm.com/)
