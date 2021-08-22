@@ -2,11 +2,51 @@
 
 ## 导航
 
-### 编程式导航
+## 滚动行为
 
-## 导航守卫
+```js
+const router = createRouter({
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      top: 0,
+      behavior: 'smooth'
+    }
+  }
+})
 
+// DOM
+const router = createRouter({
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      el: '#main',
+      top: -10,
+      left: -10
+    }
+  }
+})
 
+// 记录
+const router = createRouter({
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
+})
+
+// 锚点
+const router = createRouter({
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash
+      }
+    }
+  }
+})
+```
 
 ## 懒加载
 

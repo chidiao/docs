@@ -40,7 +40,7 @@ sessionStorage localStorage
 
 圆角、阴影、渐变
 
-### http状态码
+### http 状态码
 
 | HTTP Status Code | Reason       |                                        |
 | ---------------- | ------------ | -------------------------------------- |
@@ -49,3 +49,30 @@ sessionStorage localStorage
 | 403              | Forbidden    |                                        |
 | 404              | Not Found    | 找不到请求的资源，可能是请求的地址错误 |
 
+### Ajax、Axios、Fetch
+
+Ajax 异步的 JavaScript 和 XMLHttpRequest，特性：异步，局部刷新页面，它是异步请求一类技术的统称。
+
+Axios 基于 Promise 的网络请求库，基于 XHR 进行二次封装的工具库，是 Ajax 的封装和实现。
+
+Fetch 新的获取资源的浏览器接口 等同于 XHR，提供了许多相同功能，并且更具扩展性和高效性。
+
+Axios 和 Fetch 都属与 Ajax 的范畴，一个传统 (XHR)，一个现代的实现。
+
+### ES6
+
+[ES6](https://juejin.cn/post/6995334897065787422)
+
+let/cosnt
+
+扩展运算符
+
+模板字符串
+
+箭头函数
+
+Promise
+
+class
+
+解构赋值
