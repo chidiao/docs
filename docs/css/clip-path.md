@@ -12,11 +12,7 @@
 }
 ```
 
-
-
-## 基本图形
-
-### inset()
+## inset()
 
 矩形
 
@@ -24,7 +20,7 @@
 .box {
   clip-path: inset(10px 10px 10px 10px);
   clip-path: inset(10px 10px 10px 10px round 10px 10px 10px 10px);
-  
+
   clip-path: inset(10px round 10px);
 }
 
@@ -33,9 +29,7 @@
 // 圆角: round (top right bottom left) | 可选
 ```
 
-
-
-### circle()
+## circle()
 
 圆
 
@@ -48,9 +42,7 @@
 // 半径 at 圆心(x, y)
 ```
 
-
-
-### ellipse()
+## ellipse()
 
 椭圆
 
@@ -63,9 +55,7 @@
 // 半径(x, y) at 圆心(x, y)
 ```
 
-
-
-### polygon()
+## polygon()
 
 多边形
 
@@ -79,11 +69,7 @@
 // (x, y), (x, y), (x, y) ...
 ```
 
-
-
-## 其他
-
-### geometry-box
+## geometry-box
 
 裁剪已何种类型进行
 
@@ -96,4 +82,3 @@
 // margin-box border-box padding-box content-box
 // fill-box stroke-box view-box
 ```
-

@@ -19,9 +19,7 @@
 // margin: top (top) (top) (top);
 ```
 
-
-
-### margin合并
+### 合并
 
 两个 `垂直外边距` 相遇时，合并成一个外边距
 
@@ -34,11 +32,9 @@
 合并条件
 
 1. 垂直外边距
-2. 常规文档流，非float和绝对定位盒子
-3. 无border和padding隔绝
+2. 常规文档流，非 float 和绝对定位盒子
+3. 无 border 和 padding 隔绝
 4. 等等
-
-
 
 ### 父子合并
 
@@ -51,8 +47,6 @@
   <div class="child" style="margin-top: 30px;"></div>
 </div>
 ```
-
-
 
 ### 兄弟合并
 
@@ -67,8 +61,6 @@
 </div>
 ```
 
-
-
 ## border
 
 ```scss
@@ -80,8 +72,6 @@
 }
 ```
 
-
-
 ## padding
 
 ```scss
@@ -92,4 +82,3 @@
 // 百分比
 // 百分比基于自身 width , 包括 padding-top 和 padding-bottom 同样基于自身 width 而不是 height
 ```
-

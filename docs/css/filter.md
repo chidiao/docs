@@ -4,9 +4,7 @@
 
 [mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
 
-## 滤镜函数
-
-### blur()
+## blur()
 
 ```scss
 .box {
@@ -19,9 +17,7 @@
 // 默认：0
 ```
 
-
-
-### contrast()
+## contrast()
 
 ```scss
 .box {
@@ -34,9 +30,7 @@
 // 默认：1
 ```
 
-
-
-### grayscale()
+## grayscale()
 
 ```scss
 .box {
@@ -48,9 +42,7 @@
 // 默认：0
 ```
 
-
-
-### sepia()
+## sepia()
 
 ```scss
 .box {
@@ -62,9 +54,7 @@
 // 默认：0
 ```
 
-
-
-### invert()
+## invert()
 
 ```scss
 .box {
@@ -76,9 +66,7 @@
 // 默认：0
 ```
 
-
-
-### opacity()
+## opacity()
 
 ```scss
 .box {
@@ -89,9 +77,7 @@
 // 与 opacity 相似，不同在于通过 filter 实现，部分浏览器会提供硬件加速
 ```
 
-
-
-### saturate()
+## saturate()
 
 ```scss
 .box {
@@ -103,18 +89,14 @@
 // 默认：1
 ```
 
-
-
-### drop-shadow()
+## drop-shadow()
 
 ```scss
 // 阴影
 // 待完善
 ```
 
-
-
-### hue-rotate()
+## hue-rotate()
 
 ```scss
 .box {
@@ -125,16 +107,3 @@
 // 范围不限
 // 默认：0deg
 ```
-
-
-
-## 复合函数
-
-```scss
-.box {
-  filter: contrast(175%) brightness(3%);
-}
-
-// 你可以组合多个函数
-```
-

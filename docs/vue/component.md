@@ -1,231 +1,214 @@
 # 组件
 
-## 注册
-
-### 全局注册
+## 组件注册
 
 ```js
-app.component('TopNav', TopNav)
-```
+// 全局注册
+app.component('my-btn', MyBtn)
+app.component('MyBtn', MyBtn)
 
-### 局部注册
-
-```js
-export default = {
+// 局部注册
+export default {
   components: {
-    TopNav
+    'my-btn': MyBtn,
+    MyBtn: MyBtn
   }
 }
 ```
 
 ## Props
 
-等价写法
-
-```html
-<Blog v-bind="blog"></Blog>
-
-<Blog :id="blog.id" :title="blog.title"></Blog>
-```
-
-### 类型验证
+单项数据流
 
 ```js
-// 无验证
-export default = {
-  props: ['title', 'likes', 'isPublished', 'commentIds', 'author']
-}
+export default {
+  props: ['title', 'author'],
 
-// 常用验证
-export default = {
+  // 类型
+  props: {
+    title: String,
+    author: Object
+  },
+
+  // 验证
   props: {
     str: String,
+    num: [String, Number],
     num: {
-      type: Number,
+      type: [String, Number],
       required: true,
       default: 100
-    },
-    multi: [String, Number],
-    arr: {
-      type: Array,
-      default: () => []
     },
     obj: {
       type: Object,
       default: () = {}
+    },
+    arr: {
+      type: Array,
+      default: () => []
     }
   }
-}
 
-// 自定义验证...
+  // 自定义验证...
+}
 ```
 
 ## Attrs
 
-传给组件，但是该组件并没有定义的属性
+非 `Props` 属性，例如 `class`、`style` 和 `id` 等属性。
 
-包括 `class`、`style`、`id`、`data-` 等等
+这些属性会被默认添加到组件的根节点上。
 
-默认这些属性会继承到组件根元素
+如果你有自己的想法
 
 ```vue
+<template>
+  <div class="root">
+    <h2 v-bind="$attrs"></h2>
+  </div>
+</template>
+
 <script>
 export default = {
   inheritAttrs: false
 }
 </script>
-
-<template>
-  <div class="root">
-    <div>禁用默认继承</div>
-    <div v-bind="$attrs">指定继承</div>
-  </div>
-</template>
 ```
 
 ## Emits
 
-### 自定义事件
-
-定义/验证
-
 ```js
-export default = {
-  emits: ['myEvent', 'submit'],
+export default {
+  // 定义，建议定义
+  emits: ['onCopy', 'onAction'],
+
+  // 抛出验证
   emits: {
-    click: null,
-    submit: (e) => {
-      if (e) {
+    onCopy: null,
+    onAction: ({ type }) => {
+      if (type) {
         return true
       } else {
-        console.log('事件无效')
+        console.warn('没有指定操作类型')
         return false
       }
     }
-  }
-}
-```
-
-抛出
-
-```js
-export default = {
+  },
   methods: {
-    onClick() {
-      this.$emit('myEvent', data)
+    onChange(e) {
+      this.$emit('onAction', e)
     }
   }
 }
 ```
 
-### v-model
-
-默认/单个
-
-```html
-<Blog v-model="blog"></Blog>
-```
+`v-model` 相当于传递了 `prop` 并接收了 `update` 事件
 
 ```js
-export default = {
-  props: ['modelValue'],
-  emits: ['update:modelValue'],
-  methods: {
-    update() {
-      this.emit('update:modelValue', 'value')
-    }
-  }
-}
-
-// 2.x 默认使用 value 和 input 作为 prop 和 emit
-```
-
-自定义/多个
-
-```html
-<Blog v-model:title="title" v-model="content"></Blog>
-```
-
-```js
-export default = {
-  props: ['title', 'content'],
-  emits: ['update:title', 'update:content'],
-  methods: {
-    update() {
-      this.$emit('update:title', 'new title')
-      this.$emit('update:content', 'new content')
-    }
-  }
+export default {
+  props: ['title'],
+  emits: ['update:title']
 }
 ```
 
-修饰符...
+## v-model
 
-## 插槽
+**3.x**
 
 ```html
-<div class="card">
+<!-- 有参数 -->
+<Blog v-model:title="title"></Blog>
+<!-- 等同于 -->
+<Blog :title="title" @update:title="title = $event"></Blog>
+
+<!-- 无参数 -->
+<Blog v-model="title"></Blog>
+<!-- 等同于 -->
+<Blog :modelValue="title" @update:modelValue="title = $event"></Blog>
+```
+
+`v-model` 相当于传递了 `prop` 并接收了 `update` 事件
+
+**2.x**
+
+```html
+<Blog v-model="title"></Blog>
+<!-- 等同于 -->
+<Blog :value="title" @input="title = $event"></Blog>
+```
+
+注意：2.x 只有一个 `v-model` ，属性名和事件名为 `value` 和 `input`
+
+**v-bind.sync**
+
+另一个简单的双向绑定方案，不兼容 3.x
+
+```html
+<Blog :title.sync="title"></Blog>
+<!-- 等同于 -->
+<Blog :title="title" @update:title="title = $event"></Blog>
+```
+
+```js
+// Blog
+this.$emit('update:title', newValue)
+```
+
+## slot
+
+向组件填充内容
+
+```html
+<!-- 定义 -->
+<div class="my-btn">
   <slot></slot>
 </div>
 
-<div class="card">
-  <slot>Submit</slot>
+<!-- 使用 -->
+<MyBtn>按钮</MyBtn>
+```
+
+**备用内容/默认值**
+
+```html
+<div class="my-btn">
+  <slot>默认值</slot>
 </div>
 ```
 
-`<slot>` 内可填充后备内容，当无内容时显示后备内容，有内容时被替换。
+**具名插槽**
 
-### 具名插槽
+定义
 
 ```html
 <div class="card">
-  <slot name="header"></slot>
-  <slot></slot>
-  <slot name="footer"></slot>
+  <header>
+    <slot name="header"></slot>
+  </header>
+  <main>
+    <slot></slot>
+  </main>
+  <footer>
+    <slot name="footer"></slot>
+  </footer>
 </div>
+```
 
+使用
+
+```html
 <Card>
   <template v-slot:header></template>
-  <template v-slot:default></template>
-  <template v-slot:footer></template>
 </Card>
 
+<!-- 缩写 -->
 <Card>
   <template #header></template>
-  <template #default></template>
-  <template #footer></template>
 </Card>
 ```
 
-没有 `name` 的 `<slot>` 会带有隐含的名字 `default`
+## 动态组件
 
-`v-slot` 只能添加在 `<template>`
-
-## Provide / Inject
-
-如果有一些深度嵌套的组件，上层组件需要经过多代 prop 对其子孙组件进行传参，可以通过该种方式进行替代
-
-```js
-// 提供
-export default = {
-  provide: {
-    secret: 'hello world'
-  }
-}
-
-// 需要访问实例
-export default = {
-  provide() {
-    return {
-      secret: this.secret
-    }
-  }
-}
-
-// 接收
-export default = {
-  inject: ['secret']
-}
-
-// 处理响应性...
+```html
+<component :is="currentComponent"></component>
 ```

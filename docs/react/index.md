@@ -2,20 +2,11 @@
 
 ## create-react-app
 
-### 开始
-
 ```bash
 yarn create react-app my-app
 
-yarn add react-router-dom
-```
-
-
-
-### 扩展
-
-```bash
 yarn add @craco/craco
+yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 ```
 
 ```json
@@ -30,21 +21,6 @@ yarn add @craco/craco
 
 ```js
 // craco.config.js
-module.exports = {}
-```
-
-
-
-### tailwind
-
-```bash
-yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9 -D
-
-yarn tailwindcss init -p
-```
-
-```js
-// craco.config.js
 module.exports = {
   style: {
     postcss: {
@@ -52,22 +28,7 @@ module.exports = {
     }
   }
 }
-
-// tailwind.config.js
-module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html']
-}
 ```
-
-
-
-### 插件
-
-```bash
-yarn add antd
-```
-
-
 
 ## 其他
 

@@ -17,8 +17,6 @@
 }
 ```
 
-
-
 ### .prettierrc
 
 ```json
@@ -56,15 +54,3 @@
   // lf|crlf|cr|auto
 }
 ```
-
-
-
-## 常见问题
-
-### vscode禁止运行脚本
-
-```bash
-# 管理员身份运行命令
-set-ExecutionPolicy RemoteSigned
-```
-

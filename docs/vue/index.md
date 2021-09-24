@@ -1,59 +1,90 @@
 # 开始
 
-## vue-cli
-
-### 开始
+## Vite
 
 ```bash
-npm i @vue/cli -g
-npm update @vue/cli -g
+yarn create vite
 
-vue create my-app
-```
+yarn add vue-router@4 vuex@4
 
-## vite
-
-### 开始
-
-```bash
-yarn create @vitejs/app my-app
-
-yarn add vue-router@4
-yarn add vuex@4
-```
-
-### 配置
-
-**tailwindcss**
-
-```bash
-yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9 -D
+yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
 yarn tailwindcss init -p
 ```
 
 ```js
-{
+// tailwind.config.js
+module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}']
 }
 ```
 
-## 语法规范
+```css
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+## Vue CLI
+
+```bash
+yarn global add @vue/cli
+yarn global upgrade --latest @vue/cli
+
+vue --version
+```
+
+```bash
+vue create my-app
+
+yarn add vue-router@4 vuex@4
+
+yarn add -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+yarn tailwindcss init -p
+```
+
+```js
+// tailwind.config.js
+module.exports = {
+  purge: ['./public/index.html', './src/**/*.{vue,js,ts,jsx,tsx}']
+}
+```
+
+## 风格指南
+
+[风格指南](https://v3.cn.vuejs.org/style-guide/)
 
 ### 命名
 
-路由目录用小写 `/system`
+目录名用小写 `/system`
 
-组件页面用大驼峰 `/system/User.vue`
+组件名使用大驼峰 `/system/TodoList.vue`
 
 index 就用小写 `/system/index.vue`
 
-### 语法
+## 生态
 
-变量名还是不要简写了，维护/阅读体验不好
-
-✅ `v-for="(item, index) in list" :key="index"`
-
-❎ `v-for="(i, k) in list" :key="k"`
+[Varlet](https://varlet.gitee.io/varlet-ui)
 
 
+
+
+
+[scui](https://lolicode.gitee.io/scui-doc/)
+
+[cash](https://github.com/fabiospampinato/cash)
+
+[xgplayer](http://v2.h5player.bytedance.com/)
+
+[notiflix](https://www.notiflix.com/)
+
+[any-rule](https://any86.github.io/any-rule/)
+
+
+
+[50pro](https://github.com/bradtraversy/50projects50days)
+
+[muiplayer](https://muiplayer.gitee.io/zh/)
+
+[daisyui](https://daisyui.com/)
 

@@ -1,6 +1,6 @@
 # background
 
-## background
+## bg
 
 ```scss
 .box {
@@ -12,14 +12,12 @@
 // <bg-color> 永远只能在最后一层，且最后一个属性定义，整个元素只有一个背景颜色
 ```
 
-
-
-### bg-image
+## bg-image
 
 ```scss
 .box {
   background-image: none;
-  background-image: linear-gradient(to bottom, #091E3A, #2F80ED);
+  background-image: linear-gradient(to bottom, #091e3a, #2f80ed);
   background-image: url('xxx.png');
 }
 
@@ -27,9 +25,7 @@
 // 用户 => border => image1 => image2 ... => color
 ```
 
-
-
-### bg-color
+## bg-color
 
 ```scss
 .box {
@@ -40,9 +36,7 @@
 // <bg-color> 永远只能在最后一层，且最后一个属性定义，整个元素只有一个背景颜色
 ```
 
-
-
-### bg-position
+## bg-position
 
 ```scss
 .box {
@@ -54,7 +48,6 @@
 // <百分比>: 偏移相对于容器背景区的百分比，缺省值为50%|center
 // <关键词>: top bottom left right center，缺省值为50%|center
 
-
 .box {
   background-position: right 35% bottom 45%;
 }
@@ -62,9 +55,7 @@
 // ...
 ```
 
-
-
-### bg-size
+## bg-size
 
 ```scss
 .box {
@@ -78,9 +69,7 @@
 // <关键词>: cover contain
 ```
 
-
-
-### bg-repeat
+## bg-repeat
 
 ```scss
 .box {
@@ -89,7 +78,6 @@
 
 // <关键字>: repeat-x repeat-y repeat space round no-repeat
 
-
 .box {
   background-repeat: x y;
 }
@@ -97,11 +85,7 @@
 // <关键字>: repeat space round no-repeat
 ```
 
-
-
-## other
-
-### bg-attachment
+## bg-attachment
 
 ```scss
 .box {
@@ -121,9 +105,7 @@
 // fixed 背景贴附于整个浏览器可视区域，背景永远股东，这个 200*200 的容器就像一个窗户，只有通过他才可以看到后边的背景
 ```
 
-
-
-### bg-origin
+## bg-origin
 
 ```scss
 .box {
@@ -136,9 +118,7 @@
 // 默认：padding-box
 ```
 
-
-
-### bg-clip
+## bg-clip
 
 ```scss
 .box {
@@ -158,4 +138,3 @@
   color: transparent;
 }
 ```
-
