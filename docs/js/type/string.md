@@ -1,46 +1,82 @@
 # String
 
-### 大小写
+## 属性
 
 ```js
-str.toUpperCase()
-str.toLowerCase()
+let str = 'hello world'
 
-str[0].toUpperCase()
-str[0].toLowerCase()
+str.length // 11
+str[6] // 'w'
+str[6].toUpperCase() // 'W'
+str.toUpperCase() // 'HELLO WORLD'
 ```
 
-## 查找
+## 方法
+
+### toLowerCase()
+
+小写
+
+### toUpperCase()
+
+大写
 
 ### indexOf()
 
 ```js
 str.indexOf(substr, pos)
-str.lastIndexOf(substr, pos)
+// 返回索引 或 -1
+// 索引可以为0
 
-// 返回 索引 或 -1
+str.lastIndexOf(substr, pos)
+// 反向
 ```
 
 ### includes()
 
 ```js
-str.includes(substr)
-str.startsWith(substr)
-str.endsWith(substr)
-
+str.includes(substr, pos)
 // 返回 true/false
 ```
 
-## 截取
+### startsWith()
 
-| 方法                  | 方式             | 参数           |
-| --------------------- | ---------------- | -------------- |
-| slice(start, end)     | [start, end)     | 可以负数       |
-| substring(start, end) | [start, end)     | 负值代表 0     |
-| substr(start, length) | [start, +length] | start 可以负数 |
+```js
+str.startsWith(substr)
+// 返回 true/false
+```
 
-## 其他
+### endsWidth()
 
-### str.trim()
+```js
+str.endsWith(substr)
+// 返回 true/false
+```
 
-### str.repeat(n)
+### slice()
+
+```
+str.slice(start, end)
+```
+
+### substring()
+
+```js
+str.substring(start, end)
+```
+
+### trim()
+
+删除前后空格
+
+```js
+str.trim()
+```
+
+### repeat()
+
+重复 n 次
+
+```
+str.repeat(10)
+```

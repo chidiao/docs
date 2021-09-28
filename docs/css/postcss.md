@@ -1,16 +1,27 @@
-# postcss
+# PostCSS
 
-## pxtorem
+## PostCSS
+
+```bash
+yarn add postcss postcss-cli -D
+```
+
+**postcss.config.js**
 
 ```js
 module.exports = {
-  plugins: {
-    'autoprefixer': {},
-    'postcss-pxtorem': {
-      rootValue: 100,
-      propList: ['*']
-    },
-  }
+  plugins: [require('autoprefixer')]
 }
+```
+
+## PostCSS CLI
+
+```bash
+yarn add postcss postcss-cli -D
+```
+
+```bash
+postcss input.css -o output.css -w
+postcss src/css -d dist/css -w
 ```
 

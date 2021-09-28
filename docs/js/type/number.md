@@ -2,77 +2,95 @@
 
 ## 方法
 
-### 转换
+### toString()
 
 ```js
-parseInt(str, base)
-parseFloat(str, base)
-// str => num
-
 num.toString(base)
-// num => str
+// 返回 base 进制的'字符串', base = 10
 
-// base：进制，默认10
+let num = 2
+num.toString() // '2'
+num.toString(2) // '10'
 ```
 
-### 舍入
+### parseInt()
+
+从左到右，解析到无法解析部分
 
 ```js
-num.toFixed(2)
-// 四舍五入
-// 3.1415 => 3.14
+parseInt('100px') // 100
+parseInit('100元') // 100
 
-num.toPrecision(2)
-// 3.1415 => 3.1
+parseInit('a123') // NaN
+```
+
+### parseFloat()
+
+```js
+parseFloat('1.2.3') // 1.2
+parseFloat('12.5em') // 12.5
 ```
 
 ## Math
 
-### 舍入
+内置对象
 
-**Math.floor**
+用于 `Number` 类型，不支持 `BigInt`
 
-```js
-Math.floor(num)
-// 向下舍入，向下取整
-// 3.1 => 3
-// -1.1 => -2
-```
-
-**Math.ceil**
+### min()
 
 ```js
-Math.ceil(num)
-// 向上舍入，向上取整
-// 3.1 => 4
-// -1.1 => -1
+Math.min(1, 2, 3)
 ```
 
-**Math.round**
+### max()
 
 ```js
-Math.round(num)
-// 就近取整，四舍五入
-// 3.1 => 3
-// 3.6 => 4
+Math.max(1, 2, 3)
 ```
 
-**Math.trunc**
+### floor()
+
+向下取舍
 
 ```js
-Math.trunc(num)
-// 直接取整
-// 3.1 => 3
-// 3.6 => 3
+Math.floor(3.1) // 3
+Math.floor(-1.1) // -2
 ```
 
-### 随机数
+### ceil()
 
-**Math.random**
+向上取舍
+
+```js
+Math.ceil(3.1) // 4
+Math.ceil(-1.1) // -1
+```
+
+### round()
+
+四舍五入
+
+```js
+Math.round(3.1) // 3
+Math.round(3.6) // 4
+Math.round(-1.1) // -1
+```
+
+### trunc()
+
+取整
+
+```js
+Math.trunc(3.1) // 3
+Math.trunc(-1.1) // -1
+```
+
+### random()
 
 ```js
 Math.random()
-// => 一个大于等于0小于1的浮点数
+// 返回一个 [0, 1) 的随机数
 
 // 拓展
 function getRandom(min, max) {
@@ -81,7 +99,7 @@ function getRandom(min, max) {
   return rand * range + min
 }
 
-// 包含最小最大值
+// 取整
 function getRandomInt(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
@@ -91,18 +109,12 @@ function getRandomInt(min, max) {
 }
 ```
 
-### 数学运算
+### pow()
+
+求幂
 
 ```js
-Math.abs(x)
-// => 绝对值
+Math.pow(x, n)
 
-Math.pow(x, y)
-// => x^y
-
-Math.max(x, y, z...)
-// => max
-
-Math.min(x, y, z...)
-// => min
+Math.pow(2, 3) // 8
 ```

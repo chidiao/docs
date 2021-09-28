@@ -1,4 +1,6 @@
-# 盒子模型
+# Box
+
+盒子模型
 
 ## margin
 
@@ -8,18 +10,10 @@
   margin: 10%;
 }
 
-// 百分比
-// 百分比基于父元素的 width 计算
-
-// 简写/缺省
-// 缺省的值会取对边的值或统一值
-// margin: top right bottom left;
-// margin: top right bottom (right);
-// margin: top right (top) (right);
-// margin: top (top) (top) (top);
+// 百分比基于父元素 width
 ```
 
-### 合并
+**合并**
 
 两个 `垂直外边距` 相遇时，合并成一个外边距
 
@@ -36,7 +30,7 @@
 3. 无 border 和 padding 隔绝
 4. 等等
 
-### 父子合并
+**父子合并**
 
 垂直外边距相遇，取较大值
 
@@ -48,7 +42,7 @@
 </div>
 ```
 
-### 兄弟合并
+**兄弟合并**
 
 垂直外边距相遇，取较大值
 
@@ -79,6 +73,33 @@
   padding: 10%;
 }
 
-// 百分比
-// 百分比基于自身 width , 包括 padding-top 和 padding-bottom 同样基于自身 width 而不是 height
+// 百分比基于元素 width
+```
+
+## shadow
+
+```scss
+.shadow {
+  box-shadow: 5px 5px red;
+  box-shadow: inset 5px 5px 5px 5px red;
+  box-shadow: 5px 5px red, 2px 2px pink;
+}
+
+// box-shadow: <inset>? && <length>{2, 4} && <color>?
+// inset: 可选
+// length: x偏移、y偏移、模糊半径、扩散半径
+// color: 可选
+```
+
+## sizing
+
+```scss
+.box {
+  box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+// 默认值: content-box
+// content-box: width = content
+// border-box: width = border + content
 ```

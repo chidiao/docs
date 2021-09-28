@@ -134,11 +134,9 @@ function getCssSidebar() {
     {
       text: 'Code',
       children: [
-        { text: 'var', link: '/css/var' },
-        { text: 'scss', link: '/css/scss' },
-        { text: 'less', link: '/css/less' },
-        { text: 'rem', link: '/css/rem' },
-        { text: 'postcss', link: '/css/postcss' }
+        { text: 'precss', link: '/css/precss' },
+        { text: 'postcss', link: '/css/postcss' },
+        { text: 'tailwind', link: '/css/tailwind' }
       ]
     }
   ]

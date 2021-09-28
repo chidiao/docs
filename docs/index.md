@@ -16,13 +16,11 @@ features:
 footer: 下边没有了
 ---
 
-### 配置文档
+### Docs
 
 [vuepress](https://vuepress.vuejs.org/zh/)
 
 [vitepress](https://github.com/vuejs/vitepress)
-
-[pinia](https://github.com/posva/pinia)
 
 ### Git
 
