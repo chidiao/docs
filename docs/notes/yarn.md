@@ -22,17 +22,16 @@ npm config set registry https://registry.npm.taobao.org
 
 命令手册
 
-| yarn                         | npm                     |
-| ---------------------------- | ----------------------- |
-| yarn init                    | npm init                |
-| yarn install                 | npm install             |
-| yarn add <pkgname>           | npm install <pkgname>   |
-| yarn remove <pkgname>        | npm uninstall <pkgname> |
-| yarn upgrade                 | npm update              |
-|                              |                         |
-| yarn global add <pkgname>    | npm i -g <pkgname>      |
-| yarn global remove <pkgname> | npm un -g <pkgname>     |
-| yarn global                  | npm ls -g --depth 0     |
+| yarn                       | npm                   |
+| -------------------------- | --------------------- |
+| yarn init                  | npm init              |
+| yarn install               | npm install           |
+| yarn add pkgname           | npm install pkgname   |
+| yarn remove pkgname        | npm uninstall pkgname |
+| yarn upgrade               | npm update            |
+| yarn global add pkgname    | npm i -g pkgname      |
+| yarn global remove pkgname | npm un -g pkgname     |
+| yarn global                | npm ls -g --depth 0   |
 
 ## 问题
 
