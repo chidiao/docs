@@ -1,109 +1,94 @@
 # filter
 
-滤镜通常用于调整图像，背景和边框的渲染
+滤镜
 
-[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
+```scss
+// 给元素添加滤镜效果
+.box {
+  filter: blur(4px);
+}
+
+// 给元素背景添加滤镜效果
+// 为了看到效果，元素必须有一定的透明度
+.box {
+  background: rgba(255, 255, 255, 0.4)
+  backdrop-filter: blur(4px);
+}
+```
+
+# 滤镜函数
+
+- [所有滤镜](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter-function)
+- 对比度
+- 色调
+- 反色
+- 饱和度
+- 棕褐色
 
 ## blur()
 
+- 高斯模糊
+
 ```scss
 .box {
-  filter: blur(5px);
-  filter: blur(0);
+  filter: blur(4px);
 }
 
-// 高斯模糊
-// 长度，不接受百分比
-// 默认：0
+// 参数为长度(模糊半径)
 ```
 
-## contrast()
+## brightness()
+
+- 亮度
 
 ```scss
 .box {
-  filter: contrast(200%);
-  filter: contrast(1);
+  // 全黑效果
+  filter: brightness(0);
+  filter: brightness(2);
 }
 
-// 对比度
-// 范围不限
-// 默认：1
+// 参数为数值或百分比，大于等于 0
 ```
 
 ## grayscale()
 
-```scss
-.box {
-  filter: grayscale(100%);
-}
-
-// 灰度
-// 范围：0-1
-// 默认：0
-```
-
-## sepia()
+- 灰度
 
 ```scss
 .box {
-  filter: sepia(100%);
+  // 无效果
+  filter: grayscale(0);
+  filter: grayscale(1);
 }
 
-// 深褐色
-// 范围：0-1
-// 默认：0
-```
-
-## invert()
-
-```scss
-.box {
-  filter: invert(100%);
-}
-
-// 图像反转
-// 范围：0-1
-// 默认：0
+// 参数为数值或百分比，范围 0 ~ 1
 ```
 
 ## opacity()
 
-```scss
-.box {
-  filter: opacity(50%);
-}
-
-// 透明度
-// 与 opacity 相似，不同在于通过 filter 实现，部分浏览器会提供硬件加速
-```
-
-## saturate()
+- 透明度
 
 ```scss
 .box {
-  filter: saturate(200%);
+  // 透明
+  opacity: 0.4;
+  // 透明(硬件加速)
+  filter: opacity(0.4);
 }
 
-// 饱和度
-// 范围不限
-// 默认：1
+// 参数为数值或百分比，范围 0 ~ 1
+// 部分浏览器会提供硬件加速
 ```
 
 ## drop-shadow()
 
-```scss
-// 阴影
-// 待完善
-```
-
-## hue-rotate()
+- 投影
 
 ```scss
 .box {
-  filter: hue-rotate(90deg);
+  filter: drop-shadow(4px 4px 4px pink);
 }
 
-// 色相旋转
-// 范围不限
-// 默认：0deg
+// 参数：偏移、偏移、模糊半径、颜色
 ```

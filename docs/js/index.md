@@ -1,13 +1,5 @@
 # JavaScript
 
-## 其他
+## 导航
 
-这啥
-
-```js
-document.elementFromPoint(x, y)
-
-getComputedStyle(el)
-
-setTimeout(fn, 0)
-```
+[现代 JavaScript 教程](https://zh.javascript.info/)

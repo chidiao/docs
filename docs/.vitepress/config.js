@@ -9,18 +9,18 @@ module.exports = {
     nav: [
       { text: 'Vue', link: '/vue/' },
       { text: 'React', link: '/react/' },
+      { text: 'Utils', link: '/utils/' },
       { text: 'JS', link: '/js/' },
       { text: 'CSS', link: '/css/' },
-      { text: 'Utils', link: '/utils/' },
       { text: 'Notes', link: '/notes/' }
     ],
 
     sidebar: {
       '/vue/': getVueSidebar(),
       '/react/': getReactSidebar(),
+      '/utils/': getUtilsSidebar(),
       '/js/': getJsSidebar(),
       '/css/': getCssSidebar(),
-      '/utils/': getUtilsSidebar(),
       '/notes/': getNotesSidebar()
     }
   }
@@ -84,15 +84,9 @@ function getJsSidebar() {
         { text: '开始', link: '/js/' },
         { text: 'Async', link: '/js/async' },
         { text: 'Module', link: '/js/module' },
-        { text: 'Snippets', link: '/js/snippets/' }
-      ]
-    },
-    {
-      text: 'Browser',
-      children: [
-        { text: 'Bom', link: '/js/dom/bom' },
-        { text: 'Dom', link: '/js/dom/dom' },
-        { text: '几何学', link: '/js/dom/geometry' }
+        { text: 'Snippets', link: '/js/snippets/' },
+        { text: 'Storage', link: '/js/storage' },
+        { text: 'Function', link: '/js/function' }
       ]
     },
     {
@@ -109,6 +103,9 @@ function getJsSidebar() {
       text: '其他',
       children: [
         { text: 'canvas', link: '/js/canvas' },
+        { text: 'Bom', link: '/js/dom/bom' },
+        { text: 'Dom', link: '/js/dom/dom' },
+        { text: '几何学', link: '/js/dom/geometry' },
         { text: 'QA', link: '/js/qa' }
       ]
     }
@@ -132,7 +129,7 @@ function getCssSidebar() {
       children: result
     },
     {
-      text: 'Code',
+      text: 'Utils',
       children: [
         { text: 'precss', link: '/css/precss' },
         { text: 'postcss', link: '/css/postcss' },
@@ -159,11 +156,10 @@ function getUtilsSidebar() {
       ]
     },
     {
-      text: 'uniapp',
+      text: '其他',
       children: [
-        { text: 'uniapp', link: '/utils/uniapp' },
-        { text: 'uniui', link: '/utils/uniui' },
-        { text: 'uview', link: '/utils/uview' }
+        { text: '变成导航', link: '/utils/nav' },
+        { text: '常用配置', link: '/utils/config' }
       ]
     }
   ]
@@ -177,13 +173,7 @@ function getNotesSidebar() {
         { text: '开始', link: '/notes/' },
         { text: 'Git', link: '/notes/git' },
         { text: 'Yarn', link: '/notes/yarn' },
-        { text: 'Config', link: '/notes/config' },
-        { text: 'Standard', link: '/notes/standard' }
-      ]
-    },
-    {
-      text: '其他',
-      children: [
+        { text: '代码规范', link: '/notes/standard' },
         { text: 'Windows', link: '/notes/windows' },
         { text: '网址导航', link: '/notes/nav' }
       ]

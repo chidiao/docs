@@ -20,6 +20,12 @@ npm config set registry https://registry.npmjs.org
 npm config set registry https://registry.npm.taobao.org
 ```
 
+环境变量
+
+```bash
+yarn global bin
+```
+
 命令手册
 
 | yarn                       | npm                   |

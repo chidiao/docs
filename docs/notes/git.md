@@ -2,8 +2,8 @@
 
 ```bash
 # 全局配置
-git config --global user.name 'chidiao'
-git config --global user.email 'sunyz94123@qq.com'
+git config --global user.name "孙颖洲"
+git config --global user.email "sunyz94123@qq.com"
 
 # 生成SSH公钥
 ssh-keygen -t rsa -C 'chidiao'

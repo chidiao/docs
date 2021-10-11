@@ -4,8 +4,6 @@
 
 ## location
 
-### 属性
-
 **href**
 
 完整 URL
@@ -40,7 +38,7 @@ let name = params.get('name')
 let age = params.get('age')
 ```
 
-### 方法
+**方法**
 
 ```js
 // 跳转，有历史记录

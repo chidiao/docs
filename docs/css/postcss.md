@@ -25,3 +25,16 @@ postcss input.css -o output.css -w
 postcss src/css -d dist/css -w
 ```
 
+## Rem
+
+```bash
+yarn add postcss postcss-pxtorem -D
+```
+
+```js
+// postcss.config.js
+module.exports = {
+  plugins: 
+}
+```
+
