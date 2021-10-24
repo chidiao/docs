@@ -97,3 +97,9 @@
 | 签字板   | [signature_pad](https://github.com/szimek/signature_pad)        |
 | 滑动解锁 | [vue-drag-verify](https://github.com/AshleyLv/vue-drag-verify)  |
 | 拼图验证 | [vue-puzzle-vcode](https://github.com/javaLuo/vue-puzzle-vcode) |
+
+## js
+
+[china-division](https://github.com/modood/Administrative-divisions-of-China)
+
+[30s-code](https://github.com/30-seconds/30-seconds-of-code)

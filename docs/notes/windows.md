@@ -11,7 +11,7 @@ set-ExecutionPolicy RemoteSigned
 
 ## 系统设置
 
-LTSC 激活
+**LTSC 激活**
 
 ```bash
 slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D
@@ -23,13 +23,13 @@ slmgr -ato
 slmgr -dlv
 ```
 
-专业版密钥
+**专业版密钥**
 
 ```bash
 J4P26-7BNFR-4XMBW-4MH29-8QKTY
 ```
 
-Win11 任务栏透明
+**Win11 任务栏透明**
 
 ```bash
 regedit
@@ -45,76 +45,16 @@ SystemUsesLightTheme
 1 默认
 ```
 
-## 装机必备
+## 邮箱
 
-### 激活工具
+**POP3**
 
-[windows](https://cmwtat.cloudmoe.com/cn.html)
+客户端只能获取查看
 
-[office](https://otp.landian.vip/zh-cn/)
+**IMAP**
 
-### 开发工具
+客户端与服务端数据操作互相同步
 
-[dev-sidecar](https://gitee.com/docmirror/dev-sidecar)
+**Exchange**
 
-[nodejs](https://nodejs.org/en/)
-
-[git](https://git-scm.com/)
-
-[vscode](https://code.visualstudio.com/)
-
-[xshell](https://www.netsarang.com/zh/free-for-home-school/)
-
-### 装机必备
-
-[typora](https://typora.io/)
-
-[geek](https://geekuninstaller.com/download)
-
-[bandzip](https://www.bandisoft.com/)
-
-[snipaste](https://www.snipaste.com/)
-
-[potplayer](https://potplayer.daum.net/)
-
-[utools](https://www.u-tools.cn/)
-
-[adobe](https://weibo.com/vposy)
-
-[listen1](http://listen1.github.io/listen1/)
-
-[picgo](https://molunerfinn.com/PicGo/)
-
-### 下载工具
-
-[fdm](https://www.freedownloadmanager.org/zh/)
-
-[qbit](https://www.qbittorrent.org/)
-
-### 花里胡哨
-
-[lively](https://rocksdanister.github.io/lively/)
-
-### 科学上网
-
-[clash](https://github.com/Fndroid/clash_for_windows_pkg/releases)
-
-[yiyo](https://yiyo.mobi/)
-
-### 系统镜像
-
-[uup](https://uup.rg-adguard.net/)
-
-[msdn](https://next.itellyou.cn/)
-
-[黑果小兵](https://blog.daliansky.net/)
-
-### 更多导航
-
-[大白软件站](https://win.o--o.win/)
-
-[鹏少资源网](https://www.jokerps.com/)
-
-[鹏少资源网 VIP](https://vip.jokerps.com/)
-
-[softonic](https://en.softonic.com/)
+能同步邮件、日历、联系人、日志等等

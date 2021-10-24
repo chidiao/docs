@@ -35,8 +35,10 @@ function getVueSidebar() {
         { text: '组件', link: '/vue/component' },
         { text: '指令', link: '/vue/directives' },
         { text: '计算属性', link: '/vue/computed' },
-        { text: '样式', link: '/vue/style' },
-        { text: '动画', link: '/vue/transition' }
+        { text: '动画', link: '/vue/transition' },
+        { text: 'antdv', link: '/vue/antdv' },
+        { text: 'setup', link: '/vue/setup' },
+        { text: 'style', link: '/vue/style' }
       ]
     },
     {
@@ -46,13 +48,6 @@ function getVueSidebar() {
     {
       text: 'Vuex',
       children: [{ text: '开始', link: '/vue/vuex/' }]
-    },
-    {
-      text: '其他',
-      children: [
-        { text: 'antdv', link: '/vue/antdv' },
-        { text: 'vue3', link: '/vue/composition' }
-      ]
     }
   ]
 }
@@ -158,7 +153,7 @@ function getUtilsSidebar() {
     {
       text: '其他',
       children: [
-        { text: '变成导航', link: '/utils/nav' },
+        { text: '编程导航', link: '/utils/nav' },
         { text: '常用配置', link: '/utils/config' }
       ]
     }
