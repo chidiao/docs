@@ -64,6 +64,10 @@ localStorage/sessionStorage：仅客户端存储
 
 - 同源策略
 
+  同源是指"协议+域名+端口"三者相同，同源策略主要是来防止**CSRF**攻击的
+
+  AJAX 请求不能发送
+
 - 生产环境跨域
 
   ```js
@@ -99,4 +103,57 @@ CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持
 
 - Jsonp
 
-## HTTP
+## ES6
+
+[ES6](https://juejin.cn/post/6995334897065787422)
+
+let/cosnt
+
+扩展运算符
+
+模板字符串
+
+箭头函数
+
+Promise
+
+class
+
+解构赋值
+
+## H5C3
+
+canvas
+
+video audio
+
+sessionStorage localStorage
+
+语义化标签
+
+自定义属性
+
+媒介查询
+
+2D3D 转换
+
+圆角、阴影、渐变
+
+## Http
+
+| 状态码 | 原因         | 详情                                   |
+| ------ | ------------ | -------------------------------------- |
+| 400    | Bad Request  | 请求报文存在语法错误                   |
+| 401    | Unauthorized | 需要认证信息                           |
+| 403    | Forbidden    |                                        |
+| 404    | Not Found    | 找不到请求的资源，可能是请求的地址错误 |
+
+## Ajax
+
+- Ajax 异步的 JavaScript 和 XMLHttpRequest，特性：异步，局部刷新页面，它是异步请求一类技术的统称。
+
+- Axios 基于 Promise 的网络请求库，基于 XHR 进行二次封装的工具库，是 Ajax 的封装和实现。
+
+- Fetch 新的获取资源的浏览器接口 等同于 XHR，提供了许多相同功能，并且更具扩展性和高效性。
+
+- Axios 和 Fetch 都属与 Ajax 的范畴，一个传统 (XHR)，一个现代的实现。

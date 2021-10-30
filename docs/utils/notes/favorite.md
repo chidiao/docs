@@ -1,6 +1,6 @@
-# 网址导航
+# 收藏夹
 
-## 网站
+## 影视资源
 
 [不开 VIP](https://bukaivip.com/)
 
@@ -10,15 +10,13 @@
 
 [Counter-Strike: BreakThrough Edition Nov 22 2015](https://tieba.baidu.com/p/4174381826)
 
-## 软件
-
-### 激活工具
+## 激活工具
 
 [windows](https://cmwtat.cloudmoe.com/cn.html)
 
 [office](https://otp.landian.vip/zh-cn/)
 
-### 开发工具
+## 开发工具
 
 [dev-sidecar](https://gitee.com/docmirror/dev-sidecar)
 
@@ -30,7 +28,7 @@
 
 [xshell](https://www.netsarang.com/zh/free-for-home-school/)
 
-### 装机必备
+## 装机必备
 
 [typora](https://typora.io/)
 
@@ -50,23 +48,23 @@
 
 [picgo](https://molunerfinn.com/PicGo/)
 
-### 下载工具
+## 下载工具
 
 [fdm](https://www.freedownloadmanager.org/zh/)
 
 [qbit](https://www.qbittorrent.org/)
 
-### 花里胡哨
+## 花里胡哨
 
 [lively](https://rocksdanister.github.io/lively/)
 
-### 科学上网
+## 科学上网
 
 [clash](https://github.com/Fndroid/clash_for_windows_pkg/releases)
 
 [yiyo](https://yiyo.mobi/)
 
-### 系统镜像
+## 系统镜像
 
 [uup](https://uup.rg-adguard.net/)
 
@@ -74,7 +72,7 @@
 
 [黑果小兵](https://blog.daliansky.net/)
 
-### 更多导航
+## 更多导航
 
 [大白软件站](https://win.o--o.win/)
 
@@ -84,7 +82,7 @@
 
 [softonic](https://en.softonic.com/)
 
-### github
+## github
 
 [Bili.Uwp](https://github.com/Richasy/Bili.Uwp)
 

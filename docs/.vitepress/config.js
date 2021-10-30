@@ -11,8 +11,7 @@ module.exports = {
       { text: 'React', link: '/react/' },
       { text: 'Utils', link: '/utils/' },
       { text: 'JS', link: '/js/' },
-      { text: 'CSS', link: '/css/' },
-      { text: 'Notes', link: '/notes/' }
+      { text: 'CSS', link: '/css/' }
     ],
 
     sidebar: {
@@ -20,8 +19,7 @@ module.exports = {
       '/react/': getReactSidebar(),
       '/utils/': getUtilsSidebar(),
       '/js/': getJsSidebar(),
-      '/css/': getCssSidebar(),
-      '/notes/': getNotesSidebar()
+      '/css/': getCssSidebar()
     }
   }
 }
@@ -71,6 +69,37 @@ function getReactSidebar() {
   ]
 }
 
+function getUtilsSidebar() {
+  return [
+    {
+      text: '工具',
+      children: [
+        { text: '开始', link: '/utils/' },
+        { text: 'axios', link: '/utils/axios' },
+        { text: 'lodash', link: '/utils/lodash' },
+        { text: 'swiper', link: '/utils/swiper' },
+        { text: 'dayjs', link: '/utils/dayjs' },
+        { text: 'mock', link: '/utils/mock' },
+        { text: 'gsap', link: '/utils/gsap' },
+        { text: 'map', link: '/utils/map' }
+      ]
+    },
+    {
+      text: '笔记',
+      children: [
+        { text: 'Git', link: '/utils/git' },
+        { text: 'Yarn', link: '/utils/yarn' },
+        { text: '编程导航', link: '/utils/nav' },
+        { text: '常用配置', link: '/utils/config' },
+        { text: '系统设置', link: '/utils/notes/windows' },
+        { text: '收藏夹', link: '/utils/notes/favorite' },
+        { text: '项目', link: '/utils/notes/project' },
+        { text: '问题', link: '/utils/notes/qa' }
+      ]
+    }
+  ]
+}
+
 function getJsSidebar() {
   return [
     {
@@ -100,8 +129,7 @@ function getJsSidebar() {
         { text: 'canvas', link: '/js/canvas' },
         { text: 'Bom', link: '/js/dom/bom' },
         { text: 'Dom', link: '/js/dom/dom' },
-        { text: '几何学', link: '/js/dom/geometry' },
-        { text: 'QA', link: '/js/qa' }
+        { text: '几何学', link: '/js/dom/geometry' }
       ]
     }
   ]
@@ -129,48 +157,6 @@ function getCssSidebar() {
         { text: 'precss', link: '/css/precss' },
         { text: 'postcss', link: '/css/postcss' },
         { text: 'tailwind', link: '/css/tailwind' }
-      ]
-    }
-  ]
-}
-
-function getUtilsSidebar() {
-  return [
-    {
-      text: '工具',
-      children: [
-        { text: '开始', link: '/utils/' },
-        { text: 'axios', link: '/utils/axios' },
-        { text: 'lodash', link: '/utils/lodash' },
-        { text: 'swiper', link: '/utils/swiper' },
-        { text: 'dayjs', link: '/utils/dayjs' },
-        { text: 'mock', link: '/utils/mock' },
-        { text: 'gsap', link: '/utils/gsap' },
-        { text: 'aos', link: '/utils/aos' },
-        { text: 'map', link: '/utils/map' }
-      ]
-    },
-    {
-      text: '其他',
-      children: [
-        { text: '编程导航', link: '/utils/nav' },
-        { text: '常用配置', link: '/utils/config' }
-      ]
-    }
-  ]
-}
-
-function getNotesSidebar() {
-  return [
-    {
-      text: '笔记',
-      children: [
-        { text: '开始', link: '/notes/' },
-        { text: 'Git', link: '/notes/git' },
-        { text: 'Yarn', link: '/notes/yarn' },
-        { text: '代码规范', link: '/notes/standard' },
-        { text: 'Windows', link: '/notes/windows' },
-        { text: '网址导航', link: '/notes/nav' }
       ]
     }
   ]

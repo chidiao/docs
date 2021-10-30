@@ -1,45 +1,63 @@
-# dayjs
+# Day.js
 
-轻量的时间和日期处理方案
+## Date
 
-[dayjs](https://dayjs.gitee.io/zh-CN/)
+内置对象，存储日期和时间，并提供了管理方法
 
-## Format
+**创建**
 
 ```js
-dayjs().format()
+// 无参数，当前时间
+let now = new Date()
+
+// 字符串，被解析
+new Date(str)
+let d = new Date('2017-01-26')
+
+// 多参数
+new Date(year, month, date, hours, minutes, seconds, ms)
 ```
 
-默认格式： `ISO8601`
+**访问**
 
-长这样：`2020-04-02T08:02:17-05:00`
+```js
+// 获取年份
+getFullYear()
 
-### 支持的格式化占位符列表
+// 获取月份 0-11
+getMonth()
 
-| 占位符 | 输出             | 详情                     |
-| ------ | ---------------- | ------------------------ |
-| `YY`   | 18               | 两位数的年份             |
-| `YYYY` | 2018             | 四位数的年份             |
-| `M`    | 1-12             | 月份，从 1 开始          |
-| `MM`   | 01-12            | 月份，两位数             |
-| `MMM`  | Jan-Dec          | 缩写的月份名称           |
-| `MMMM` | January-December | 完整的月份名称           |
-| `D`    | 1-31             | 月份里的一天             |
-| `DD`   | 01-31            | 月份里的一天，两位数     |
-| `d`    | 0-6              | 一周中的一天，星期天是 0 |
-| `dd`   | Su-Sa            | 最简写的星期几           |
-| `ddd`  | Sun-Sat          | 简写的星期几             |
-| `dddd` | Sunday-Saturday  | 星期几                   |
-| `H`    | 0-23             | 小时                     |
-| `HH`   | 00-23            | 小时，两位数             |
-| `h`    | 1-12             | 小时, 12 小时制          |
-| `hh`   | 01-12            | 小时, 12 小时制, 两位数  |
-| `m`    | 0-59             | 分钟                     |
-| `mm`   | 00-59            | 分钟，两位数             |
-| `s`    | 0-59             | 秒                       |
-| `ss`   | 00-59            | 秒 两位数                |
-| `SSS`  | 000-999          | 毫秒 三位数              |
-| `Z`    | +05:00           | UTC 的偏移量，±HH:mm     |
-| `ZZ`   | +0500            | UTC 的偏移量，±HHmm      |
-| `A`    | AM PM            |                          |
-| `a`    | am pm            |                          |
+// 获取日期 1-31
+getDate()
+
+// 获取周几 0-6
+getDay()
+
+// 获取时间戳
+getTime()
+
+// 获取时分秒
+getHours()
+getMinutes()
+getSeconds()
+getMilliseconds()
+```
+
+## Day.js
+
+[Day.js](https://dayjs.gitee.io/zh-CN/)
+
+| 占位符 | 详情 | 关联        |
+| ------ | ---- | ----------- |
+| `Y`    | 年份 | getFullYear |
+| `M`    | 月份 | getMonth    |
+| `D`    | 日期 | getDate     |
+| `d`    | 周几 | getDay      |
+| `H`    | 时   | getHours    |
+| `m`    | 分   | getMinutes  |
+| `s`    | 秒   | getSeconds  |
+
+```js
+let now = dayjs().format('YYYY-MM-DD HH:mm:ss')
+```
+

@@ -1,3 +1,5 @@
+# Git
+
 ## 快速配置
 
 ```bash
@@ -34,8 +36,6 @@ git push -u origin master
 ```
 
 ## 使用手册
-
-### remote
 
 ```bash
 # 查看远程仓库

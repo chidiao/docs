@@ -3,6 +3,7 @@
 ## Prettier
 
 - [Prettier](https://prettier.io/)
+
 - [Options](https://prettier.io/docs/en/options.html)
 
 ```json
