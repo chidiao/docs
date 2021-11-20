@@ -1,34 +1,18 @@
 # 收藏夹
 
-## 影视资源
-
-[不开 VIP](https://bukaivip.com/)
-
-[电影天堂](https://www.dy2018.com/)
-
 ## 游戏
 
 [Counter-Strike: BreakThrough Edition Nov 22 2015](https://tieba.baidu.com/p/4174381826)
 
-## 激活工具
+## 装机必备
+
+[clash](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+
+[yiyo](https://yiyo.mobi/)
 
 [windows](https://cmwtat.cloudmoe.com/cn.html)
 
 [office](https://otp.landian.vip/zh-cn/)
-
-## 开发工具
-
-[dev-sidecar](https://gitee.com/docmirror/dev-sidecar)
-
-[nodejs](https://nodejs.org/en/)
-
-[git](https://git-scm.com/)
-
-[vscode](https://code.visualstudio.com/)
-
-[xshell](https://www.netsarang.com/zh/free-for-home-school/)
-
-## 装机必备
 
 [typora](https://typora.io/)
 
@@ -48,29 +32,21 @@
 
 [picgo](https://molunerfinn.com/PicGo/)
 
-## 下载工具
-
-[fdm](https://www.freedownloadmanager.org/zh/)
-
 [qbit](https://www.qbittorrent.org/)
-
-## 花里胡哨
 
 [lively](https://rocksdanister.github.io/lively/)
 
-## 科学上网
+## 开发工具
 
-[clash](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+[dev-sidecar](https://gitee.com/docmirror/dev-sidecar)
 
-[yiyo](https://yiyo.mobi/)
+[nodejs](https://nodejs.org/en/)
 
-## 系统镜像
+[git](https://git-scm.com/)
 
-[uup](https://uup.rg-adguard.net/)
+[vscode](https://code.visualstudio.com/)
 
-[msdn](https://next.itellyou.cn/)
-
-[黑果小兵](https://blog.daliansky.net/)
+[xshell](https://www.netsarang.com/zh/free-for-home-school/)
 
 ## 更多导航
 
@@ -79,13 +55,3 @@
 [鹏少资源网](https://www.jokerps.com/)
 
 [鹏少资源网 VIP](https://vip.jokerps.com/)
-
-[softonic](https://en.softonic.com/)
-
-## github
-
-[Bili.Uwp](https://github.com/Richasy/Bili.Uwp)
-
-[biliuwp-lite](https://github.com/xiaoyaocz/biliuwp-lite)
-
-[激活工具](https://github.com/TGSAN/CMWTAT_Digital_Edition)

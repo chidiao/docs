@@ -19,7 +19,8 @@ module.exports = {
       '/react/': getReactSidebar(),
       '/utils/': getUtilsSidebar(),
       '/js/': getJsSidebar(),
-      '/css/': getCssSidebar()
+      '/css/': getCssSidebar(),
+      '/qa/': getQASidebar()
     }
   }
 }
@@ -93,8 +94,7 @@ function getUtilsSidebar() {
         { text: '常用配置', link: '/utils/config' },
         { text: '系统设置', link: '/utils/notes/windows' },
         { text: '收藏夹', link: '/utils/notes/favorite' },
-        { text: '项目', link: '/utils/notes/project' },
-        { text: '问题', link: '/utils/notes/qa' }
+        { text: '项目', link: '/utils/notes/project' }
       ]
     }
   ]
@@ -157,6 +157,20 @@ function getCssSidebar() {
         { text: 'precss', link: '/css/precss' },
         { text: 'postcss', link: '/css/postcss' },
         { text: 'tailwind', link: '/css/tailwind' }
+      ]
+    }
+  ]
+}
+
+function getQASidebar() {
+  return [
+    {
+      text: '问题',
+      children: [
+        { text: '开始', link: '/qa/' },
+        { text: 'vue', link: '/qa/vue' },
+        { text: 'js', link: '/qa/js' },
+        { text: 'css', link: '/qa/css' }
       ]
     }
   ]

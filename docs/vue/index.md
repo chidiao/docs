@@ -8,6 +8,8 @@
 
 - [Balm UI](https://next-material.balmjs.com/)
 
+- [Arco Design](https://arco.design/vue)
+
 ## 插件
 
 - [Prerender SPA Plugin](https://github.com/chrisvfritz/prerender-spa-plugin)
@@ -55,10 +57,13 @@
 ## 脚手架
 
 ```bash
-# 安装脚手架
+# vuecli
 yarn global add @vue/cli
 vue --version
 
-# 创建项目
+# vuecli
 vue create my-app
+
+# vite
+yarn create vite
 ```
