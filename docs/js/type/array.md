@@ -239,3 +239,42 @@ arr.sort((a, b) => b - a)
 ```js
 arr.reverse()
 ```
+
+## 应用
+
+### 数组去重
+
+- `new Set`
+
+  ```js
+  let set = new Set(arr)
+  let result = Array.from(set)
+
+  // Set 值的集合，每个值只出现一次
+  ```
+
+- `indexOf/include`
+
+  ```js
+  let result = []
+
+  arr.forEach((item) => {
+    if (result.indexOf(item) === -1) {
+      result.push(item)
+    }
+  })
+
+  arr.forEach((item) => {
+    if (!result.include(item)) {
+      result.push(item)
+    }
+  })
+  ```
+
+- `filter`
+
+  ```js
+  let result = arr.filter((item, index) => {
+    return arr.indexOf(item) === index
+  })
+  ```

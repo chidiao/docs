@@ -1,5 +1,18 @@
 # 开始
 
+```bash
+# vite
+yarn create vite
+```
+
+```bash
+# vuecli
+yarn global add @vue/cli
+vue --version
+
+vue create my-app
+```
+
 ## UI
 
 - [Naive UI](https://www.naiveui.com/)
@@ -53,17 +66,3 @@
 - [vxe-table](https://github.com/x-extends/vxe-table)
 
 - [Vue.Draggable](https://github.com/SortableJS/Vue.Draggable)
-
-## 脚手架
-
-```bash
-# vuecli
-yarn global add @vue/cli
-vue --version
-
-# vuecli
-vue create my-app
-
-# vite
-yarn create vite
-```
