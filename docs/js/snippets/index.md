@@ -2,19 +2,19 @@
 
 ## Dom
 
-<<< @/\_utils/dom.js
+<<< @/code/utils/dom.js
 
 ## Scroll
 
-<<< @/\_utils/scroll.js
+<<< @/code/utils/scroll.js
 
 ## Form
 
-<<< @/\_utils/form.js
+<<< @/code/utils/form.js
 
 ## Function
 
-<<< @/\_utils/function.js
+<<< @/code/utils/function.js
 
 ## 三级联动
 
