@@ -29,71 +29,83 @@ for (let key in object) {
 }
 ```
 
-## 赋值
-
-**赋值了对象的变量存储的不是对象本身，而是该对象“在内存中的地址”，换句话说就是对该对象的“引用”。**
-
-### 浅拷贝
-
-```js
-let clone = Object.assign({}, user)
-
-let clone = { ...user }
-```
-
-## 垃圾回收
-
-[垃圾回收](https://zh.javascript.info/garbage-collection)
-
-## 可选链
-
-```js
-user?.name
-
-// 可读不可写
-```
-
 ## 方法
 
 ### Object.assign()
 
+克隆与合并
+
+将多个对象的属性合并到一个目标对象内
+
 ```js
-Object.assign(target, ...sources)
-// 将所有可枚举属性 从一个或多个源对象 分配到目标对象
-// 相同属性(key)，会被后边的对象覆盖，按顺序
-// 返回目标对象
+// 语法
+Object.assign(dest, [src1, src2, src3...])
+
+//	浅拷贝
+let clone = Object.assign({}, obj)
+
+// 合并
+let merge = Object.assign(dest, obj1, obj2)
 ```
+
+## 迭代
 
 ### Object.keys()
 
-返回一个包含所有 key 的数组
-
-顺序与手动遍历一致
-
-```js
-Object.keys(obj)
-// => [key, key, key]
-```
+返回所有键 key 的数组
 
 ### Object.values()
 
-返回一个包含所有 value 的数组
-
-顺序与手动遍历一致
-
-```js
-Object.values(obj)
-// => [value, vlalue, value]
-```
+返回所有值 value 的数组
 
 ### Object.entries()
 
-```js
-Object.entries(obj)
-// => [[key, value], [key, value], [key, value]]
+返回所有键值对 [key, value] 的数组
 
-for (let [key, val] of Object.entries(obj)) {
-  console.log(key)
-  console.log(val)
+```js
+let user = {
+  name: 'john',
+  age: 20
 }
+
+Object.keys(user) //	=>	['name', 'age']
+Object.values(user) //	=>	['john', 20]
+Object.entries(user) //	=>	[['name', 'john'], ['age', 20]]
+```
+
+## 拓展
+
+### Object.fromEntries()
+
+如果我们想要对对象使用数组才有的方法，只要先通过迭代将对象转换为数组，对数据进行处理后，再将结果转换为对象即可
+
+```js
+let count = {
+  apple: 1,
+  banana: 2,
+  orange: 3
+}
+
+let doubleCount = Object.fromEntries(
+  Object.entries(count).map((entry) => [entry[0], entry[1] * 2])
+  //	将对象转换为 [key, value] 数组，再使用数组方法，再将结果数组转换为对象
+  //	1.=>	{ apple: 1, ... }
+  //	2.=>	[ ['apple', 1], ... ]
+  //	3.=>	[ ['apple', 2], ... ]
+  //	4.=>	{ apple: 2, ... }
+)
+```
+
+## 可选链
+
+如果可选链 `?.` 前面的值为 `undefined` 或 `null` 则停止运算直接返回 `undefined`
+
+`?.` 表示前面的值为可选值，可有可无
+
+```js
+let user = {}
+
+alert(user.address.street) //	=>	Error	×
+
+alert(user.address?.street) //	=>	undefined	√
 ```

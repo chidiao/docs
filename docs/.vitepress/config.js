@@ -15,7 +15,8 @@ export default {
       '/react/': sidebarReact(),
       '/utils/': sidebarUtils(),
       '/js/': sidebarJs(),
-      '/css/': sidebarCss()
+      '/css/': sidebarCss(),
+      '/nav/': sidebarNav()
     },
 
     footer: {
@@ -28,10 +29,18 @@ export default {
 function nav() {
   return [
     { text: 'Vue', link: '/vue/' },
-    { text: 'Utils', link: '/utils/axios' },
+    { text: 'Utils', link: '/utils/' },
     { text: 'JS', link: '/js/type/array' },
     { text: 'CSS', link: '/css/' },
-    { text: 'Nav', items: sidebarNav() }
+    { text: 'Nav', items: dropNav() }
+  ]
+}
+
+function dropNav() {
+  return [
+    { text: 'Windows', link: '/nav/windows' },
+    { text: '收藏夹', link: '/nav/favorite' },
+    { text: '项目', link: '/nav/project' }
   ]
 }
 
@@ -90,7 +99,8 @@ function sidebarUtils() {
         { text: 'gsap', link: '/utils/gsap' },
         { text: 'map', link: '/utils/map' },
         { text: 'git', link: '/utils/git' },
-        { text: 'yarn', link: '/utils/yarn' }
+        { text: 'yarn', link: '/utils/yarn' },
+        { text: 'config', link: '/utils/config' }
       ]
     }
   ]
@@ -159,11 +169,16 @@ function sidebarCss() {
 
 function sidebarNav() {
   return [
-    { text: '编程导航', link: '/utils/nav' },
-    { text: '常用配置', link: '/utils/config' },
-    { text: '系统设置', link: '/utils/notes/windows' },
-    { text: '收藏夹', link: '/utils/notes/favorite' },
-    { text: '项目', link: '/utils/notes/project' }
+    {
+      text: '导航',
+      items: [
+        { text: '编程导航', link: '/utils/nav' },
+        { text: '常用配置', link: '/utils/config' },
+        { text: '系统设置', link: '/nav/windows' },
+        { text: '收藏夹', link: '/nav/favorite' },
+        { text: '项目', link: '/nav/project' }
+      ]
+    }
   ]
 }
 
