@@ -6,8 +6,6 @@
 const [count, setCount] = useState(0)
 ```
 
-
-
 ### useEffect
 
 ```jsx
@@ -24,26 +22,22 @@ useEffect(() => {
 
 `useEffect` 是异步的，React 保证了每次运行 effect 的同时，DOM 都已经更新完毕
 
-
-
 ### useContext
 
 ```jsx
 
 ```
 
-
-
 ### useReducer
 
 ```jsx
 function reducer(state, action) {
   switch (action) {
-    case 'add': 
+    case 'add':
       return count + 1
     case: 'sub':
       return count - 1
-    default: 
+    default:
       return count
   }
 }
@@ -53,4 +47,3 @@ const [state, dispatch] = useReducer(reducer, initialState)
 dispatch('add')
 dispatch('sub')
 ```
-

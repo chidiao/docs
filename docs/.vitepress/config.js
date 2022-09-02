@@ -16,7 +16,8 @@ export default {
       '/utils/': sidebarUtils(),
       '/js/': sidebarJs(),
       '/css/': sidebarCss(),
-      '/nav/': sidebarNav()
+      '/nav/': sidebarNav(),
+      '/qa/': sidebarQa()
     },
 
     footer: {
@@ -32,15 +33,7 @@ function nav() {
     { text: 'Utils', link: '/utils/' },
     { text: 'JS', link: '/js/type/array' },
     { text: 'CSS', link: '/css/' },
-    { text: 'Nav', items: dropNav() }
-  ]
-}
-
-function dropNav() {
-  return [
-    { text: 'Windows', link: '/nav/windows' },
-    { text: '收藏夹', link: '/nav/favorite' },
-    { text: '项目', link: '/nav/project' }
+    { text: 'Nav', link: '/nav/favorite' }
   ]
 }
 
@@ -99,8 +92,7 @@ function sidebarUtils() {
         { text: 'gsap', link: '/utils/gsap' },
         { text: 'map', link: '/utils/map' },
         { text: 'git', link: '/utils/git' },
-        { text: 'yarn', link: '/utils/yarn' },
-        { text: 'config', link: '/utils/config' }
+        { text: 'yarn', link: '/utils/yarn' }
       ]
     }
   ]
@@ -112,6 +104,7 @@ function sidebarJs() {
       text: 'JavaScript',
       items: [
         { text: 'Async', link: '/js/async' },
+        { text: 'Class', link: '/js/class' },
         { text: 'Module', link: '/js/module' },
         { text: 'Snippets', link: '/js/snippets/' },
         { text: 'Storage', link: '/js/storage' },
@@ -122,10 +115,10 @@ function sidebarJs() {
       text: 'Type',
       items: [
         { text: 'Type', link: '/js/type/index' },
-        { text: 'Array', link: '/js/type/array' },
-        { text: 'Object', link: '/js/type/object' },
+        { text: 'Number', link: '/js/type/number' },
         { text: 'String', link: '/js/type/string' },
-        { text: 'Number', link: '/js/type/number' }
+        { text: 'Object', link: '/js/type/object' },
+        { text: 'Array', link: '/js/type/array' }
       ]
     },
     {
@@ -142,8 +135,8 @@ function sidebarJs() {
 }
 
 function sidebarCss() {
-  let css = ['animation', 'background', 'box', 'clip-path', 'counter', 'filter', 'flex', 'transition']
-  let cssItems = [{ text: '开始', link: '/css/' }]
+  let css = ['selector', 'animation', 'background', 'box', 'clip-path', 'counter', 'filter', 'flex', 'transition']
+  let cssItems = []
   css.map((item) => {
     cssItems.push({
       text: item,
@@ -154,7 +147,7 @@ function sidebarCss() {
   return [
     {
       text: 'CSS',
-      items: cssItems
+      items: [{ text: '开始', link: '/css/' }, ...cssItems]
     },
     {
       text: 'Utils',
@@ -172,11 +165,10 @@ function sidebarNav() {
     {
       text: '导航',
       items: [
-        { text: '编程导航', link: '/utils/nav' },
-        { text: '常用配置', link: '/utils/config' },
-        { text: '系统设置', link: '/nav/windows' },
-        { text: '收藏夹', link: '/nav/favorite' },
-        { text: '项目', link: '/nav/project' }
+        { text: 'vscode', link: '/nav/vscode' },
+        { text: 'windows', link: '/nav/windows' },
+        { text: 'favorite', link: '/nav/favorite' },
+        { text: 'project', link: '/nav/project' }
       ]
     }
   ]
@@ -185,13 +177,13 @@ function sidebarNav() {
 function sidebarQa() {
   return [
     {
-      text: '问题',
+      text: 'QA',
       items: [
-        { text: '开始', link: '/qa/' },
         { text: 'vue', link: '/qa/vue' },
-        { text: 'uni', link: '/qa/uni' },
         { text: 'js', link: '/qa/js' },
-        { text: 'css', link: '/qa/css' }
+        { text: 'array', link: '/qa/array' },
+        { text: 'css', link: '/qa/css' },
+        { text: 'mp', link: '/qa/mp' }
       ]
     }
   ]

@@ -42,10 +42,6 @@
 
 [PicGo 图片上传](https://molunerfinn.com/PicGo/)
 
-[potplayer](https://potplayer.daum.net/)
-
-[qbit](https://www.qbittorrent.org/)
-
 ## 开发工具
 
 [Git](https://git-scm.com/)
