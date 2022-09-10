@@ -16,8 +16,7 @@ export default {
       '/utils/': sidebarUtils(),
       '/js/': sidebarJs(),
       '/css/': sidebarCss(),
-      '/nav/': sidebarNav(),
-      '/qa/': sidebarQa()
+      '/nav/': sidebarNav()
     },
 
     footer: {
@@ -43,14 +42,15 @@ function sidebarVue() {
       text: 'Vue',
       collapsible: true,
       items: [
-        { text: '开始', link: '/vue/' },
-        { text: '组件', link: '/vue/component' },
+        { text: 'components', link: '/vue/components' },
+        { text: 'data', link: '/vue/data' },
         { text: '指令', link: '/vue/directives' },
-        { text: '计算属性', link: '/vue/computed' },
         { text: '动画', link: '/vue/transition' },
         { text: 'antdv', link: '/vue/antdv' },
         { text: 'setup', link: '/vue/setup' },
-        { text: 'style', link: '/vue/style' }
+        { text: 'style', link: '/vue/style' },
+        { text: 'bak', link: '/vue/' },
+        { text: 'qa', link: '/vue/qa' }
       ]
     },
     {
@@ -124,18 +124,31 @@ function sidebarJs() {
     {
       text: '其他',
       items: [
-        { text: 'canvas', link: '/js/canvas' },
         { text: 'Bom', link: '/js/dom/bom' },
         { text: 'Dom', link: '/js/dom/dom' },
         { text: '几何学', link: '/js/dom/geometry' },
-        { text: 'this', link: '/js/this' }
+        { text: 'this', link: '/js/this' },
+        { text: 'canvas', link: '/js/canvas' },
+        { text: 'mp', link: '/js/mp/qa' },
+        { text: 'qa', link: '/js/qa' }
       ]
     }
   ]
 }
 
 function sidebarCss() {
-  let css = ['selector', 'animation', 'background', 'box', 'clip-path', 'counter', 'filter', 'flex', 'transition']
+  let css = [
+    'selector',
+    'animation',
+    'background',
+    'box',
+    'clip-path',
+    'counter',
+    'filter',
+    'flex',
+    'transition',
+    'position'
+  ]
   let cssItems = []
   css.map((item) => {
     cssItems.push({
@@ -154,7 +167,8 @@ function sidebarCss() {
       items: [
         { text: 'precss', link: '/css/precss' },
         { text: 'postcss', link: '/css/postcss' },
-        { text: 'tailwind', link: '/css/tailwind' }
+        { text: 'tailwind', link: '/css/tailwind' },
+        { text: 'qa', link: '/css/qa' }
       ]
     }
   ]
@@ -169,21 +183,6 @@ function sidebarNav() {
         { text: 'windows', link: '/nav/windows' },
         { text: 'favorite', link: '/nav/favorite' },
         { text: 'project', link: '/nav/project' }
-      ]
-    }
-  ]
-}
-
-function sidebarQa() {
-  return [
-    {
-      text: 'QA',
-      items: [
-        { text: 'vue', link: '/qa/vue' },
-        { text: 'js', link: '/qa/js' },
-        { text: 'array', link: '/qa/array' },
-        { text: 'css', link: '/qa/css' },
-        { text: 'mp', link: '/qa/mp' }
       ]
     }
   ]

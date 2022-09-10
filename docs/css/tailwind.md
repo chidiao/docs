@@ -14,6 +14,8 @@
 
 [kutty](https://kutty.netlify.app/components)
 
+[Flowbite](https://flowbite.com/)
+
 ## Base
 
 ```css

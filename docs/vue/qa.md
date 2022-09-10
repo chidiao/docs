@@ -92,6 +92,33 @@ app.config.globalProperties.$store = store
 
   强制更新视图
 
+### 异步更新
+
+vue 的视图，dom 更新是异步的
+
+$nextTick(callback)
+
+```js
+let methods = {
+  fn1() {
+    this.list.push('new obj')
+    fn()
+    // 此时如果获取 dom 元素，结果则为更新前的结果
+  },
+  fn2() {
+    this.list.push('new obj')
+    this.list.push('new obj')
+    this.list.push('new obj')
+
+    this.$nextTick(() => {
+      fn()
+      // 此时如果获取 dom 元素，结果才是更新后的结果
+      // 虽然数据多次更新，但 nextTick 只会触发一次回调
+    })
+  }
+}
+```
+
 ### 生命周期
 
 | 钩子函数        | 生命周期 | 阶段                                                    | vue3            | 描述 |

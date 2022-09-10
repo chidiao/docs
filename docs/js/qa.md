@@ -138,8 +138,6 @@ CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持
 | 长度 | 2k                                            | 不受限制                                   |
 | 缓存 | 浏览器主动缓存                                | 不缓存，除非手动设置                       |
 
-
-
 ## ES6
 
 ```js
@@ -191,3 +189,36 @@ let b = 2
 | `cookie`         | 可设置过期时间，默认浏览器关闭后过期    | 4KB 左右 | 每次 HTTP 请求都会携带 cookie 在请求头里 |
 | `localStorage`   | 除非手动清除，否则永久保留              | 5MB+     | 仅客户端存储                             |
 | `sessionStorage` | 当前标签页有效，关闭标签/浏览器就会清除 | 5MB+     | 仅客户端存储                             |
+
+# Array
+
+## 数组去重
+
+- new Set()
+
+  ```js
+  let set = new Set(arr)
+  let result = Array.from(set)
+
+  // Set 值的集合，每个值只出现一次
+  ```
+
+- 遍历
+
+  ```js
+  let result = []
+
+  arr.forEach((item) => {
+    if (!result.includes(item)) {
+      result.push(item)
+    }
+  })
+  ```
+
+- 筛选
+
+  ```js
+  let result = arr.filter((item, index) => {
+    return arr.indexOf(item) === index
+  })
+  ```

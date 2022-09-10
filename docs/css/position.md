@@ -1,77 +1,58 @@
-# position
+# Position
 
-[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
+[position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
 
-## static
+- static 静态
 
-除了它都是定位元素
+- relative 相对定位
 
-```scss
-.box {
-  position: static;
-}
+- absolute 绝对定位
 
-// 默认值
-// 文档流布局
-// top, right, bottom, left, z-index 无效
-```
+- fixed 固定定位
 
-## relative
+- sticky 粘性定位
 
-定位元素
+## position
 
-```scss
-.box {
-  position: relative;
-}
+### static
 
-// 文档流布局
-// 然后在不改变页面布局的前提下，相对自身文档流位置定位/偏移(原本位置空间留白)
-```
+`static` 是 `非定位元素`
 
-## absolute
+其余四种都是 `定位元素`
 
-定位元素
+元素使用正常的布局行为
 
-```scss
-.box {
-  position: absolute;
-}
+此时 `top`、`right`、`bottom`、`left` 和 `z-index` 属性均无效
 
-// 脱离文档流，没有留白(位置)
-// 相当于该元素不存在
-// 相对最近的非 static 定位元素祖先进行定位/偏移
-```
+### relative
 
-## fixed
+正常文档流，保留原空间，留白
 
-定位元素
+相对于自身文档流的位置，进行定位和偏移
 
-```scss
-.box {
-  position: fixed;
-}
+### absolute
 
-// 脱离文档流，没有留白(位置)
-// 相对 viewport 进行定位/偏移
-```
+脱离文档流，不保留原空间，不留白
 
-## sticky
+相对于最近的 `定位元素(祖先)` ，进行定位和偏移
 
-定位元素
+### fixed
 
-```scss
-.box {
-  position: sticky;
-}
+脱离文档流，不保留原空间，不留白
 
-// 文档流布局
+相对于屏幕视口 `viewport` ，进行定位和偏移
 
-// 粘性定位可以被认为是相对定位和固定定位的混合
-// 元素在跨越特定阈值前为相对定位，之后为固定定位
+### sticky
 
-// 须指定 top, right, bottom, top 四个阈值其中之一，才可生效，否则等同于相对定位
-```
+正常文档流，保留原空间，留白
+
+可以当作 `relative` + `fixed`
+
+需要有一个可滚动的祖先元素，且必须指定 `top`、`right`、`bottom`、`left` 其一作为阈值
+
+元素先是正常文档流(relative)，当滚动到阈值位置时，相对于该可滚动的祖先元素吸附(fixed)
+
+若不指定阈值，则等效于相对定位
 
 ## other
 
@@ -79,24 +60,27 @@
 
 ```scss
 .box {
-  top: 0;
-  bottom: 0;
+  top: auto;
+  bottom: auto;
 }
 
-// top优先，bottom忽略
+// 1. height 未指定或auto时，两者同时生效
+// 2. height 被指定时，top 优先生效，bottom 会被忽略
+// 3. height 被指定时，top：auto时，bottom生效
 
-// height: auto/未指定 => top/bottom同时生效
-
-// top: auto; => top忽略，bottom生效
+// 仅对定位元素生效
 ```
 
 ### left/right
 
 ```scss
 .box {
-  left: 0;
-  right: 0;
+  left: auto;
+  right: auto;
 }
+
+// left 优先于 right
+// 仅对定位元素生效
 ```
 
 ### z-index
@@ -104,8 +88,9 @@
 ```scss
 .box {
   z-index: auto;
+  z-index: -1;
 }
 
 // 堆叠层级
-// 仅对对位元素有效，也就是 static 无效
+// 仅对定位元素生效
 ```
