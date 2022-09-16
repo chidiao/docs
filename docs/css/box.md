@@ -1,6 +1,12 @@
 # Box
 
-盒子模型
+## 盒子模型
+
+对文档进行布局的时候，将所有元素表示为一个个矩形的盒子
+
+盒子有四部分组成：`margin` 、`border` 、`padding` 、`content`
+
+通过这些属性，来决定盒子的大小、位置、属性等。
 
 ## margin
 
@@ -99,7 +105,7 @@
   box-sizing: border-box;
 }
 
-// 默认值: content-box
+// 标准盒模型：content-box(默认值)
 // content-box: width = content
 // border-box: width = border + content
 ```

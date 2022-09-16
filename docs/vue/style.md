@@ -1,7 +1,5 @@
 # Style
 
-###
-
 ## class
 
 ```html

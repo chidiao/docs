@@ -1,8 +1,6 @@
-# 开始
+# Pinia
 
 [Pinia](https://pinia.vuejs.org/)
-
-## 安装
 
 ```bash
 yarn add pinia
@@ -17,56 +15,119 @@ app.use(pinia)
 
 ## Store
 
-定义store
+创建 store
+
+pinia 更像一个组件了，分别对应 `data` 、`computed` 、`methods`
 
 ```js
-import { defineStore } from 'pinia'
+import { defineStore } from 'store'
 
-export const useStore = defineStore('main', {
-  state: () => {
+export const useCounterStore = defineStore('counter', {
+  state() {
     return {
       count: 0
+    }
+  },
+  getters: {
+    doubleCount: (state) => state.count * 2
+  },
+  actions: {
+    increment() {
+      this.count++
     }
   }
 })
 ```
 
-调用store
+setup
 
 ```js
-import { useStore } from '...'
+export const useCounterStore = define('', () => {
+  const count = ref(0)
+  const doubleCount = computed(() => count.value * 2)
+  function increment() {
+    count.value++
+  }
+
+  return { count, doubleCount, increment }
+})
+```
+
+调用 store
+
+```js
+import { useCounterStore } from '@/store/counter'
 import { storeToRefs } from 'pinia'
 
-const store = useStore()
-const { count } = storeToRefs(store)	// 保持响应性
+const counterStore = useCounterStore()
+const { count, doubleCount } = storeToRefs(counterStore)
 ```
 
 ## State
 
-修改state
+`data`
+
+修改 state
 
 ```js
 const store = useStore()
 
-// 简单
+// 可以通过store直接修改了
 store.count++
 
-// $patch：适合多数据
+// 修改多个
 store.$patch({
   count: store.count + 1,
-  word: 'hello'
+  age: 120,
+  name: 'john'
 })
-
-// $patch函数：适合带有一定的逻辑
-store.$patch((state) => {
-  if (isOk) {
-    state.count++
-  } else {
-    state.count--
-  }
-})
-
-// actions：适合封装和复用
-store.increment()
 ```
 
+重置 state
+
+```js
+store.$reset()
+```
+
+mapState()
+
+可读
+
+```js
+import { mapState } from 'pinia'
+
+export default {
+  computed: {
+    ...mapState(useCounterStore, ['count', 'doubleCount']),
+    ...mapState(useCounterStore, {
+      myCount: 'count',
+      double: (store) => store.count * 2
+    })
+  }
+}
+```
+
+mapWritableState()
+
+可写
+
+```js
+import { mapWritableState } from 'pinia'
+
+export default {
+  computed: {
+    ...mapWritableState(useCounterState, ['count', 'doubleCount']),
+    ...mapWritableState(useCounterState, {
+      myCount: 'count'
+    })
+  }
+}
+```
+
+## Getters
+
+`computed`
+
+## Actions
+
+`methods`

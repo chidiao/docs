@@ -4,98 +4,92 @@
 
 ```js
 [mp].[fun]({
-  // 通用参数
-  url: url,
-  success: function(res) {},
-  fail: function(err) {},
-  complete: function(res) {},
-
-  // navigateTo
-  events: { ...obj }
+  url,
+  success: () => {},
+  fail: () => {},
+  complete: () => {}
 })
 
 [mp].[fun](url).then(res => {
-  console.log(res)
+	//
 }).catch(err => {
-  console.log(err)
+	//
 }).finally(res => {
-  console.log(res)
+	//
 })
 ```
 
-### switchTab(obj)
+| 方法              | 描述                                                   |
+| ----------------- | ------------------------------------------------------ |
+| switchTab(obj)    | 跳转到 `tabBar` 页面，并关闭其他所有非 `tabBar` 页面   |
+| reLaunch(obj)     | 关闭所有页面，打开某个页面                             |
+| redirectTo(obj)   | 关闭当前页面，打开某个页面，不允许跳转 `tabBar` 页面   |
+| navigateTo(obj)   | 保留当前页面，跳转到某个页面，不允许跳转 `tabBar` 页面 |
+| navigateBack(obj) | 关闭当前页面，返回上一页或多页                         |
+| getCurrentPages() | 获取当前页面栈                                         |
 
-跳转到 `tabBar` 页面，并关闭其他所有非 `tabBar` 页面
+## 生命周期
 
-### reLaunch(obj)
+| 钩子                | 时机                                 | 更多信息   |
+| ------------------- | ------------------------------------ | ---------- |
+| onLoad()            | 首次进入页面加载时触发               | 可获取参数 |
+| onShow()            | 加载完成、后台转前台、重新进入时触发 |            |
+| onReady()           | 页面首次渲染完成时触发               |            |
+| onHide()            | 前台转后台、进入其他页面时触发       |            |
+| onUnload()          | 页面卸载时触发                       |            |
+| onPullDownRefresh() | 下拉刷新                             |            |
+| onReachBottom()     | 上拉触底                             |            |
+| onShareAppMessage() | 点击转发                             |            |
 
-关闭所有页面，打开某个页面
+## 下拉刷新
 
-### redirectTo(obj)
-
-关闭当前页面，打开某个页面，不允许跳转 `tabBar` 页面
-
-### navigateTo(obj)
-
-保留当前页面，跳转到某个页面，不允许跳转 `tabBar` 页面
-
-### navigateBack(obj)
-
-关闭当前页面，返回上一页或多页
-
-### getCurrentPages()
-
-获取当前页面栈
-
-## 页面生命周期
-
-### onLoad
-
-页面加载，可以传递参数
-
-```js
-uni.navigateTo('/user?id=7')
-
-export default {
-  onLoad(opt) {
-    let { id } = opt
-    console.log(id)
+```json
+// pages.json
+{
+  "path": "index",
+  "style": {
+    "enablePullDownRefresh": true
   }
 }
 ```
 
-### onUnload
-
-页面卸载
-
-### onShow
-
-页面显示
-
-### onHide
-
-页面隐藏
-
-### onPullDownRefresh
-
-下拉刷新
-
 ```js
-// 可以手动触发
-[mp].startPullDownRefresh()
-
-// 触发
-onPullDownRefresh() {
-  http.get(url).then(res => {
-    // 手动结束
-    [mp].stopPullDownRefresh()
-  })
+// 下拉动作可触发生命周期，也可以手动触发下拉刷新
+// 下拉刷新，需要手动结束
+export default {
+  onLoad() {
+    ;[mp].startPullDownRefresh()
+    this.getData()
+  },
+  onPullDownRefresh() {
+    this.getData()
+  },
+  methods: {
+    getData() {
+      this.$http.get().then((res) => {
+        ;[mp].stopPullDownRefresh()
+      })
+    }
+  }
 }
 ```
 
-### onReachBottom
+## 条件编译
 
-滑到底部
+```html
+<!-- #ifdef MP-WEIXIN -->
+<view>hello</view>
+<!-- #endif -->
+```
+
+## 支付
+
+```js
+uni.requestPayment({
+  provider: 'alipay',
+  orderInfo: orderInfo
+})
+```
 
 ## openid
 

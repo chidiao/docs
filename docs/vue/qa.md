@@ -2,6 +2,10 @@
 
 ## Vue
 
+- [常用指令](./directives)
+
+- [生命周期](./lifecycle)
+
 ### MVC
 
 `View` 负责页面显示逻辑
@@ -15,10 +19,6 @@
 `ViewModel` 通过双向绑定，将 `View` 和 `Model` 的同步更新给自动化了
 
 ### 渐进式
-
-### 指令
-
-v-show、v-if、v-for、v-on、v-model、v-bind、v-cloak
 
 ### 修饰符
 
@@ -118,22 +118,6 @@ let methods = {
   }
 }
 ```
-
-### 生命周期
-
-| 钩子函数        | 生命周期 | 阶段                                                    | vue3            | 描述 |
-| --------------- | -------- | ------------------------------------------------------- | --------------- | ---- |
-| beforeCreate()  | 创建     | 开始创建实例，`data` 、`methods` 不可访问               |                 |      |
-| created()       | 创建     | 实例创建完毕，`data` 、`methods` 可以访问，模板尚未编译 |                 |      |
-| beforeMount()   | 挂载     | 完成模板的编译                                          |                 |      |
-| mounted()       | 挂载     | 将编译好的模板挂载到页面                                |                 |      |
-| beforeUpdate()  | 更新     | 实例数据发生改变(更新)，DOM 还未更新                    |                 |      |
-| updated()       | 更新     | DOM 更新完毕                                            |                 |      |
-| beforeDestroy() | 销毁     | 实例被销毁之前，实例所有数据功能正常                    | beforeUnmount() | 卸载 |
-| destroyed()     | 销毁     | 实例被销毁之后                                          | unmounted()     | 卸载 |
-| activated()     |          | 特殊，`keep-alive` 缓存的组件被激活                     |                 |      |
-| deactivated()   |          | 特殊，`keep-alive` 缓存的组件被失活                     |                 |      |
-| errorCaptured() |          | 特殊                                                    |                 |      |
 
 ### computed 和 watch
 

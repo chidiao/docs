@@ -28,7 +28,7 @@ export default {
 
 function nav() {
   return [
-    { text: 'Vue', link: '/vue/' },
+    { text: 'Vue', link: '/vue/utils/' },
     { text: 'Utils', link: '/utils/' },
     { text: 'JS', link: '/js/type/array' },
     { text: 'CSS', link: '/css/' },
@@ -42,25 +42,30 @@ function sidebarVue() {
       text: 'Vue',
       collapsible: true,
       items: [
+        { text: 'start', link: '/vue/start' },
+        { text: 'state', link: '/vue/state' },
+        { text: 'lifecycle', link: '/vue/lifecycle' },
         { text: 'components', link: '/vue/components' },
-        { text: 'data', link: '/vue/data' },
-        { text: '指令', link: '/vue/directives' },
-        { text: '动画', link: '/vue/transition' },
-        { text: 'antdv', link: '/vue/antdv' },
-        { text: 'setup', link: '/vue/setup' },
+        { text: 'directives', link: '/vue/directives' },
         { text: 'style', link: '/vue/style' },
-        { text: 'bak', link: '/vue/' },
         { text: 'qa', link: '/vue/qa' }
       ]
     },
     {
+      text: 'Utils',
+      items: [
+        { text: 'utils', link: '/vue/utils/' },
+        { text: 'antdv', link: '/vue/utils/antdv' }
+      ]
+    },
+    {
       text: 'Router',
-      items: [{ text: '开始', link: '/vue/router/' }]
+      items: [{ text: 'router', link: '/vue/router/' }]
     },
     {
       text: 'Pinia',
       items: [
-        { text: '开始', link: '/vue/pinia/' },
+        { text: 'pinia', link: '/vue/pinia/' },
         { text: 'vuex', link: '/vue/pinia/vuex' }
       ]
     }
@@ -129,6 +134,7 @@ function sidebarJs() {
         { text: '几何学', link: '/js/dom/geometry' },
         { text: 'this', link: '/js/this' },
         { text: 'canvas', link: '/js/canvas' },
+        { text: 'jquery', link: '/js/jquery' },
         { text: 'mp', link: '/js/mp/qa' },
         { text: 'qa', link: '/js/qa' }
       ]

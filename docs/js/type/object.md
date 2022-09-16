@@ -4,7 +4,7 @@
 
 ```js
 let user = {
-  name: 'sunya',
+  name: 'sunyz',
   age: 27
 }
 

@@ -1,31 +1,40 @@
-# 指令
+# Directives
 
-## v-for
+## 内置指令
 
-遍历数组
+| 指令      | 作用                       |
+| --------- | -------------------------- |
+| v-text    | 绑定文本                   |
+| v-html    | 绑定 `innerHTML`           |
+| v-show    | 控制元素可见性，`display`  |
+| v-if      | 控制元素渲染               |
+| v-else-if |                            |
+| v-else    |                            |
+| v-for     | 列表渲染                   |
+| v-on      | 事件监听，`@`              |
+| v-bind    | 动态绑定参数               |
+| v-model   | 双向绑定                   |
+| v-slot    | 插槽，`#`                  |
+| v-pre     | 跳过编译，原样显示         |
+| v-once    | 只渲染一次                 |
+| v-memo    |                            |
+| v-cloak   | 非构建环境下，解决闪烁问题 |
+
+### v-for
 
 ```html
-<li v-for="(item, index) in items" :key="index">{{ item.name }}</li>
+<div v-for="(item, index) in items" :key="item.id">{{ item.name }}</div>
+<div v-for="(value, key, index) in object">{{ key }} : {{ value }}</div>
 ```
 
-遍历对象
+### v-cloak
 
-```html
-<li v-for="(value, key, index) in object">{{ key }} : {{ value }}</li>
-```
-
-## v-cloak
-
-解决模板未渲染完成而导致的页面闪烁问题
-
-`<div>` 不会显示，直到编译结束
-
-```html
-<div v-cloak>{{ message }}</div>
-```
-
-```css
+```scss
 [v-cloak] {
   display: none;
 }
+```
+
+```html
+<div v-cloak>{{ message }}</div>
 ```
