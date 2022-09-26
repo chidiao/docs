@@ -1,62 +1,8 @@
 # JavaScript
 
-## 递归
-
-简单理解：递归就是函数**自己调用自己**
-
-关键词：**套娃**、**递归深度**
-
-```js
-关键步骤
-1.写出递归公式(等价关系式)
-2.找到结束条件
-
-递归条件
-1.子问题必须与原问题'相同'，且更为简单
-2.不能无限递归，必须有个'出口'
-
-递归思想
-将一个未知问题转换为一个已解决的问题来实现
-```
-
-```js
-// 阶乘
-function pow(x, n) {
-  if (n == 1) {
-    return x
-  } else {
-    return pow(x, n - 1)
-  }
-}
-```
-
-## 闭包
-
-- **定义**：闭包是指内部函数总是可以访问其所在的外部函数中声明的变量和参数，即使在其外部函数被返回(寿命终结)了之后。
-
-- **关键词**：嵌套、返回函数、变量、词法环境
-
-```js
-function createCounter() {
-  let count = 0
-
-  function counter() {
-    count++
-    console.log(count)
-  }
-
-  return counter
-}
-
-let counter1 = createCounter()
-let counter2 = createCounter()
-
-// 每一个 counter 函数都有一个 count 变量与它维护一个独立的词法环境
-```
-
-- **缺点**：内存泄漏，页面不关闭，变量就一直在，不能被垃圾回收机制回收或者手动清除。
-
-- **应用**：私有变量、防抖、节流
+- [递归](./function#递归)
+- [闭包](./function#闭包)
+- [数据存储](./storage)
 
 ## 跨域
 
@@ -222,3 +168,7 @@ let b = 2
     return arr.indexOf(item) === index
   })
   ```
+
+## 备忘
+
+axios 并发请求

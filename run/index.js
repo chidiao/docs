@@ -1,1 +1,4 @@
-console.log(parseInt(' 123 '))
+let mp = new Set()
+
+console.log(typeof mp)
+console.log(typeof undefined)

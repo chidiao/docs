@@ -1,3 +1,5 @@
+import { sidebarJs } from './sidebarJs'
+
 export default {
   lang: 'zh-CN',
   title: 'MyDocs',
@@ -30,7 +32,7 @@ function nav() {
   return [
     { text: 'Vue', link: '/vue/utils/' },
     { text: 'Utils', link: '/utils/' },
-    { text: 'JS', link: '/js/type/array' },
+    { text: 'JS', link: '/js/types/array' },
     { text: 'CSS', link: '/css/' },
     { text: 'Nav', link: '/nav/favorite' }
   ]
@@ -98,45 +100,6 @@ function sidebarUtils() {
         { text: 'map', link: '/utils/map' },
         { text: 'git', link: '/utils/git' },
         { text: 'yarn', link: '/utils/yarn' }
-      ]
-    }
-  ]
-}
-
-function sidebarJs() {
-  return [
-    {
-      text: 'JavaScript',
-      items: [
-        { text: 'Async', link: '/js/async' },
-        { text: 'Class', link: '/js/class' },
-        { text: 'Module', link: '/js/module' },
-        { text: 'Snippets', link: '/js/snippets/' },
-        { text: 'Storage', link: '/js/storage' },
-        { text: 'Function', link: '/js/function' }
-      ]
-    },
-    {
-      text: 'Type',
-      items: [
-        { text: 'Type', link: '/js/type/index' },
-        { text: 'Number', link: '/js/type/number' },
-        { text: 'String', link: '/js/type/string' },
-        { text: 'Object', link: '/js/type/object' },
-        { text: 'Array', link: '/js/type/array' }
-      ]
-    },
-    {
-      text: '其他',
-      items: [
-        { text: 'Bom', link: '/js/dom/bom' },
-        { text: 'Dom', link: '/js/dom/dom' },
-        { text: '几何学', link: '/js/dom/geometry' },
-        { text: 'this', link: '/js/this' },
-        { text: 'canvas', link: '/js/canvas' },
-        { text: 'jquery', link: '/js/jquery' },
-        { text: 'mp', link: '/js/mp/qa' },
-        { text: 'qa', link: '/js/qa' }
       ]
     }
   ]

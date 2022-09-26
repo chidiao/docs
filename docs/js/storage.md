@@ -40,4 +40,3 @@ localStorage.length
 [js-cookie](https://github.com/js-cookie/js-cookie)
 
 [store.js](https://github.com/marcuswestin/store.js)
-
