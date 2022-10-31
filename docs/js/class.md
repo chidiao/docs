@@ -1,46 +1,119 @@
+```js
+class Star {}
+
+typeof Star // function
+```
+
 # Class
 
-`ES6` 中创建 '类' `更高级` 的语法
+类，用于创建对象的可扩展的程序代码模板
 
-需求：创建许多相同类型的对象
+为对象提供了：
 
-目的：实现可复用的对象创建代码
+- `成员变量` 的初始值
+- `成员方法` 的实现
 
 ```js
-class User {
-  constructor(name) {
+class Star {
+  constructor(name, age) {
     this.name = name
+    this.age = age
   }
 
-  sayHi() {
-    alert(this.name)
+  sing() {
+    console.log('唱')
   }
 }
+
+let cxk = new Star('蔡徐坤')
+cxk.sing()
+```
+
+## 原型
+
+对象有一个特殊的隐藏属性 `[[Prototype]]` ，它是一个对象或 `null` ，这就是 `原型` 。
+
+只能通过特殊方法进行访问，如 `__proto__`
+
+```js
+console.log(cxk.__proto__)
+```
+
+类有一个属性 `prototype` ，这个属性的值和类的实例对象的 `__proto__` 的值是同一个东西。
+
+这个东西也叫做 `原型对象`
+
+```js
+console.log(cxk.__proto__ === Kun.prototype) // true
+```
+
+原型对象有 `原型方法` 和 `constructor` 两部分组成。
+
+`constructor` 又指向了这个 `类或构造函数`
+
+```js
+console.log(Kun.prototype.constructor === Kun) // true
 ```
 
 ## 继承
 
-## 构造函数
-
-`ES5` 中创建 '类' 的方法
-
 ```js
-function User(name) {
-  this.name = name
+class Star {
+  constructor(name) {
+    this.name = name
+  }
+
+  sing() {
+    console.log('唱')
+  }
 }
 
-User.prototype.sayHi = function () {
-  alert(this.name)
+class Kun extends Star {
+  dance() {
+    console.log('跳')
+  }
+}
+
+let cxk = new Kun('蔡徐坤')
+```
+
+### super
+
+扩展父类的变量和方法
+
+```js
+class Kun extends Star {
+  constructor(name, age) {
+    super(name)
+    this.age = age
+  }
+
+  show() {
+    super.sing()
+    console.log('结束')
+  }
 }
 ```
 
-### 差异
+## 原型链
 
-`Class` 创建的函数具有特殊的内部标记 `[[IsClassConstructor]]: true`
+```js
+// cxk.__proto__ => Kun.prototype
+// Kun.prototype.__proto__ => Star.prototype
+// Star.prototype.__proto__ => Object.prototype
+// Object.prototype.__proto__ => null
+```
 
-|          | Function | Class                 |
-| -------- | -------- | --------------------- |
-| new      |          | 必须通过 `new` 来调用 |
-| 类方法   | 可枚举   | 不可枚举              |
-| strict   |          | 总是执行严格模式      |
-| 变量提升 | 可提升   | 不可提升              |
+## 构造函数
+
+```js
+function Star(name) {
+  this.name = name
+}
+
+Star.prototype.sing = function () {
+  console.log('唱')
+}
+
+let cxk = new Star('蔡徐坤')
+```

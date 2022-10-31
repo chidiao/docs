@@ -35,6 +35,14 @@ localStorage.length
 
 `sessionStorage` 与 `localStorage` 语法完全相同
 
+## 总结
+
+|                  | 生命周期                                | 存储大小 | 网络请求                                 |
+| ---------------- | --------------------------------------- | -------- | ---------------------------------------- |
+| `cookie`         | 可设置过期时间，默认浏览器关闭后过期    | 4KB 左右 | 每次 HTTP 请求都会携带 cookie 在请求头里 |
+| `localStorage`   | 除非手动清除，否则永久保留              | 5MB+     | 仅客户端存储                             |
+| `sessionStorage` | 当前标签页有效，关闭标签/浏览器就会清除 | 5MB+     | 仅客户端存储                             |
+
 ## 易用
 
 [js-cookie](https://github.com/js-cookie/js-cookie)

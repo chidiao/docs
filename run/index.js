@@ -1,4 +1,17 @@
-let mp = new Set()
+class Star {
+  constructor(name) {
+    this.name = name
+  }
 
-console.log(typeof mp)
-console.log(typeof undefined)
+  sing() {
+    console.log('唱')
+  }
+}
+
+class Kun extends Star {
+  dance() {
+    console.log('跳')
+  }
+}
+
+let cxk = new Kun('蔡徐坤')
