@@ -1,22 +1,6 @@
 # vscode
 
-## Jsconfig
-
-```json
-// jsconfig.json
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src/**/*"]
-}
-```
-
-## 禁止脚本
+## 禁止运行脚本
 
 管理员身份运行 vscode
 
@@ -30,7 +14,7 @@ get-ExecutionPolicy
 # RemoteSigned
 ```
 
-## 设置
+## 常用配置
 
 ### Auto Closing Tags
 
@@ -43,5 +27,3 @@ auto rename tags
 ### Bracket Pair Colorization
 
 括号对着色
-
-## 快捷键

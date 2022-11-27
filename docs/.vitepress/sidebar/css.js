@@ -1,5 +1,5 @@
 export function sidebarCss() {
-  let css = ['selector', 'animation', 'background', 'box', 'clip-path', 'counter', 'filter', 'transition', 'position']
+  let css = ['box', 'clip-path', 'filter', 'transition', 'position']
   let cssItems = []
   css.map((item) => {
     cssItems.push({
@@ -11,14 +11,24 @@ export function sidebarCss() {
   return [
     {
       text: 'CSS',
-      items: [{ text: '开始', link: '/css/' }, { text: 'Flex', link: '/css/flex' }, ...cssItems]
+      items: [
+        { text: 'Start', link: '/css/' },
+        { text: 'Selector', link: '/css/selector' },
+        { text: 'Flex', link: '/css/flex' },
+        { text: 'Background', link: '/css/background' },
+        { text: 'Border', link: '/css/border' },
+        { text: 'Text', link: '/css/text' },
+        ...cssItems
+      ]
     },
     {
       text: 'Utils',
       items: [
+        { text: 'Function', link: '/css/function' },
+        { text: 'Animate', link: '/css/animate' },
+        { text: 'Tailwind', link: '/css/tailwind' },
         { text: 'precss', link: '/css/precss' },
         { text: 'postcss', link: '/css/postcss' },
-        { text: 'tailwind', link: '/css/tailwind' },
         { text: 'qa', link: '/css/qa' }
       ]
     }

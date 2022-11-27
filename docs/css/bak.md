@@ -18,8 +18,6 @@
 }
 ```
 
-
-
 ## time
 
 ```scss
@@ -32,8 +30,6 @@
 }
 ```
 
-
-
 ### duration
 
 ```scss
@@ -42,8 +38,6 @@
 }
 ```
 
-
-
 ### delay
 
 ```scss
@@ -51,8 +45,6 @@
   animation-delay: 1s;
 }
 ```
-
-
 
 ## other
 
@@ -63,8 +55,6 @@
   animation-name: none;
 }
 ```
-
-
 
 ### direction
 
@@ -77,8 +67,6 @@
 | alternate         | start=>end,end=>start,start=>end (往返交替) |
 | alternate-reverse | end=>start,start=>end,end=>start (往返交替) |
 
-
-
 ```scss
 .box {
   animation-direction: normal;
@@ -88,22 +76,18 @@
 }
 ```
 
-
-
 ### fill-mode
 
 填充模式
 
 动画执行前和执行后保持什么样的状态
 
-| 值        | 描述                                |
-| --------- | ----------------------------------- |
-| none      | 默认。                              |
-| forwards  | 动画结束时(后)，保持最后一帧状态    |
-| backwards | 动画开始前(delay中)，保持第一帧状态 |
-| both      | forwards + backwards                |
-
-
+| 值        | 描述                                 |
+| --------- | ------------------------------------ |
+| none      | 默认。                               |
+| forwards  | 动画结束时(后)，保持最后一帧状态     |
+| backwards | 动画开始前(delay 中)，保持第一帧状态 |
+| both      | forwards + backwards                 |
 
 ```scss
 .box {
@@ -114,8 +98,6 @@
 }
 ```
 
-
-
 ### iteration-count
 
 动画次数
@@ -125,8 +107,6 @@
   animation-iteration-count: infinite;
 }
 ```
-
-
 
 ### timing-function
 
@@ -164,8 +144,6 @@ steps(steps, end)
 // 可以制作雪碧图动画
 ```
 
-
-
 ### play-state
 
 播放暂停
@@ -177,8 +155,6 @@ steps(steps, end)
 }
 ```
 
-
-
 ## @keyframes
 
 关键帧
@@ -186,7 +162,7 @@ steps(steps, end)
 ```scss
 @keyframes slidein {
   from {
-    transform: translateX(0%); 
+    transform: translateX(0%);
   }
 
   to {
@@ -199,3 +175,32 @@ steps(steps, end)
 // to（与 100% 相同）
 ```
 
+# counter
+
+```html
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+```
+
+```scss
+ul {
+  counter-reset: test 0;
+}
+
+li {
+  counter-increment: test 1;
+}
+
+li::before {
+  content: counter(test);
+}
+```
+
+`reset` 定义计数器及初始值
+
+`increment` 指定计数器及其步进值
+
+`counter()` 计算结果值

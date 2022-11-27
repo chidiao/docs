@@ -20,7 +20,7 @@
 
 - transform
 
-- [animation](./animation)
+- [animate](./animate)
 
 - 渐变
 

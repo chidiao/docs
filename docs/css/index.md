@@ -4,25 +4,25 @@
 
 - [You need to know](https://lhammer.cn/You-need-to-know-css/#/zh-cn/)
 
-### ellipsis
+## 代码
 
-文本截断
+- [Free Frontend](https://freefrontend.com/)
 
-```scss
-.text-cut {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
+- [UIverse](https://uiverse.io/)
 
-.text-cut3 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-```
+- [Get Waves](https://getwaves.io/)
+
+- [Border Radius](https://9elements.github.io/fancy-border-radius/)
+
+- [Clip Path](https://www.html.cn/tool/css-clip-path/)
+
+## 素材
+
+- [unDraw](https://undraw.co/illustrations)
+
+- [LottieFiles](https://lottiefiles.com/)
+
+## 备注
 
 ### 视差滚动
 
