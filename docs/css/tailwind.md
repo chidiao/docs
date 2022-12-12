@@ -35,17 +35,19 @@
 4. script
 
    ```bash
-   yarn tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+   tailwindcss -i ./src/input.css -o ./dist/output.css --watch
    ```
 
 ## Components
 
-[Tail-kit](https://www.tailwind-kit.com/components)
+[Tailkit](https://www.tailwind-kit.com/)
 
-[Meraki UI](https://merakiui.com/#main)
+[Meraki](https://merakiui.com/)
 
-[Tails](https://devdojo.com/tails/app)
-
-[kutty](https://kutty.netlify.app/components)
+[MyNaui](https://mynaui.com/)
 
 [Flowbite](https://flowbite.com/)
+
+## Plugins
+
+[DaisyUI](https://daisyui.com/)

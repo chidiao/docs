@@ -4,7 +4,7 @@ export function sidebarVue() {
       text: 'Vue',
       collapsible: true,
       items: [
-        { text: 'start', link: '/vue/start' },
+        { text: 'Start', link: '/vue/' },
         { text: 'state', link: '/vue/state' },
         { text: 'lifecycle', link: '/vue/lifecycle' },
         { text: 'components', link: '/vue/components' },
@@ -16,6 +16,7 @@ export function sidebarVue() {
     {
       text: 'Utils',
       items: [
+        { text: 'Vite', link: '/vue/utils/vite' },
         { text: 'utils', link: '/vue/utils/' },
         { text: 'antdv', link: '/vue/utils/antdv' }
       ]

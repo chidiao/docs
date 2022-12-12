@@ -2,6 +2,7 @@ import { sidebarVue } from './sidebar/vue'
 import { sidebarReact } from './sidebar/react'
 import { sidebarJs } from './sidebar/js'
 import { sidebarCss } from './sidebar/css'
+import { sidebarMp } from './sidebar/mp'
 import { sidebarUtils } from './sidebar/utils'
 import { sidebarNav } from './sidebar/nav'
 
@@ -18,9 +19,10 @@ export default {
     sidebar: {
       '/vue/': sidebarVue(),
       '/react/': sidebarReact(),
-      '/utils/': sidebarUtils(),
       '/js/': sidebarJs(),
       '/css/': sidebarCss(),
+      '/mp/': sidebarMp(),
+      '/utils/': sidebarUtils(),
       '/nav/': sidebarNav()
     },
     footer: {
@@ -33,9 +35,10 @@ export default {
 function nav() {
   return [
     { text: 'Vue', link: '/vue/utils/' },
-    { text: 'Utils', link: '/utils/' },
     { text: 'JS', link: '/js/types/array' },
     { text: 'CSS', link: '/css/' },
+    { text: 'MP', link: '/mp/' },
+    { text: 'Utils', link: '/utils/' },
     { text: 'Nav', link: '/nav/favorite' }
   ]
 }
