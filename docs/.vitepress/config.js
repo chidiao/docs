@@ -37,7 +37,7 @@ function nav() {
     { text: 'Vue', link: '/vue/utils/' },
     { text: 'JS', link: '/js/types/array' },
     { text: 'CSS', link: '/css/' },
-    { text: 'MP', link: '/mp/' },
+    { text: 'MP', link: '/mp/wx' },
     { text: 'Utils', link: '/utils/' },
     { text: 'Nav', link: '/nav/favorite' }
   ]
