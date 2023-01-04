@@ -1,8 +1,57 @@
-# JavaScript
+# 其他
 
-- [递归](./function#递归)
-- [闭包](./function#闭包)
-- [数据存储](./storage)
+## 递归
+
+函数通过调用自身来解决问题，这就是递归。
+
+简单来说就是，`函数自己调用自己` 。
+
+```js
+递归思想
+将一个未知问题转换为一个已解决的问题来实现
+
+递归条件
+1.子问题必须与原问题'相同'，且更为简单
+2.不能无限递归，必须有个'出口'
+
+两个要素
+1.递归公式(等价关系式)
+2.结束条件
+```
+
+```js
+// 阶乘
+function pow(x, n) {
+  if (n == 1) {
+    return x
+  } else {
+    return pow(x, n - 1)
+  }
+}
+```
+
+## 闭包
+
+闭包是指一个函数可以记住其外部变量并可访问这些变量。
+
+外部变量还包括其外部函数的参数
+
+```js
+function createCounter() {
+  let count = 0
+
+  function counter() {
+    count++
+    console.log(count)
+  }
+
+  return counter
+}
+
+let counter = createCounter()
+// 每次调用都会创建一个新的词法环境，用来存储变量
+// 函数总是可以记住并访问这个词法环境里的变量
+```
 
 ## 跨域
 
@@ -168,7 +217,3 @@ let b = 2
     return arr.indexOf(item) === index
   })
   ```
-
-## 备忘
-
-axios 并发请求

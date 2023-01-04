@@ -1,5 +1,31 @@
 # Number
 
+数字：包括整数和小数，但都是以浮点数形式进行存储的。
+
+```ts
+let age: number = 18
+```
+
+## toString(base)
+
+进制转换
+
+返回给定(进制)的字符串
+
+```js
+num.toString(base)
+
+let num = 255
+
+num.toString() // '255'
+num.toString(16) // 'ff'
+num.toString(2) // '11111111'
+```
+
+## 精度损失
+
+## ----bak----
+
 ## 方法
 
 ### toString()

@@ -3,40 +3,26 @@ export function sidebarJs() {
     {
       text: 'JavaScript',
       items: [
-        { text: 'start', link: '/js/' },
-        { text: 'bom', link: '/js/dom/bom' },
-        { text: 'dom', link: '/js/dom/dom' },
-        { text: 'event', link: '/js/event' },
-        { text: 'geometry', link: '/js/dom/geometry' },
-        { text: 'storage', link: '/js/storage' },
-        { text: 'async', link: '/js/async' },
-        { text: 'class', link: '/js/class' },
-        { text: 'module', link: '/js/module' },
-        { text: 'function', link: '/js/function' }
-      ]
-    },
-    {
-      text: 'Types',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        { text: 'Types', link: '/js/types/index' },
-        { text: 'String', link: '/js/types/string' },
-        { text: 'Number', link: '/js/types/number' },
-        { text: 'Object', link: '/js/types/object' },
-        { text: 'Array', link: '/js/types/array' },
-        { text: 'Map', link: '/js/types/map' },
-        { text: 'Set', link: '/js/types/set' }
+        { text: '开始', link: '/js/' },
+        { text: 'Bom', link: '/js/dom/bom' },
+        { text: 'Dom', link: '/js/dom/dom' },
+        { text: 'Event', link: '/js/event' },
+        { text: 'Geometry', link: '/js/dom/geometry' },
+        { text: 'Storage', link: '/js/storage' },
+        { text: 'Async', link: '/js/async' },
+        { text: 'Class', link: '/js/class' },
+        { text: 'Module', link: '/js/module' },
+        { text: 'Function', link: '/js/function' },
+        { text: 'Window', link: '/js/window' }
       ]
     },
     {
       text: 'Other',
       items: [
-        { text: 'snippets', link: '/js/snippets/' },
-        { text: 'canvas', link: '/js/canvas' },
-        { text: 'jquery', link: '/js/jquery' },
-        { text: 'mp', link: '/js/mp/qa' },
-        { text: 'qa', link: '/js/qa' }
+        { text: '其他', link: '/js/other' },
+        { text: '代码段', link: '/js/snippets/' },
+        { text: 'Canvas', link: '/js/canvas' },
+        { text: 'jQuery', link: '/js/jquery' }
       ]
     }
   ]

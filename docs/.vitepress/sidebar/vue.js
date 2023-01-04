@@ -14,22 +14,19 @@ export function sidebarVue() {
       ]
     },
     {
-      text: 'Utils',
+      text: '全家桶',
       items: [
-        { text: 'Vite', link: '/vue/utils/vite' },
-        { text: 'utils', link: '/vue/utils/' },
-        { text: 'antdv', link: '/vue/utils/antdv' }
+        { text: 'Vite', link: '/vue/vite/' },
+        { text: 'Router', link: '/vue/vite/router' },
+        { text: 'Pinia', link: '/vue/vite/pinia' },
+        { text: 'Vuex', link: '/vue/vite/vuex' }
       ]
     },
     {
-      text: 'Router',
-      items: [{ text: 'router', link: '/vue/router/' }]
-    },
-    {
-      text: 'Pinia',
+      text: 'Utils',
       items: [
-        { text: 'pinia', link: '/vue/pinia/' },
-        { text: 'vuex', link: '/vue/pinia/vuex' }
+        { text: 'utils', link: '/vue/utils/' },
+        { text: 'antdv', link: '/vue/utils/antdv' }
       ]
     }
   ]

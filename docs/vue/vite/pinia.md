@@ -1,10 +1,14 @@
 # Pinia
 
-[Pinia](https://pinia.vuejs.org/)
+[pinia](https://pinia.vuejs.org/zh/)
 
-```bash
+```sh
 yarn add pinia
 ```
+
+## 开始
+
+main.js
 
 ```js
 import { createPinia } from 'pinia'
@@ -14,6 +18,29 @@ app.use(pinia)
 ```
 
 ## Store
+
+```js
+import { defineStore } from 'pinia'
+
+const useMyStore = defineStore('mystore', {
+  state() {
+    return {
+      count: 10
+    }
+  },
+  actions: {
+    setCount() {
+      this.count++
+    }
+  }
+})
+
+export useMyStore
+```
+
+## ----bak----
+
+### Store
 
 创建 store
 
@@ -63,7 +90,7 @@ const counterStore = useCounterStore()
 const { count, doubleCount } = storeToRefs(counterStore)
 ```
 
-## State
+### State
 
 `data`
 
@@ -123,11 +150,3 @@ export default {
   }
 }
 ```
-
-## Getters
-
-`computed`
-
-## Actions
-
-`methods`

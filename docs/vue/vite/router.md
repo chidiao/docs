@@ -1,52 +1,43 @@
 # Router
 
-4.x
+[router](https://router.vuejs.org/zh/)
+
+## 开始
+
+router@3 适配 vue@2
 
 ```js
-const router = createRouter({
-  history,
-  routes,
-  scrollBehavior
-})
-```
+import Vue from 'vue'
+import Router from 'vue-router'
 
-3.x
+Vue.use(Router)
 
-```js
 const router = new VueRouter({
-  mode,
+  mode: 'hash', // 'hash' || 'history'
   routes,
   scrollBehavior
 })
+
+export default router
 ```
 
-## history
-
-4.x
+router@4 适配 vue@3
 
 ```js
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 
-cosnt router = createRouter({
-  history: createWebHashHistory()
-})
-
 const router = createRouter({
-  history: createWebHistory()
+  history: createWebHashHistory(), // createWebHashHistory() || createWebHistory()
+  routes,
+  scrollBehavior
 })
+
+export default router
 ```
 
-3.x
+## Routes
 
-```js
-const router = new VueRouter({
-  mode: 'hash'
-})
-
-const router = new VueRouter({
-  mode: 'history'
-})
-```
+-- 分隔线 --
 
 ## scrollBehavior
 
