@@ -1,150 +1,44 @@
 # JavaScript
 
-## 索引
+**Any application that can be written in JavaScript, will eventually be written in JavaScript.**
 
-- [递归](./function#递归)
+**任何可以用 JavaScript 来写的应用，最终都将用 JavaScript 来写。**
 
-- [闭包](./function#闭包)
+## ES5
 
-- [存储](./storage)
+### 严格模式
 
+## ES6
+
+ES 的全称是 ECMAScript，它是由 ECMA 国际标准化组织 制定的一套**脚本语言的标准化规范**。
+
+**ES6 实际上是一个泛指，泛指 ES 2015 及后续的版本**。
+
+ES6 新特性：
+
+- [变量](./var)
+- 扩展运算符
+- 解构赋值
+- 模板字符串
+- 箭头函数
+- 对象属性同名简写
+- [本地存储](./storage)
+- [Promise](./async)
+- [Class](./class)
+
+## 进阶
+
+- [递归](./function)
+- [闭包](./function)
 - [垃圾回收]()
 
-## 随手记
+### 随手记
 
 对象只能用 `for in`
 
 能用 `for of` 的对象叫做可迭代对象。
 
 有索引又有 `length` 的又叫做类数组对象。
-
-## 待补课
-
-axios 并发请求
-
-## 待归档
-
-### 跨域
-
-- 同源策略
-
-  同源是指"协议+域名+端口"三者相同，同源策略主要是来防止**CSRF**攻击的
-
-  AJAX 请求不能发送
-
-- 生产环境跨域
-
-  ```js
-  // vue.config.js
-  module.exports = {
-    devServer: {
-      port: 8080,
-      proxy: {
-        '/api': {
-          target: 'https://m.maoyan.com',
-          changeOrigin: true,
-          pathRewrite: {
-            '^/api': ''
-          }
-        }
-      }
-    }
-  }
-
-  // http.js
-  const baseURL = process.env.NODE_ENV == 'development' ? '/api' : 'https://m.maoyan.com'
-  ```
-
-- CORS
-
-CORS 是一个 W3C 标准，全称**跨域资源共享**
-
-CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE 除外。
-
-整个 CORS 通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS 通信与同源的 AJAX 通信没有差别，代码完全一样。浏览器一旦发现 AJAX 请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。
-
-因此，实现 CORS 通信的关键是服务器。只要服务器实现了 CORS 接口，就可以跨源通信。
-
-- Jsonp
-
-### 状态码
-
-| 状态码 | 原因                  | 详情                                     |
-| ------ | --------------------- | ---------------------------------------- |
-| 2XX    | Success               | 成功状态码                               |
-| 200    | OK                    | 成功                                     |
-|        |                       |                                          |
-| 4XX    | Client Error          | 客户端错误状态码                         |
-| 400    | Bad Request           | 请求报文存在语法错误                     |
-| 401    | Unauthorized          | 需要认证信息                             |
-| 403    | Forbidden             | 被服务端拒绝，不被允许，没有权限等       |
-| 404    | Not Found             | 无法找到请求的资源，可能是请求的地址错误 |
-| 405    | Method Not Allowed    | 请求方式被拒绝                           |
-|        |                       |                                          |
-| 5XX    | Server Error          | 服务器错误状态码                         |
-| 500    | Internal Server Error | 服务端错误                               |
-| 502    | Bad Gateway           | 服务器或者代理相应无效                   |
-| 503    | Service Unavailable   | 无法处理请求，超负载或停机维护           |
-
-### Ajax
-
-- Ajax 异步的 JavaScript 和 XMLHttpRequest，特性：异步，局部刷新页面，它是异步请求一类技术的统称。
-- Axios 基于 Promise 的网络请求库，基于 XHR 进行二次封装的工具库，是 Ajax 的封装和实现。
-- Fetch 新的获取资源的浏览器接口 等同于 XHR，提供了许多相同功能，并且更具扩展性和高效性。
-- Axios 和 Fetch 都属与 Ajax 的范畴，一个传统 (XHR)，一个现代的实现。
-
-### Get/Post
-
-| 区别 | Get                                           | Post                                       |
-| ---- | --------------------------------------------- | ------------------------------------------ |
-| 作用 | 获取资源                                      | 提交资源                                   |
-| 参数 | 暴露在 `URL` 中，只接受 `ASCII 字符` 数据类型 | 包含在 `request body` 中，数据类型不受限制 |
-| 长度 | 2k                                            | 不受限制                                   |
-| 缓存 | 浏览器主动缓存                                | 不缓存，除非手动设置                       |
-
-### ES6
-
-```js
-// 扩展运算符
-let arr = [...arr1, ...arr2, ...arr3]
-let obj = {
-  ...res.data
-}
-
-// 解构赋值
-let { count } = this.data
-
-// 模板字符串
-let str = `name: ${obj.name}`
-
-// 箭头函数
-
-// 同名简写
-let obj = {
-  name,
-  age
-}
-
-// Promise
-
-// class
-```
-
-- **变量**：`let` 、`const`
-
-|         | 作用域                   | 变量提升 | 重复声明 | 特别                   |
-| ------- | ------------------------ | -------- | -------- | ---------------------- |
-| `var`   | 全局作用域 或 函数作用域 | ✔        | ✔        |                        |
-| `let`   | 块级作用域               | ✖        | ✖        |                        |
-| `const` | 块级作用域               | ✖        | ✖        | 必须有初始值，不可修改 |
-
-```js
-// 变量提升
-console.log(a) // undefined
-console.log(b) // ReferenceError
-var a = 1
-let b = 2
-```
 
 ### 数组去重
 

@@ -17,3 +17,12 @@ yarn add -D tailwindcss postcss autoprefixer
 
 yarn tailwindcss init -p
 ```
+
+## 待补课
+
+component 动态组件
+
+```html
+<component :is="currentTab"></component>
+```
+

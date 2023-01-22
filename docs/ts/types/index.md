@@ -4,9 +4,9 @@
 
 ## Number
 
-数字。整数和浮点数。超出安全整数范围会出现精度问题。
+[Number](/ts/types/number)
 
-特殊值：`Infinity` 、`-Infinity` 、`NaN`
+数字。包括整数和浮点数。
 
 ## BigInt
 
@@ -14,11 +14,17 @@
 
 ## String
 
+[String](/ts/types/string)
+
 字符串。
 
 ## Boolean
 
 `true` 和 `false`
+
+```ts
+let isDone: boolean = false
+```
 
 ## null
 

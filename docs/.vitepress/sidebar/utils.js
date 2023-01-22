@@ -3,10 +3,11 @@ export function sidebarUtils() {
     {
       text: 'Utils',
       items: [
-        { text: 'axios', link: '/utils/axios' },
+        { text: 'Axios', link: '/utils/axios' },
+        { text: 'Dayjs', link: '/utils/dayjs' },
+        { text: 'Clipboard', link: '/utils/clipboard' },
         { text: 'lodash', link: '/utils/lodash' },
         { text: 'swiper', link: '/utils/swiper' },
-        { text: 'dayjs', link: '/utils/dayjs' },
         { text: 'mock', link: '/utils/mock' },
         { text: 'gsap', link: '/utils/gsap' },
         { text: 'map', link: '/utils/map' }

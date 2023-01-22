@@ -1,63 +1,77 @@
-# Day.js
+# Dayjs
 
-## Date
+[Date](/ts/types/date)
 
-内置对象，存储日期和时间，并提供了管理方法
+[Dayjs](https://dayjs.gitee.io/zh-CN/)
 
-**创建**
-
-```js
-// 无参数，当前时间
-let now = new Date()
-
-// 字符串，被解析
-new Date(str)
-let d = new Date('2017-01-26')
-
-// 多参数
-new Date(year, month, date, hours, minutes, seconds, ms)
+```sh
+yarn add dayjs
 ```
 
-**访问**
+## 解析
+
+将不同格式的时间转换为 dayjs 的时间对象
 
 ```js
-// 获取年份
-getFullYear()
+let now = dayjs()
 
-// 获取月份 0-11
-getMonth()
+// Date
+dayjs(new Date())
 
-// 获取日期 1-31
-getDate()
+// 字符串
+dayjs('2018-04-04T16:00:00.000Z')
 
-// 获取周几 0-6
-getDay()
-
-// 获取时间戳
-getTime()
-
-// 获取时分秒
-getHours()
-getMinutes()
-getSeconds()
-getMilliseconds()
+// 字符串 + 格式
+dayjs('12-25-1995', 'MM-DD-YYYY')
 ```
 
-## Day.js
-
-[Day.js](https://dayjs.gitee.io/zh-CN/)
-
-| 占位符 | 详情 | 关联        |
-| ------ | ---- | ----------- |
-| `Y`    | 年份 | getFullYear |
-| `M`    | 月份 | getMonth    |
-| `D`    | 日期 | getDate     |
-| `d`    | 周几 | getDay      |
-| `H`    | 时   | getHours    |
-| `m`    | 分   | getMinutes  |
-| `s`    | 秒   | getSeconds  |
+## GET
 
 ```js
-let now = dayjs().format('YYYY-MM-DD HH:mm:ss')
+let now = dayjs()
+
+now.get('year')
+now.get('month')
+now.get('date')
+now.get('day')
+now.get('hour')
+now.get('minute')
+now.get('second')
+now.get('millisecond')
+
+now.year()
+now.month()
+now.date()
 ```
 
+## SET
+
+```js
+let now = dayjs()
+
+now.set('year', 2000).set('month', 1).set('date', 1)
+
+now.year(2000)
+now.month(1)
+now.date(1)
+```
+
+## 显示
+
+格式化，用指定格式来显示时间
+
+```js
+let now = dayjs()
+
+let date = now.format('YYYY-MM-DD HH:mm:ss')
+```
+
+| 占位符 | 描述  | Dayjs    | Date        |
+| ------ | ----- | -------- | ----------- |
+| `Y`    | 年    | `year`   | getFullYear |
+| `M`    | 月    | `month`  | getMonth    |
+| `D`    | 日/月 | `date`   | getDate     |
+| `d`    | 天/周 | `day`    | getDay      |
+| `H`    | 时    | `hour`   | getHours    |
+| `m`    | 分    | `minute` | getMinutes  |
+| `s`    | 秒    | `second` | getSeconds  |

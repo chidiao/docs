@@ -13,12 +13,14 @@ export function sidebarJs() {
         { text: 'Class', link: '/js/class' },
         { text: 'Module', link: '/js/module' },
         { text: 'Function', link: '/js/function' },
-        { text: 'Window', link: '/js/window' }
+        { text: 'Window', link: '/js/window' },
+        { text: 'Prototype', link: '/js/prototype' }
       ]
     },
     {
       text: 'Other',
       items: [
+        { text: '变量', link: '/js/var' },
         { text: '其他', link: '/js/other' },
         { text: '代码段', link: '/js/snippets/' },
         { text: 'Canvas', link: '/js/canvas' },

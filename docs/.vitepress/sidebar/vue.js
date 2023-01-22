@@ -4,11 +4,11 @@ export function sidebarVue() {
       text: 'Vue',
       collapsible: true,
       items: [
-        { text: 'Start', link: '/vue/' },
-        { text: 'state', link: '/vue/state' },
-        { text: 'lifecycle', link: '/vue/lifecycle' },
-        { text: 'components', link: '/vue/components' },
-        { text: 'directives', link: '/vue/directives' },
+        { text: '开始', link: '/vue/' },
+        { text: '数据', link: '/vue/state' },
+        { text: '生命周期', link: '/vue/lifecycle' },
+        { text: '组件', link: '/vue/components' },
+        { text: '指令', link: '/vue/directives' },
         { text: 'style', link: '/vue/style' },
         { text: 'qa', link: '/vue/qa' }
       ]
