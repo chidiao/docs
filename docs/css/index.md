@@ -29,3 +29,7 @@
 - background-attachment
 
 - transform: translate3D
+
+### 新特性
+
+- aspect-ratio

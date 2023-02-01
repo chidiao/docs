@@ -4,7 +4,8 @@ export function sidebarReact() {
       text: 'React',
       items: [
         { text: '开始', link: '/react/' },
-        { text: 'hook', link: '/react/hook' }
+        { text: 'Class', link: '/react/class' },
+        { text: 'Hook', link: '/react/hook' }
       ]
     },
     {
