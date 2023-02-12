@@ -1,85 +1,46 @@
 # Box
 
-## 盒子模型
-
-对文档进行布局的时候，将所有元素表示为一个个矩形的盒子
-
-盒子有四部分组成：`margin` 、`border` 、`padding` 、`content`
-
-通过这些属性，来决定盒子的大小、位置、属性等。
-
 ## margin
 
-```scss
+外边距：元素外部空出的空间
+
+```less
 .box {
-  margin: auto;
-  margin: 10%;
-}
-
-// 百分比基于父元素 width
-```
-
-**合并**
-
-两个 `垂直外边距` 相遇时，合并成一个外边距
-
-合并结果
-
-1. 两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。
-2. 两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
-3. 两个外边距一正一负时，折叠结果是两者的相加的和。
-
-合并条件
-
-1. 垂直外边距
-2. 常规文档流，非 float 和绝对定位盒子
-3. 无 border 和 padding 隔绝
-4. 等等
-
-**父子合并**
-
-垂直外边距相遇，取较大值
-
-30px + 10px = 30px
-
-```html
-<div class="parent" style="margin-top: 10px;">
-  <div class="child" style="margin-top: 30px;"></div>
-</div>
-```
-
-**兄弟合并**
-
-垂直外边距相遇，取较大值
-
-30px + 10px = 30px
-
-```html
-<div class="parent">
-  <div class="child" style="margin-bottom: 30px;"></div>
-  <div class="child" style="margin-top: 10px;"></div>
-</div>
-```
-
-## border
-
-```scss
-.box {
-  border-width: 1px;
-  border-style: solid;
-  border-color: pink;
-  border: 1px solid pink;
+  margin: 0; // 初始值
+  margin: 0 auto;
+  margin: 100%; // 百分比基于父元素宽度
 }
 ```
 
 ## padding
 
-```scss
+内边距：元素内容与边框之间的空间
+
+```less
 .box {
-  padding: 10%;
+  padding: 0; // 初始值
+  padding: 100%; // 百分比基于父元素宽度
+}
+```
+
+## border
+
+边框
+
+```less
+.box {
+  border-width: 1px;
+  border-style: solid;
+  border-color: pink;
+  // 可传入多个参数来同时设定4条边框
 }
 
-// 百分比基于元素 width
+.box {
+  border: 1px solid pink;
+  border-top: 1px solid pink;
+  border-bottom: 1px solid pink;
+  // 同时指定4条边框或单独设定指定边框
+}
 ```
 
 ## shadow
@@ -108,4 +69,45 @@
 // 标准盒模型：content-box(默认值)
 // content-box: width = content
 // border-box: width = border + content
+```
+
+## 盒子模型
+
+## 居中
+
+## 外边距合并
+
+元素的上外边距和下外边距有时会合并/重叠为单个边距，其大小取最大值。
+
+float 和 absolute 的元素不会发生外边距合并。
+
+三种情况(垂直方向)：
+
+- 兄弟/相邻元素之间合并。(清除浮动解决)
+
+```html
+<div class="parent">
+  <div class="child mb-2">child</div>
+  <div class="child mt-4">child</div>
+</div>
+```
+
+- 没有内容将父元素与子元素分开。(border、padding、content 等可分割的内容)
+
+```html
+<div class="parent mt-2">
+  <div class="child mt-4">child</div>
+</div>
+```
+
+- 空的块级元素。
+
+  没有内容不光自己的上下边距会合并，甚至进一步和兄弟继续合并。
+
+```html
+<div class="mb-2"></div>
+<div class="mt-2 mb-2"></div>
+<div class="mt-2"></div>
+
+<!-- 实际总外边距为 2 -->
 ```

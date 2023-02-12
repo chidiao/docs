@@ -1,54 +1,98 @@
 # Git
 
-## 快速配置
+## 配置
 
-```bash
+```sh
 # 全局配置
 git config --global user.name "孙颖洲"
 git config --global user.email "sunyz94123@qq.com"
 
-# 生成SSH公钥
-ssh-keygen -t rsa -C 'chidiao'
+# 生成公钥(公钥名是可以随意指定的)
+ssh-keygen -t rsa -C 'mgb'
 
 # 测试公钥
 ssh -T git@gitee.com
-```
-
-注意：生成公钥设置的参数并不是邮箱地址，只是公钥的名字，可以随意指定
-
-## 快速上手
-
-```bash
-# 初始化仓库
-git init
-
-# 提交修改到暂存区
-git add .
-
-# 提交暂存区到仓库
-git commit -m 'init'
 
 # 配置远程仓库
-git remote add origin git@gitee.com:chidiao/study.git
+git remote add origin sunyz.git
 
-# 推送到远程仓库
+# 配置默认推送
 git push -u origin master
 ```
 
-## 使用手册
+## 提交
 
-```bash
+```sh
+# 初始化仓库
+git init
+
+# 查看修改状态
+git status
+
+# 产看修改内容
+git diff
+
+# 撤销修改(工作区)
+git checkout -- <file>
+
+# 提交修改到暂存区
+git add <file>
+git add .
+
+# 从暂存区撤销提交
+git restore <file>
+
+# 提交暂存区到仓库
+git commit -m <msg>
+git commit -m 'init'
+```
+
+删除文件
+
+删除工作区中的文件，版本库中仍存有文件，提交到暂存，同步修改。
+
+使用 `git rm` 等效于，删除加提交到暂存。
+
+```sh
+1. <delete> <file>
+2. git add <file>
+3. git commit -m 'del'
+
+1. git rm <file>
+2. git commit -m 'del'
+```
+
+## 回退
+
+回退可以指定版本：
+
+`HEAD` 当前版本，`HEAD^` 上一个，`HEAD^^` 上上个，`HEAD~100` 上 100 个。
+
+也可以指定 `commit id` ，并不需要输完整。
+
+```sh
+# 查看记录
+git log
+git log --pretty=oneline
+
+# 回退到指定版本
+git reset --hard HEAD^
+git reset --hard 1094a
+```
+
+## 远程
+
+```sh
 # 查看远程仓库
 git remote -v
 
 # 添加远程仓库
-git remote add <shortname> <url>
-git remote add one 1st.git
-git remote add two 2nd.git
+git remote add <name> <url>
+git remote add test test.git
 
 # 移除远程仓库
-git remote remove <shortname>
-git remote remove laji
+git remote remove <name>
+git remote remove test
 
 # 拉取
 git fetch <remote>
@@ -58,7 +102,12 @@ git fetch origin
 git push <remote> <branch>
 git push origin master
 
-# 默认
+# 配置默认推送
 git push -u origin master
 git push
+
+# 克隆
+git clone <url> <name>
 ```
+
+## 分支

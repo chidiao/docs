@@ -36,8 +36,8 @@ export default {
 
 function nav() {
   return [
-    { text: 'Vue', link: '/vue/utils/' },
-    { text: 'React', link: '/react/' },
+    { text: 'Vue', link: '/vue/' },
+    // { text: 'React', link: '/react/' },
     { text: 'JS', link: '/js/' },
     { text: 'TS', link: '/ts/types/' },
     { text: 'CSS', link: '/css/' },

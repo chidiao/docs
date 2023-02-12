@@ -9,17 +9,18 @@ export function sidebarUtils() {
         { text: 'lodash', link: '/utils/lodash' },
         { text: 'swiper', link: '/utils/swiper' },
         { text: 'mock', link: '/utils/mock' },
-        { text: 'gsap', link: '/utils/gsap' },
+        { text: 'Gsap', link: '/utils/gsap' },
         { text: 'map', link: '/utils/map' }
       ]
     },
     {
       text: 'Config',
       items: [
-        { text: 'git', link: '/utils/git' },
-        { text: 'yarn', link: '/utils/yarn' },
-        { text: 'prettier', link: '/utils/prettier' },
-        { text: 'vscode', link: '/utils/vscode' }
+        { text: 'Vite', link: '/utils/vite' },
+        { text: 'Prettier', link: '/utils/prettier' },
+        { text: 'Git', link: '/utils/git' },
+        { text: 'Yarn', link: '/utils/yarn' },
+        { text: 'VScode', link: '/utils/vscode' }
       ]
     }
   ]

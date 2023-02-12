@@ -1,53 +1,53 @@
 # 收藏夹
 
-## 软件站
+## 资源
 
-[鹏少](https://www.jokerps.com/)
+- [鹏少资源网](https://vip.jokerps.com/)
 
-[鹏少 VIP](https://vip.jokerps.com/)
+## 软件
 
-## 鸡场
+- [微 PE](https://www.wepe.com.cn/)
 
-[Clash](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+- [系统激活](https://cmwtat.cloudmoe.com/cn.html)
 
-[几鸡](https://j01.best/)
+- [OTP](https://otp.landian.vip/zh-cn/)
 
-[极客云](https://jike0001.com/)
+- [Geek](https://geekuninstaller.com/)
+
+- [Bandzip](https://www.bandisoft.com/)
+
+- [Snipaste](https://zh.snipaste.com/)
+
+- [Utools](https://www.u-tools.cn/)
+
+- [Lively](https://www.rocksdanister.com/lively/)
+
+- [Listen1](http://listen1.github.io/listen1/)
+
+- [PicGo](https://molunerfinn.com/PicGo/)
+
+## 开发
+
+- [Node](https://nodejs.org/en/)
+
+- [Git](https://git-scm.com/)
+
+- [VScode](https://code.visualstudio.com/)
+
+```sh
+# 官方源
+https://az764295.vo.msecnd.net/stable/xxx.exe
+
+# 镜像源
+https://vscode.cdn.azure.cn
+```
+
+## 梯子
+
+- [Clash](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+
+- [Steam++](https://steampp.net/)
 
 ## 游戏
 
-[Steam++](https://steampp.net/)
-
-[CSBTE FINAL](https://tieba.baidu.com/p/4174381826)
-
-## 装机必备
-
-[WePE 工具箱](https://www.wepe.com.cn/)
-
-[Win10 激活工具](https://cmwtat.cloudmoe.com/cn.html)
-
-[Office 部署工具](https://otp.landian.vip/zh-cn/)
-
-[Geek 卸载工具](https://geekuninstaller.com/)
-
-[Bandzip 压缩工具](https://www.bandisoft.com/)
-
-[Snipaste 截图工具](https://zh.snipaste.com/)
-
-[Utools 效率工具](https://www.u-tools.cn/)
-
-[Lively 动态壁纸](https://rocksdanister.github.io/lively/)
-
-[Listen 音乐软件](http://listen1.github.io/listen1/)
-
-[PicGo 图片上传](https://molunerfinn.com/PicGo/)
-
-## 开发工具
-
-[Git](https://git-scm.com/)
-
-[Nodejs](https://nodejs.org/)
-
-[VScode](https://code.visualstudio.com/)
-
-[DevSidecar](https://gitee.com/keysnick/dev-sidecar)
+- [CSBTE](https://tieba.baidu.com/p/4174381826)

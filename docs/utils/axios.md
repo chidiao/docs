@@ -10,8 +10,9 @@ yarn add axios
 
 ## 基本用法
 
-```js
-// promise
+::: code-group
+
+```js [promise]
 axios
   .get('/user?id=123')
   .then((res) => {
@@ -23,8 +24,9 @@ axios
   .then(() => {
     // always
   })
+```
 
-// async
+```js [async]
 async function getUser() {
   try {
     let res = await axios.get('/user?id=123')
@@ -35,6 +37,8 @@ async function getUser() {
   // always
 }
 ```
+
+:::
 
 ## GET
 
@@ -232,8 +236,6 @@ http.interceptors.response.use(
 
 export default http
 ```
-
-## -- More --
 
 ## HTTP
 

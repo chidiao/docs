@@ -1,7 +1,7 @@
 export function sidebarCss() {
   return [
     {
-      text: 'Base',
+      text: 'CSS',
       items: [
         { text: 'Start', link: '/css/' },
         { text: 'Selector', link: '/css/selector' },
@@ -13,17 +13,18 @@ export function sidebarCss() {
         { text: 'ClipPath', link: '/css/clip-path' },
         { text: 'Filter', link: '/css/filter' },
         { text: 'Position', link: '/css/position' },
-        { text: 'Transform', link: '/css/transform' }
+        { text: 'Function', link: '/css/function' },
+        { text: 'Animate', link: '/css/animate' },
+        { text: 'Transform', link: '/css/transform' },
+        { text: 'Backup', link: '/css/bak' }
       ]
     },
     {
       text: 'Utils',
       items: [
-        { text: 'Function', link: '/css/function' },
-        { text: 'Animate', link: '/css/animate' },
+        { text: 'BEM', link: '/css/bem' },
         { text: 'Tailwind', link: '/css/tailwind' },
-        { text: 'PostCSS', link: '/css/postcss' },
-        { text: 'Backup', link: '/css/bak' }
+        { text: 'PostCSS', link: '/css/postcss' }
       ]
     }
   ]

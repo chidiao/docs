@@ -1,6 +1,6 @@
-# Tailwind CSS
+# Tailwind
 
-[docs](https://tailwindcss.com/docs/installation)
+[https://tailwindcss.com](https://tailwindcss.com/docs/installation)
 
 ## Tailwind CLI
 
