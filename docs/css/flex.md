@@ -1,125 +1,110 @@
 # Flex
 
-## Flex
-
-作用子元素
-
-`flex-grow` 、`flex-shrink` 和 `flex-basis` 的缩写
-
-`flex-grow` ：是否可变大填充剩余空间
-
-`flex-shrink` ：是否可缩小如果被挤压
-
-`flex-basis` ：预期宽度？
-
-| Class          | Properties        | 描述                 |
-| -------------- | ----------------- | -------------------- |
-| `flex-1`       | `flex: 1 1 0%;`   | 可变大缩小，无关比例 |
-| `flex-auto`    | `flex: 1 1 auto;` | 可变大缩小，等比例   |
-| `flex-initial` | `flex: 0 1 auto;` | 可缩小，不可变大     |
-| `flex-none`    | `flex: none;`     | 不可变大缩小         |
-| `grow`         | `flex-grow: 1;`   |                      |
-| `grow-0`       | `flex-grow: 0;`   |                      |
-| `shrink`       | `flex-shrink: 1;` |                      |
-| `shrink-0`     | `flex-shrink: 0;` |                      |
-
 ## Flex Flow
 
 `flex-direction` 和 `flex-wrap` 的缩写
 
 ```scss
 .box {
-  flex-flow: row wrap;
-}
-
-.box {
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: <direction> <wrap>;
+  flex-direction: <direction>;
+  flex-wrap: <wrap>;
 }
 ```
 
-| Class               | Properties                        |
-| ------------------- | --------------------------------- |
-| `flex-row`          | `flex-direction: row;`            |
-| `flex-row-reverse`  | `flex-direction: row-reverse;`    |
-| `flex-col`          | `flex-direction: column;`         |
-| `flex-col-reverse`  | `flex-direction: column-reverse;` |
-| `flex-wrap`         | `flex-wrap: wrap;`                |
-| `flex-wrap-reverse` | `flex-wrap: wrap-reverse;`        |
-| `flex-nowrap`       | `flex-wrap: nowrap;`              |
-
-## Order
-
-排序
-
-| Class         | Properties      |
-| ------------- | --------------- |
-| `order-11`    | `order: 11;`    |
-| `order-12`    | `order: 12;`    |
-| `order-first` | `order: -9999;` |
-| `order-last`  | `order: 9999;`  |
-| `order-none`  | `order: 0;`     |
+<<< @/css/style/flex-flow.scss
 
 ## Justify Content
 
-[Justify Content](https://tailwindcss.com/docs/justify-content)
+[justify-content](https://tailwindcss.com/docs/justify-content)
 
 主轴对齐方式
 
-| Class             | Properties                        |
-| ----------------- | --------------------------------- |
-| `justify-start`   | `justify-content: flex-start;`    |
-| `justify-end`     | `justify-content: flex-end;`      |
-| `justify-center`  | `justify-content: center;`        |
-| `justify-between` | `justify-content: space-between;` |
-| `justify-around`  | `justify-content: space-around;`  |
-| `justify-evenly`  | `justify-content: space-evenly;`  |
-
-## Align Items
-
-[Align Items](https://tailwindcss.com/docs/align-items)
-
-交叉轴对齐方式
-
-| Class            | Properties                 |
-| ---------------- | -------------------------- |
-| `items-start`    | `align-items: flex-start;` |
-| `items-end`      | `align-items: flex-end;`   |
-| `items-center`   | `align-items: center;`     |
-| `items-baseline` | `align-items: baseline;`   |
-| `items-stretch`  | `align-items: stretch;`    |
-
-## Align Self
-
-[Align Self](https://tailwindcss.com/docs/align-self)
-
-覆盖 `align-items`
-
-| Class           | Properties                |
-| --------------- | ------------------------- |
-| `self-auto`     | `align-self: auto;`       |
-| `self-start`    | `align-self: flex-start;` |
-| `self-end`      | `align-self: flex-end;`   |
-| `self-center`   | `align-self: center;`     |
-| `self-stretch`  | `align-self: stretch;`    |
-| `self-baseline` | `align-self: baseline;`   |
+<<< @/css/style/justify-content.scss
 
 ## Align Content
 
-[Align Content](https://tailwindcss.com/docs/align-content)
+[align-content](https://tailwindcss.com/docs/align-content)
 
-多主轴的对齐方式
+多主轴对齐方式
 
-| Class             | Properties                      |
-| ----------------- | ------------------------------- |
-| `content-center`  | `align-content: center;`        |
-| `content-start`   | `align-content: flex-start;`    |
-| `content-end`     | `align-content: flex-end;`      |
-| `content-between` | `align-content: space-between;` |
-| `content-around`  | `align-content: space-around;`  |
-| `content-evenly`  | `align-content: space-evenly;`  |
+<<< @/css/style/align-content.scss
 
-## Extend
+## Align Items
+
+[align-items](https://tailwindcss.com/docs/align-items)
+
+交叉轴对齐方式
+
+<<< @/css/style/align-items.scss
+
+## Align Self
+
+[align-self](https://tailwindcss.com/docs/align-self)
+
+对齐方式，覆盖 `align-self`
+
+<<< @/css/style/align-self.scss
+
+## Flex
+
+子元素大小，缩写
+
+::: code-group
+
+```scss [flex]
+.box {
+  flex: <grow> <shrink> <basis>;
+  flex: 0 1 auto; // 默认值
+}
+```
+
+```scss [grow]
+.box {
+  flex-grow: <grow>; // 拉伸系数
+  flex-grow: 0; // 默认值
+}
+
+// 分配剩余空间
+// 按比例拉伸
+// 0 不拉伸
+```
+
+```scss [shrink]
+.box {
+  flex-shrink: <shrink>; // 收缩系数
+  flex-shrink: 1; // 默认值
+}
+
+// 超出容器空间
+// 按比例收缩
+// 0 不收缩
+```
+
+```scss [basis]
+.box {
+  flex-basis: <basis>; // flex宽度
+  flex-basis: auto; // 默认值
+}
+
+// auto表示flex计算宽度等于width或height，否则为指定值
+```
+
+:::
+
+<<< @/css/style/flex.scss
+
+## Order
+
+子元素排序
+
+```scss
+.box {
+  order: 99;
+}
+```
+
+## 扩展
 
 ### Margin
 
@@ -127,7 +112,7 @@
 
 左右对齐
 
-```scss
+```html
 <div class="flex-row justify-start">
   <div class="item">left</div>
   <div class="item">left</div>
@@ -141,7 +126,7 @@
 
 左中右对齐
 
-```scss
+```html
 <div class="flex-row justify-start">
   <div class="item">left</div>
   <div class="item">left</div>

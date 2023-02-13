@@ -2,12 +2,11 @@
 
 ```scss
 .box {
-  background: <position> / <size>;
-  // <size> 只能跟在 <position> 后边，并以 / 分隔
+  background: <image> <position> / <size>;
+  // <position> / <size> 顺序固定，不可更改。
 
-  background: <...args>, <...args>, <...args> <color>;
-  // 如果有多个背景，可用 逗号 分隔
-  // <color> 只在最后一层最后位置定义，有且只有一个
+  background: <...args>, <...args> <color>;
+  // 多背景，但有且只有一个 <color> 位置末尾(固定)。
 }
 ```
 
@@ -20,43 +19,6 @@
   background-image: <gradient>;
   background-image: linear-gradient(...);
 }
-```
-
-## Clip
-
-```scss
-.box {
-  background-clip: <keyword>;
-  background-clip: border-box; // 默认值
-  background-clip: padding-box;
-  background-clip: content-box;
-  background-clip: text;
-}
-
-// 指定背景范围，背景所能显示的区域
-// 关键词：border-box padding-box content-box (text)
-
-.box {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-// 实验功能
-```
-
-## Origin
-
-```scss
-.box {
-  background-origin: <keyword>;
-  background-origin: border-box;
-  background-origin: padding-box; // 默认值
-  background-origin: content-box;
-}
-
-// 指定源点位置，供 <position> 定位
-// 关键词：border-box padding-box content-box
 ```
 
 ## Position
@@ -110,6 +72,43 @@
 
 // 可选值：长度、百分比
 // 缺省值：auto(保持缩放比例)
+```
+
+## Clip
+
+```scss
+.box {
+  background-clip: <keyword>;
+  background-clip: border-box; // 默认值
+  background-clip: padding-box;
+  background-clip: content-box;
+  background-clip: text;
+}
+
+// 指定背景范围，背景所能显示的区域
+// 关键词：border-box padding-box content-box (text)
+
+.box {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+// 实验功能
+```
+
+## Origin
+
+```scss
+.box {
+  background-origin: <keyword>;
+  background-origin: border-box;
+  background-origin: padding-box; // 默认值
+  background-origin: content-box;
+}
+
+// 指定源点位置，供 <position> 定位
+// 关键词：border-box padding-box content-box
 ```
 
 ## Attachment

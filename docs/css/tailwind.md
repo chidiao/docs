@@ -4,41 +4,38 @@
 
 ## Tailwind CLI
 
-1. init
+::: code-group
 
-   ```bash
-   yarn add -D tailwindcss
+```bash [init]
+yarn add -D tailwindcss
 
-   yarn tailwindcss init
-   ```
+yarn tailwindcss init
+```
 
-2. tailwind.config.js
+```js [tailwind.config.js]
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{html,js}'],
+  theme: {
+    extend: {}
+  },
+  plugins: []
+}
+```
 
-   ```js
-   module.exports = {
-     content: ['./src/**/*.{html,js}'],
-     theme: {
-       extend: {}
-     },
-     plugins: []
-   }
-   ```
+```css [input.css]
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-3. src/input.css
+```bash [script]
+tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
 
-   ```css
-   @tailwind base;
-   @tailwind components;
-   @tailwind utilities;
-   ```
+:::
 
-4. script
-
-   ```bash
-   tailwindcss -i ./src/input.css -o ./dist/output.css --watch
-   ```
-
-## Components
+## 组件
 
 [Tailkit](https://www.tailwind-kit.com/)
 
@@ -47,7 +44,5 @@
 [MyNaui](https://mynaui.com/)
 
 [Flowbite](https://flowbite.com/)
-
-## Plugins
 
 [DaisyUI](https://daisyui.com/)
