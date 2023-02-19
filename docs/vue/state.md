@@ -1,131 +1,157 @@
-# 响应式状态
+# 状态
 
-## Computed
+## data
 
-模板中可以使用表达式，这很方便，但是当处理逻辑过于复杂，直接在模板使用表达式就不方便阅读和维护了，因此需要将它们抽离出来。
+声明组件初始状态(响应式)的函数
 
-计算属性指数据(`响应式依赖`)通过计算函数(`表达式`)计算得到的数据
-
-计算属性值会基于其响应式依赖被缓存，只有依赖更新才会重新计算
-
-### getter
-
-```vue
-<script>
-export default {
-  computed: {
-    fullName() {
-      return this.firstName + ' ' + this.lastName
-    }
-  }
-}
-</script>
-
-<script setup>
-import { computed } from 'vue'
-const fullName = computed(() => {
-  return firstName + ' ' + lastName
-})
-</script>
-```
-
-### setter
-
-```vue
-<script>
-export default {
-  computed: {
-    fullName: {
-      get() {
-        return this.firstName + ' ' + this.lastName
-      },
-      set(val) {
-        ;[this.firstName, this.lastName] = val.split(' ')
-      }
-    }
-  }
-}
-</script>
-
-<script setup>
-import { computed } from 'vue'
-const fullName = computed({
-  get() {
-    return firstName.value + ' ' + lastName.value
-  },
-  set(val) {
-    ;[firstName.value, lastName.value] = val.split(' ')
-  }
-})
-</script>
-```
-
-## Watch
-
-计算属性是衍生值/派生值，应只做计算，而不应该有任何副作用(异步请求或更改 DOM)
-
-我们可以使用 `监听器` 在状态变化时执行一些副作用
-
-```vue
-<script>
+```js
 export default {
   data() {
-    return {
-      question: ''
+    return { count: 0 }
+  }
+}
+```
+
+## props
+
+声明组件 `props`
+
+单向数据流，只允许父组件向子组件传递
+
+字符串数组
+
+::: code-group
+
+```js [setup]
+let props = defineProps(['foo', 'bar'])
+```
+
+```js [option]
+export default {
+  props: ['foo', 'bar']
+}
+```
+
+:::
+
+对象
+
+::: code-group
+
+```js [setup]
+let props = defineProps({
+  foo: String,
+  bar: Number
+})
+```
+
+```js [option]
+export default {
+  props: {
+    foo: String,
+    bar: Number
+  }
+}
+```
+
+:::
+
+参数校验
+
+::: code-group
+
+```js [setup]
+defineProps({
+  propA: Number,
+  propB: [String, Number],
+  propC: {
+    type: String,
+    required: true
+  },
+  propD: {
+    type: Number,
+    default: 100
+  },
+  // 工厂函数，原始props
+  propE: {
+    type: Object,
+    default(props) {
+      return { msg: 'hello' }
     }
   },
-  watch: {
-    question(newVal, oldVal) {
-      this.getAnswer()
+  // 自定义校验
+  propF: {
+    validator(val) {
+      return ['success', 'warning', 'danger'].includes(val)
+    }
+  },
+  // 默认函数
+  propG: {
+    type: Function,
+    default() {
+      return 'Default Function'
     }
   }
-}
-</script>
-
-<script setup>
-import { ref, watch } from 'vue'
-const question = ref('')
-watch(question, (newVal, oldVal) => {
-  getAnswer()
 })
-</script>
 ```
 
-### deep
+:::
 
-深层监听器
+## methods
 
-### immediate
-
-立即执行
-
-`watch` 仅当数据源变化时，才会执行回调
-
-`immediate: true` 让创建监听器的时候直接执行一次回调
+事件处理
 
 ```vue
+<template>
+  <button @click="save(id, $event)">Save</button>
+  <button @click="(e) => save(id, e)">Save</button>
+</template>
+
 <script>
-export defautl {
-  watch: {
-    url: {
-      handler(val) {
-        fetchData()
-      },
-      immediate: true
-    }
+export default {
+  methods: {
+    save(id, e) {}
   }
 }
 </script>
-
-<script setup>
-// watch，手动绑定监听对象
-fetchData()
-watch(url, fetchData)
-
-// watchEffect，立即执行一次，并自动追踪 url.vlaue 作为依赖
-watchEffect(async () => {
-  const res = await fetch(url.value)
-  data.value = await res.json()
-})
-</script>
 ```
+
+## emits
+
+声明由组件触发的自定义事件
+
+字符串数组
+
+::: code-group
+
+```js [setup]
+let emits = defineEmits(['submit', 'change'])
+```
+
+```js [option]
+export default {
+  emits: ['submit', 'change']
+}
+```
+
+:::
+
+对象
+
+```js
+defineEmits({
+  // 没有验证函数
+  submit: null,
+
+  // 具有验证函数
+  change: (payload) => {
+    if (payload.isRead) {
+      return true
+    } else {
+      return false
+    }
+  }
+})
+```
+
+## expose

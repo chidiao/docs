@@ -25,13 +25,15 @@ vue create [name]
 
 ```js [vue3]
 const app = createApp(App)
-app.use(router)
-app.use(pinia)
-app.use(store)
-app.mount('#app')
+
+app.config.globalProperties.$http = http
+
+app.use(router).use(pinia).use(store).mount('#app')
 ```
 
 ```js [vue2]
+Vue.prototype.$http = http
+
 const app = new Vue({
   el: '#app',
   router,

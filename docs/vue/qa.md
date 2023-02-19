@@ -2,9 +2,17 @@
 
 ## Vue
 
+- [生命周期](./cycle)
 - [常用指令](./directives)
+- [常用修饰符](./modifier)
+- [计算属性和侦听器](./cw)
 
-- [生命周期](./lifecycle)
+## 通信方式
+
+- [props]()
+- [emits]()
+- [provide 和 inject]()
+- [vuex]()
 
 ### MVC
 
@@ -19,62 +27,6 @@
 `ViewModel` 通过双向绑定，将 `View` 和 `Model` 的同步更新给自动化了
 
 ### 渐进式
-
-### 修饰符
-
-- 表单修饰符
-
-  ```html
-  <input type="text" v-model.lazy="value" />
-  <p>光标离开时更新，change事件触发更新，而不是input</p>
-
-  <input type="text" v-model.trim="value" />
-  <p>过滤首空格字符字符，不过滤中间空格字符</p>
-
-  <input type="number" v-model.number="age" />
-  <p>转换为数值类型，若不能则返回原值</p>
-  ```
-
-- 事件修饰符
-
-  ```html
-  <button @click.stop="handle">阻止冒泡</button>
-
-  <button @click.prevent="handle">阻止默认行为</button>
-
-  <button @click.self="handle">event.target是自己是才触发</button>
-
-  <button @click.once="handle">只触发一次</button>
-
-  <div @click.capture="handle">捕获</div>
-
-  <div @scroll.passive="onScroll">scroll lazy</div>
-
-  <btn @click.native>自定义组件的原生事件</btn>
-  ```
-
-- v-bind 修饰符
-
-- 鼠标修饰符
-
-- 键盘修饰符
-
-### 组件通信
-
-- props
-- $emit
-- provide 和 inject
-- vuex
-
-### 全局变量
-
-```js
-// vue2.x
-Vue.prototype.$store = store
-
-// vue3.x
-app.config.globalProperties.$store = store
-```
 
 ### 视图刷新
 
@@ -118,16 +70,6 @@ let methods = {
   }
 }
 ```
-
-### computed 和 watch
-
-**computed**
-
-有缓存功能，依赖发生改变才会重新计算
-
-**watch**
-
-异步操作或开销较大的操作时，watch 一定是最有用的选择
 
 ### keep-alive
 
