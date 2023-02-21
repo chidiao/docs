@@ -5,7 +5,8 @@ export function sidebarNav() {
       items: [
         { text: 'Win', link: '/nav/windows' },
         { text: '收藏', link: '/nav/favorite' },
-        { text: '简历', link: '/nav/resume' }
+        { text: '简历', link: '/nav/resume' },
+        { text: 'tree.js', link: '/nav/tree' }
       ]
     }
   ]

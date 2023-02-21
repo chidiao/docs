@@ -8,73 +8,74 @@ let list: number[] = [1, 2, 3]
 let list: Array<number> = [1, 2, 3]
 ```
 
+## pop/push
 
-
-## 增删
-
-### 队列
-
-`pop/push` 在数组末尾添加删除元素
-
-`shift/unshift` 在数组开头添加删除元素
-
-`pop/push` 性能和速度都要优于 `shift/unshift`
+在末端增加/删除元素
 
 ```js
-let arr = [1, 2, 3]
-
-arr.pop()
-//	取出并返回最后一个数组元素
-//	=>	item
-
 arr.push(4)
 arr.push(4, 5, 6)
-//	在数组末端添加元素
-//	=>	arr.length
+// 可以增加多个，并返回数组长度
+
+arr.pop()
+// 只能删除一个，并返回该元素
 ```
 
-### splice()
+## shift/unshift
 
-截取了再插入新内容，修改原数组
+在首端增加/删除元素
+
+`pop/push` 速度和性能总是优于 `shift/unshift`
 
 ```js
-arr.splice(index, delCount, ...item)
+arr.unshift(4)
+arr.unshift(4, 5, 6)
+// 可以增加多个，并返回数组长度
 
-//	位置
-//	删除个数
-//	插入元素
-
-//	=>	被删除的部分(数组)
-//	不产生副本，原数组被修改
-
-//	只裁剪
-arr.splice(index, delCount)
-
-//	只插入
-arr.splice(index, 0, ...item)
+arr.shift()
+// 只能删除一个，并返回该元素
 ```
 
-### slice()
+## splice
 
-简单截取，获取副本，不修改原数组
+从开始位置，删除指定个数，并插入新元素，修改源数组
 
 ```js
-arr.slice(start, end)
-//	=>	被截取的副本(数组)
-//	=>	产生副本，不修改原数组
+arr.splice(startIndex, delCount, ...item)
+// 返回被删除的部分
 
-//	浅拷贝
+// 只删除
+arr.splice(startIndex, delCount)
+
+// 只插入
+arr.splice(startIndex, 0, ...item)
+```
+
+## slice
+
+截取新数组，不修改原数组
+
+包括 `startIndex` 不包括 `endIndex`
+
+```js
+arr.slice(startIndex, endIndex)
+// 返回被截取的部分
+
+// 浅拷贝
 arr.slice()
 ```
 
-### concat()
+## concat
 
-合并数组，新的副本
+合并数组
+
+产生新的副本，所有源都不会修改
 
 ```js
 arr.concat(arr1, arr2, arr3)
 
-//	=>	newArr
+a.concat(b, c, d)
+// a,b,c,d 都不会修改，产生新的副本
 ```
 
 ## 改
@@ -222,32 +223,6 @@ arr.some((item, index, array) => {
 
 ## 遍历
 
-### for
-
-最古老而又最经典的方法
-
-效率最高，性能最好
-
-```js
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i])
-}
-```
-
-### for..of
-
-更现代更简单的方法
-
-```js
-for (let item of arr) {
-  console.log(item)
-}
-```
-
-### for..in
-
-继承自对象的方法，可用但不建议
-
 ### forEach()
 
 为每个数组元素都运行一个函数
@@ -322,4 +297,60 @@ let arr = str.split()
 let arr = ['a', 'b', 'c']
 let str = arr.join('+')
 //	=> 'a+b+c'
+```
+
+## for
+
+遍历数组最古老的方式
+
+效率最高，性能最好，兼容最好
+
+元素可读，可写，可修改源数组
+
+`for` 作为循环语句，并不是专为遍历数组的，它的起点，范围，梯度，索引都是可以修改的，而且可以通过 `break` 跳出循环，这些都是数组专用的遍历方法所不具备的。
+
+```js
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i])
+}
+
+let arr = [1, 2, 3]
+for (let i = 0; i < arr.length; i++) {
+  arr[i] *= 2
+}
+// [2, 4, 6]
+```
+
+## for..of
+
+更简单，更现代，只能访问元素，不能访问索引值
+
+元素只读，不可写，无法修改源数组
+
+```js
+for (let item of arr) {
+  console.log(item)
+}
+
+let arr = [1, 2, 3]
+for (let item of arr) {
+  item *= 2
+}
+// [1, 2, 3]
+```
+
+## for..in
+
+继承自对象的方法，最好别用
+
+## forEach
+
+遍历，为每个元素运行一个函数
+
+元素只读，不可写，无法修改源数组
+
+```js
+arr.forEach((item, index, array) => {
+  console.log(item)
+})
 ```

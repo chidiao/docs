@@ -1,40 +1,10 @@
-# 接口
+# 支付
 
-## 登录
+[payment](https://uniapp.dcloud.net.cn/api/plugins/payment.html)
 
-```js
-uni
-  .login({
-    provider: 'weixin'
-  })
-  .then((loginRes) => {
-    const { code } = loginRes
+## 微信支付
 
-    http
-      .post('/login', {
-        code: code
-      })
-      .then((res) => {
-        msg('登录成功')
-      })
-  })
-```
-
-### openid
-
-用户在当前小程序的唯一标识
-
-`code` 用户登录凭证(5 分钟)，使用 `code` 换取 `openid` 、`unionid` 、`session_key` 等
-
-### unionid
-
-用户在微信开放平台帐号下的唯一标识
-
-## 支付
-
-微信支付
-
-一个参数，格式是对象。`orderInfo`
+`orderInfo` 是对象类型。
 
 ```js
 const orderInfo = {
@@ -60,9 +30,9 @@ uni
   })
 ```
 
-微信小程序支付
+## 微信小程序支付
 
-多个参数，来源于 `orderInfo`
+小程序支付接口的参数需要从 `orderInfo` 解构出来。
 
 ```js
 uni
