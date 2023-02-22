@@ -16,10 +16,10 @@ export function sidebarUtils() {
     {
       text: 'Config',
       items: [
+        { text: 'Node', link: '/utils/node' },
         { text: 'Vite', link: '/utils/vite' },
         { text: 'Prettier', link: '/utils/prettier' },
         { text: 'Git', link: '/utils/git' },
-        { text: 'Yarn', link: '/utils/yarn' },
         { text: 'VScode', link: '/utils/vscode' }
       ]
     }

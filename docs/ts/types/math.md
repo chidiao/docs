@@ -6,16 +6,30 @@
 
 `Math` 用于 `Number` 类型，它不支持 `BigInt` 。
 
-## min()
-
-```js
-Math.min(1, 2, 3)
-```
-
 ## max()
+
+最大值
+
+可以通过 `map` 将对象数组转换，从而求某项属性的最大值
 
 ```js
 Math.max(1, 2, 3)
+Math.max(...arr)
+
+Math.max(...arr.map((item) => item.age))
+```
+
+## min()
+
+最小值
+
+可以通过 `map` 将对象数组转换，从而求某项属性的最小值
+
+```js
+Math.min(1, 2, 3)
+Math.min(...arr)
+
+Math.min(...arr.map((item) => item.age))
 ```
 
 ## floor()

@@ -8,7 +8,7 @@ let list: number[] = [1, 2, 3]
 let list: Array<number> = [1, 2, 3]
 ```
 
-## pop/push
+## pop()/push()
 
 在末端增加/删除元素
 
@@ -21,7 +21,7 @@ arr.pop()
 // 只能删除一个，并返回该元素
 ```
 
-## shift/unshift
+## shift()/unshift()
 
 在首端增加/删除元素
 
@@ -36,9 +36,9 @@ arr.shift()
 // 只能删除一个，并返回该元素
 ```
 
-## splice
+## splice()
 
-从开始位置，删除指定个数，并插入新元素，修改源数组
+从开始位置，删除指定个数，并插入新元素，修改原数组
 
 ```js
 arr.splice(startIndex, delCount, ...item)
@@ -51,7 +51,7 @@ arr.splice(startIndex, delCount)
 arr.splice(startIndex, 0, ...item)
 ```
 
-## slice
+## slice()
 
 截取新数组，不修改原数组
 
@@ -65,7 +65,7 @@ arr.slice(startIndex, endIndex)
 arr.slice()
 ```
 
-## concat
+## concat()
 
 合并数组
 
@@ -78,43 +78,42 @@ a.concat(b, c, d)
 // a,b,c,d 都不会修改，产生新的副本
 ```
 
-## 改
+## map()
 
-### map()
-
-数组转换，改变每个数组元素，产生一个新的数组副本
+数组转换，将数组元素进行修改，产生新的副本，不修改原数组
 
 ```js
 arr.map((item, index, array) => {
-  return { ...item }
-  //	返回一个改造过的新元素
+  return {
+    ...item,
+    isNew: true
+  }
 })
-
-//	==>	newArr
-//	==>	新的数组副本，不会影响原来的数组
 ```
 
-### sort(fn)
+## sort()
 
-数组排序，修改原数组
+数组排序
+
+修改原数组
+
+传入一个方法，返回 `true` 则交换元素，否则则不交换
 
 ```js
-arr.sort()
+arr.sort(fn)
 
 arr.sort((a, b) => {
   return truthy / falsy
-  //	=>	truthy，替换
-  //	=>	falsy，不替换
 })
 
 // 从小到大
 arr.sort((a, b) => a - b)
 
-//	从大到小
+// 从大到小
 arr.sort((a, b) => b - a)
 ```
 
-### reverse()
+## reverse()
 
 倒序
 
@@ -122,59 +121,69 @@ arr.sort((a, b) => b - a)
 arr.reverse()
 ```
 
-## 查
+## indexOf()/lastIndexOf()
 
-### indexOf()
-
-查索引，返回索引或 `-1`
+搜索/查询 请使用严格相等 `===` ，避免 布尔型值。
 
 ```js
 arr.indexOf(item)
-arr.indexOf(item, fromIndex)
-arr.lastIndexOf(item, fromIndex)
+arr.indexOf(item, from)
 
-//	=>	index/-1
+// 存在，返回索引值
+// 不存在，返回 -1
 ```
 
-### includes()
-
-查是否包含
-
-```js
-arr.includes(item)
-arr.includes(item, fromIndex)
-
-//	=>	true/false
-```
-
-### find()
-
-查找数组中 `第一个` 符合条件的元素，停止迭代并返回该元素
-
-查元素
-
-```js
-arr.find((item, index, array) => {
-  return truthy / falsy
-})
-
-//	=>	item/undefined
-```
+## findIndex()/findLastIndex()
 
 查索引
 
 ```js
 arr.findIndex()
 arr.findLastIndex()
-
-arr.findIndex((item, index, array) => {
-  return truthy / falsy
-})
-
-//	=>	index/-1
 ```
 
-### filter()
+## includes()
+
+是否包含，返回 `true/false`
+
+搜索/查询 请使用严格相等 `===` ，避免 布尔型值。
+
+```js
+arr.includes(item)
+arr.includes(item, from)
+```
+
+## every()
+
+是否所有元素都满足条件
+
+```js
+arr.every((item, index, array) => {
+  return truthy / falsy
+})
+```
+
+## some()
+
+是否有元素满足条件
+
+```js
+arr.some((item, index, array) => {
+  return truthy / falsy
+})
+```
+
+## find()
+
+查找数组中第一个符合条件的元素，停止迭代并返回该元素
+
+```js
+arr.find((item, index, array) => {
+  return truthy / falsy
+})
+```
+
+## filter()
 
 查找数组中符合条件的元素，返回一个新数组，产生副本
 
@@ -182,121 +191,6 @@ arr.findIndex((item, index, array) => {
 arr.filter((item, index, array) => {
   return truthy / falsy
 })
-
-//	=>	newArr/[]
-```
-
-## 判断
-
-### Array.isArray()
-
-是否数组
-
-```js
-Array.isArray([]) //	true
-Array.isArray({}) //	false
-```
-
-### every()
-
-是否所有都满足
-
-```js
-arr.every((item, index, array) => {
-  return truthy / falsy
-})
-
-//	=>	true/false
-```
-
-### some()
-
-是否部分满足
-
-```js
-arr.some((item, index, array) => {
-  return truthy / falsy
-})
-
-//	=>	true/false
-```
-
-## 遍历
-
-### forEach()
-
-为每个数组元素都运行一个函数
-
-```js
-arr.forEach((item, index, array) => {
-  //	do something
-})
-
-// => undefined
-```
-
-### reduce()
-
-接力赛
-
-为每个数组元素进行运算，每一个运算结果，传递给下一个元素作为参数进行运算，最终获得一个最终结果
-
-```js
-arr.reduce(
-  (prev, cur, index, array) => {
-    return prev + cur
-  },
-  [initial]
-)
-
-//	prev	前项结果 或 初始值
-//	cur	当前元素
-//	=>	最终结果
-
-//	求和
-arr.reduce((sum, item) => sum + item, 0)
-
-// 从右向左
-arr.reduceRight()
-```
-
-## 其他
-
-### Array.from()
-
-将类数组转化为数组
-
-```js
-Array.from()
-
-let set = new Set()
-let arr = Array.from(set)
-```
-
-### str.split()
-
-将字符串拆成数组
-
-```js
-//	按分隔符拆分
-let str = 'a, b, c'
-let arr = str.split(', ')
-//	=>	['a', 'b', 'c']
-
-//	拆成单个字符
-let str = 'boy'
-let arr = str.split()
-//	=>	['b', 'o', 'y']
-```
-
-### arr.join()
-
-将数组拼接成字符串
-
-```
-let arr = ['a', 'b', 'c']
-let str = arr.join('+')
-//	=> 'a+b+c'
 ```
 
 ## for
@@ -305,7 +199,7 @@ let str = arr.join('+')
 
 效率最高，性能最好，兼容最好
 
-元素可读，可写，可修改源数组
+元素可读，可写，可修改原数组
 
 `for` 作为循环语句，并不是专为遍历数组的，它的起点，范围，梯度，索引都是可以修改的，而且可以通过 `break` 跳出循环，这些都是数组专用的遍历方法所不具备的。
 
@@ -325,7 +219,7 @@ for (let i = 0; i < arr.length; i++) {
 
 更简单，更现代，只能访问元素，不能访问索引值
 
-元素只读，不可写，无法修改源数组
+元素只读，不可写，无法修改原数组
 
 ```js
 for (let item of arr) {
@@ -343,14 +237,41 @@ for (let item of arr) {
 
 继承自对象的方法，最好别用
 
-## forEach
+## forEach()
 
 遍历，为每个元素运行一个函数
 
-元素只读，不可写，无法修改源数组
+元素只读，不可写，无法修改原数组
 
 ```js
 arr.forEach((item, index, array) => {
   console.log(item)
 })
+```
+
+## reduce()
+
+接力赛，根据数组计算单个结果
+
+将每一项的计算结果搬运到下一项并进行下一次的计算
+
+```js
+arr.reduce(
+  (accumulator, item, index, array) => {
+    return item
+  },
+  [initial]
+)
+
+// accumulator 上一项的结果 或 初始值
+// item 当前元素
+// return 返回最终结果
+
+// 求和
+arr.reduce((sum, item) => {
+  return sum + item
+}, 0)
+
+// 反向
+arr.reduceRight()
 ```

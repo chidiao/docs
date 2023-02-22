@@ -41,7 +41,7 @@ function nav() {
     { text: 'JS', link: '/js/' },
     { text: 'TS', link: '/ts/types/' },
     { text: 'CSS', link: '/css/' },
-    { text: 'MP', link: '/mp/wx' },
+    { text: 'MP', link: '/mp/' },
     { text: 'Utils', link: '/utils/' },
     { text: 'Nav', link: '/nav/favorite' }
   ]

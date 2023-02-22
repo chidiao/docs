@@ -1,4 +1,4 @@
-# uni-app
+# uniapp
 
 ## 路径
 
@@ -49,13 +49,19 @@ uni
 
 ## 分包
 
+小程序，总包不超过 `20M` ，分包不超过 `2M`
+
 ```json [pages.json]
 {
   "pages": [],
   "subPackages": [
     {
-      "root": "page_sub",
-      "pages": []
+      "root": "pages/shop",
+      "pages": [
+        {
+          "path": "index"
+        }
+      ]
     }
   ]
 }

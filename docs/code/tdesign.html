@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TDesign</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style/t-message.css" />
+  </head>
+  <body>
+    <!-- app -->
+    <div id="app">
+      <button @click="$message.info('用户表示普通操作信息提示')">click</button>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tdesign-vue-next@1.0.9/dist/tdesign.min.js"></script>
+    <script>
+      const { createApp } = Vue
+      const { Message, MessagePlugin } = TDesign
+      const app = createApp({
+        methods: {
+          onClick() {
+            this.$message.info('用户表示普通操作信息提示')
+          }
+        }
+      })
+        .use(Message)
+        .use(MessagePlugin)
+        .mount('#app')
+    </script>
+  </body>
+</html>

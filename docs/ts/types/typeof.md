@@ -60,13 +60,12 @@ typeof null // 'object'
 Object.prototype.toString.call(null) // '[object Null]'
 ```
 
-## isArray()
-
-Array.isArray()
+## Array.isArray()
 
 检测是否为数组
 
 ```js
+typeof [] // 'object'
 Array.isArray([]) // true
 Array.isArray({}) // false
 ```
