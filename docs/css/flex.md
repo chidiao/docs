@@ -12,7 +12,7 @@
 }
 ```
 
-<<< @/css/style/flex-flow.scss
+<<< @/code/style/flex-flow.scss
 
 ## Justify Content
 
@@ -20,7 +20,7 @@
 
 主轴对齐方式
 
-<<< @/css/style/justify-content.scss
+<<< @/code/style/justify-content.scss
 
 ## Align Content
 
@@ -28,7 +28,7 @@
 
 多主轴对齐方式
 
-<<< @/css/style/align-content.scss
+<<< @/code/style/align-content.scss
 
 ## Align Items
 
@@ -36,7 +36,7 @@
 
 交叉轴对齐方式
 
-<<< @/css/style/align-items.scss
+<<< @/code/style/align-items.scss
 
 ## Align Self
 
@@ -44,7 +44,7 @@
 
 对齐方式，覆盖 `align-self`
 
-<<< @/css/style/align-self.scss
+<<< @/code/style/align-self.scss
 
 ## Flex
 
@@ -92,7 +92,7 @@
 
 :::
 
-<<< @/css/style/flex.scss
+<<< @/code/style/flex.scss
 
 ## Order
 

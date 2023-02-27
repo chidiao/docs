@@ -14,13 +14,15 @@ export function sidebarUtils() {
       ]
     },
     {
-      text: 'Config',
+      text: 'Build',
       items: [
-        { text: 'Node', link: '/utils/node' },
-        { text: 'Vite', link: '/utils/vite' },
+        { text: 'Node', link: '/utils/build/node' },
+        { text: 'Yarn', link: '/utils/node' },
         { text: 'Prettier', link: '/utils/prettier' },
         { text: 'Git', link: '/utils/git' },
-        { text: 'VScode', link: '/utils/vscode' }
+        { text: 'VScode', link: '/utils/vscode' },
+        { text: 'Vite', link: '/utils/build/vite' },
+        { text: 'Parcel', link: '/utils/build/parcel' }
       ]
     }
   ]

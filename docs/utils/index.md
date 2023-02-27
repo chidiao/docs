@@ -66,6 +66,6 @@
 
 - [parallax.js](https://github.com/wagerfield/parallax)
 
-## 优秀项目
+## 项目
 
 [vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)

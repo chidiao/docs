@@ -24,7 +24,8 @@ export function sidebarCss() {
       items: [
         { text: 'BEM', link: '/css/bem' },
         { text: 'Tailwind', link: '/css/tailwind' },
-        { text: 'PostCSS', link: '/css/postcss' }
+        { text: 'PostCSS', link: '/css/postcss' },
+        { text: 'Scss', link: '/css/scss' }
       ]
     }
   ]

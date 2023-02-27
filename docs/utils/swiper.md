@@ -1,5 +1,15 @@
 # Swiper
 
+[demos](https://swiperjs.com/demos)
+
+```sh
+yarn add swiper
+```
+
+
+
+## --bak--
+
 [Swiper](https://swiperjs.com/)
 
 [vue-awesome-swiper](https://github.surmon.me/vue-awesome-swiper/)

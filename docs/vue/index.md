@@ -2,7 +2,7 @@
 
 ## 构建项目
 
-[Vite 构建项目](../utils/vite#vue)
+[Vite 构建项目](../utils/build/vite#vue)
 
 ::: code-group
 
