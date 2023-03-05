@@ -18,7 +18,8 @@ export function sidebarTs() {
         { text: 'Map', link: '/ts/types/map' },
         { text: 'Set', link: '/ts/types/set' },
         { text: 'Math', link: '/ts/types/math' },
-        { text: 'Date', link: '/ts/types/date' }
+        { text: 'Date', link: '/ts/types/date' },
+        { text: 'Interface', link: '/ts/types/interface' }
       ]
     }
   ]

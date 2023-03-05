@@ -1,5 +1,24 @@
 # uniapp
 
+## 变量
+
+状态栏高度：H5 为 0，App 有状态栏高度，小程序有固定高度。
+
+顶距：App 和小程序为 0，H5 为 NavBar 高度。
+
+底距：App 和小程序为 0，H5 为 TabBar 高度。
+
+```scss
+.box {
+  // 状态栏高度
+  height: var(--status-bar-height);
+  // 内容到顶部距离
+  height: var(--window-top);
+  // 内容到底部距离
+  height: var(--window-bottom);
+}
+```
+
 ## 路径
 
 [引用](https://uniapp.dcloud.net.cn/tutorial/page-script.html)
@@ -12,39 +31,6 @@ import uView from '@/utils/uview'
 import uView from './utils/uview'
 
 // js 不支持 '/' 开头的路径
-```
-
-## promise
-
-进行了封装，数据格式需要注意
-
-```js
-// options
-uni.request({
-  url,
-  success: (res) => {
-    console.log(res)
-  },
-  fail: (err) => {
-    console.log(err)
-  }
-})
-
-// vue2，无法使用 catch
-uni.request({ url }).then((data) => {
-  let [err, res] = data
-  console.log(res)
-})
-
-// vue3
-uni
-  .request({ url })
-  .then((res) => {
-    console.log(res)
-  })
-  .catch((err) => {
-    console.log(err)
-  })
 ```
 
 ## 分包
@@ -67,96 +53,53 @@ uni
 }
 ```
 
-## uView
+## promise
 
-[快速搭建](https://www.uviewui.com/components/install.html)
+[api](https://uniapp.dcloud.net.cn/api/)
+
+`promise` 返回的数据格式很奇葩，需要注意。
 
 ::: code-group
 
+```js [vue2]
+getData().then((data) => {
+  let [err, res] = data
+  console.log(res)
+  console.log(err)
+})
+```
+
+```js [vue3]
+getData()
+  .then((res) => {
+    console.log(res)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+```
+
 ```js [main.js]
-import uView from '@/utils/uview'
-Vue.use(uView)
-```
-
-```scss [uni.scss]
-@import '@/utils/uview/theme.scss';
-```
-
-```vue [App.vue]
-<style lang="scss">
-@import '@/utils/uview/index.scss';
-</style>
-```
-
-```json [pages.json]
-{
-  "easycom": {
-    "^u-(.*)": "@/utils/uview/components/u-$1/u-$1.vue"
-  },
-  "pages": []
+function isPromise(obj) {
+  return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function'
 }
-```
 
-:::
-
-## luch
-
-[luch-request](https://www.quanzhan.co/luch-request/)
-
-::: code-group
-
-```js [main.js]
-import http from '@/utils/http'
-Vue.prototype.$http = http
-```
-
-```js [http.js]
-import Request from '@/utils/luch-request'
-import Request from '@/utils/uview/libs/luch-request'
-
-// 创建实例
-const http = new Request({
-  baseURL: '',
-  dataType: 'json'
-})
-
-export default http
-```
-
-```js [修改配置]
-// 修改配置
-http.setConfig((config) => {
-  config.baseURL = ''
-  config.dataType = 'json'
-
-  return config
-})
-```
-
-```js [请求拦截器]
-// 请求拦截器
-http.interceptors.request.use(
-  (req) => {
-    req.header.token = token
-
-    return req
-  },
-  (err) => {
-    return Promise.reject(err)
+uni.addInterceptor({
+  returnValue(res) {
+    if (!isPromise(res)) {
+      return res
+    }
+    return new Promise((resolve, reject) => {
+      res.then((res) => {
+        if (res[0]) {
+          reject(res[0])
+        } else {
+          resolve(res[1])
+        }
+      })
+    })
   }
-)
-```
-
-```js [响应拦截器]
-// 响应拦截器
-http.interceptors.response.use(
-  (res) => {
-    return res
-  },
-  (err) => {
-    return Promise.reject(err)
-  }
-)
+})
 ```
 
 :::
