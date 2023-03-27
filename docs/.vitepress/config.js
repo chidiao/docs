@@ -3,7 +3,7 @@ import { sidebarReact } from './sidebar/react'
 import { sidebarJs } from './sidebar/js'
 import { sidebarTs } from './sidebar/ts'
 import { sidebarCss } from './sidebar/css'
-import { sidebarMp } from './sidebar/mp'
+import { sidebarUni } from './sidebar/uni'
 import { sidebarUtils } from './sidebar/utils'
 import { sidebarNav } from './sidebar/nav'
 
@@ -23,7 +23,7 @@ export default {
       '/js/': sidebarJs(),
       '/ts/': sidebarTs(),
       '/css/': sidebarCss(),
-      '/mp/': sidebarMp(),
+      '/uni/': sidebarUni(),
       '/utils/': sidebarUtils(),
       '/nav/': sidebarNav()
     },
@@ -41,7 +41,7 @@ function nav() {
     { text: 'JS', link: '/js/' },
     { text: 'TS', link: '/ts/types/' },
     { text: 'CSS', link: '/css/' },
-    { text: 'MP', link: '/mp/' },
+    { text: 'Uni', link: '/uni/' },
     { text: 'Utils', link: '/utils/' },
     { text: 'Nav', link: '/nav/favorite' }
   ]

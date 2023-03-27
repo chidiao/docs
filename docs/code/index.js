@@ -1,6 +1,13 @@
-let arr = [1, 2, 3]
-arr.forEach((item) => {
-  item *= 2
-})
+class User {
+  a() {
+    console.log('a')
+    this.b()
+  }
 
-console.log(arr)
+  b() {
+    console.log('b')
+  }
+}
+
+let u = new User()
+u.a()

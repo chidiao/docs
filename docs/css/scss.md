@@ -121,3 +121,17 @@ $name: flex;
   @include btn(red);
 }
 ```
+
+## @import
+
+```scss
+// 导入 scss
+@import 'foo.scss';
+
+// 导入 css
+@import 'foo.css';
+
+// 按 css 处理
+@import url('foo.scss');
+@import 'http://xx/foo.scss';
+```

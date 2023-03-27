@@ -19,9 +19,9 @@ export function sidebarVue() {
       text: '全家桶',
       items: [
         { text: 'Router', link: '/vue/router' },
-        { text: 'Pinia', link: '/vue/pinia' },
         { text: 'Vuex', link: '/vue/vuex' },
-        { text: 'antdv', link: '/vue/antdv' }
+        { text: 'Pinia', link: '/vue/pinia' },
+        { text: 'I18n', link: '/vue/i18n' }
       ]
     }
   ]

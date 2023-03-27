@@ -111,7 +111,7 @@ export default {
 }
 ```
 
-# Action
+## Action
 
 `action` 提交的是 `mutation` ，而不改变状态。
 

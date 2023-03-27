@@ -1,21 +1,31 @@
 # uniapp
 
-## 变量
+## CSS
 
-状态栏高度：H5 为 0，App 有状态栏高度，小程序有固定高度。
-
-顶距：App 和小程序为 0，H5 为 NavBar 高度。
-
-底距：App 和小程序为 0，H5 为 TabBar 高度。
+- 变量值都是 `px` 。
+- 状态栏：H5 为 0，APP 为状态栏高度，小程序固定高度。自定义导航栏时需要该值。
+- 顶距：APP 和小程序为 0，H5 为 `navBar` 高度。
+- 底距：APP 和小程序为 0，H5 为 `tabBar` 高度。
+- 内容区域：APP 和小程序的内容区域就是除去 `navBar` 和 `tabBar` 之外的区域，由于 H5 是模拟出来的，因此 `navBar` 和 `tabBar` 也在内容区域内，真实的内容区域需要顶距和底距进行计算。
 
 ```scss
-.box {
+:root {
   // 状态栏高度
   height: var(--status-bar-height);
-  // 内容到顶部距离
-  height: var(--window-top);
-  // 内容到底部距离
-  height: var(--window-bottom);
+  // 内容区域到顶部的距离
+  top: var(--window-top);
+  // 内容取药到底部的距离
+  bottom: var(--window-bottom);
+}
+
+.status-bar {
+  width: 100%;
+  height: var(--status-bar-height);
+}
+
+.backup {
+  position: fixed;
+  bottom: calc(var(--window-bottom) + 24px);
 }
 ```
 

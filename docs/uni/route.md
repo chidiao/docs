@@ -1,5 +1,7 @@
 # 路由
 
+[router](https://uniapp.dcloud.net.cn/api/router.html)
+
 ```js
 uni[type]({
   url: url,
