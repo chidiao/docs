@@ -111,3 +111,13 @@ git clone <url> <name>
 ```
 
 ## 分支
+
+## Error
+
+**SSL certificate problem: unable to get local issuer certificate**
+
+解决：关闭 `SSL` 验证
+
+```sh
+git config --global http.sslVerify false
+```

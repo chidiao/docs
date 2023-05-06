@@ -1,13 +1,8 @@
-class User {
-  a() {
-    console.log('a')
-    this.b()
-  }
+async function msg(title) {
+  console.log(title)
 
-  b() {
-    console.log('b')
-  }
+  await new Promise((resolve) => setTimeout(resolve, 5000))
+  return
 }
 
-let u = new User()
-u.a()
+msg('test').then(() => console.log(123))

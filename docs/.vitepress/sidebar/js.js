@@ -18,13 +18,14 @@ export function sidebarJs() {
       ]
     },
     {
-      text: 'Other',
+      text: '其他',
       items: [
         { text: '变量', link: '/js/var' },
         { text: '其他', link: '/js/other' },
         { text: '代码段', link: '/js/snippets/' },
         { text: 'Canvas', link: '/js/canvas' },
-        { text: 'jQuery', link: '/js/jquery' }
+        { text: 'jQuery', link: '/js/jquery' },
+        { text: 'Node.js', link: '/js/node' }
       ]
     }
   ]

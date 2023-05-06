@@ -16,11 +16,18 @@ export function sidebarVue() {
       ]
     },
     {
+      text: '指令',
+      items: [
+        { text: 'v-for', link: '/vue/v-for' },
+        { text: 'v-model', link: '/vue/v-model' }
+      ]
+    },
+    {
       text: '全家桶',
       items: [
-        { text: 'Router', link: '/vue/router' },
         { text: 'Vuex', link: '/vue/vuex' },
         { text: 'Pinia', link: '/vue/pinia' },
+        { text: 'Router', link: '/vue/router' },
         { text: 'I18n', link: '/vue/i18n' }
       ]
     }

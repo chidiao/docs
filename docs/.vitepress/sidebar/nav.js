@@ -6,6 +6,7 @@ export function sidebarNav() {
         { text: 'Win', link: '/nav/windows' },
         { text: '收藏', link: '/nav/favorite' },
         { text: '简历', link: '/nav/resume' },
+        { text: 'Code', link: '/nav/code' },
         { text: 'tree.js', link: '/nav/tree' }
       ]
     }

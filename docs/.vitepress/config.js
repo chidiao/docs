@@ -1,3 +1,4 @@
+import { sidebarFlutter } from './sidebar/flutter'
 import { sidebarVue } from './sidebar/vue'
 import { sidebarReact } from './sidebar/react'
 import { sidebarJs } from './sidebar/js'
@@ -18,6 +19,7 @@ export default {
     smoothScroll: true,
     nav: nav(),
     sidebar: {
+      '/flutter/': sidebarFlutter(),
       '/vue/': sidebarVue(),
       '/react/': sidebarReact(),
       '/js/': sidebarJs(),
@@ -36,6 +38,7 @@ export default {
 
 function nav() {
   return [
+    { text: 'Flutter', link: '/flutter/dart' },
     { text: 'Vue', link: '/vue/' },
     // { text: 'React', link: '/react/' },
     { text: 'JS', link: '/js/' },

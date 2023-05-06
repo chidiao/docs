@@ -16,7 +16,6 @@ export function sidebarUtils() {
     {
       text: 'Build',
       items: [
-        { text: 'Node', link: '/utils/build/node' },
         { text: 'Yarn', link: '/utils/node' },
         { text: 'Prettier', link: '/utils/prettier' },
         { text: 'Git', link: '/utils/git' },
