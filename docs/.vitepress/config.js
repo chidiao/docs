@@ -1,50 +1,60 @@
-import { sidebarFlutter } from './sidebar/flutter'
-import { sidebarVue } from './sidebar/vue'
-import { sidebarReact } from './sidebar/react'
-import { sidebarJs } from './sidebar/js'
-import { sidebarTs } from './sidebar/ts'
-import { sidebarCss } from './sidebar/css'
-import { sidebarUni } from './sidebar/uni'
-import { sidebarUtils } from './sidebar/utils'
-import { sidebarNav } from './sidebar/nav'
+import { defineConfig } from 'vitepress'
+import { css } from '../css'
+import { dart } from '../dart'
+import { flutter } from '../flutter'
+import { js } from '../js'
+import { nav } from '../nav'
+import { ts } from '../ts'
+import { uni } from '../uni'
+import { utils } from '../utils'
+import { vue } from '../vue'
 
-export default {
-  lang: 'zh-CN',
+export default defineConfig({
+  lang: 'zh',
   title: 'MyDocs',
-  description: '我的文档，编程笔记。',
+  description: 'Code',
 
   themeConfig: {
-    logo: '/logo.jpg',
     siteTitle: 'MyDocs',
-    smoothScroll: true,
-    nav: nav(),
+    logo: '/logo.jpg',
+
+    outline: 'deep',
+    outlineTitle: 'On this page',
+
+    nav: _nav(),
     sidebar: {
-      '/flutter/': sidebarFlutter(),
-      '/vue/': sidebarVue(),
-      '/react/': sidebarReact(),
-      '/js/': sidebarJs(),
-      '/ts/': sidebarTs(),
-      '/css/': sidebarCss(),
-      '/uni/': sidebarUni(),
-      '/utils/': sidebarUtils(),
-      '/nav/': sidebarNav()
-    },
-    footer: {
-      message: '下边没有了',
-      copyright: ''
+      '/css/': css(),
+      '/dart/': dart(),
+      '/flutter/': flutter(),
+      '/js/': js(),
+      '/nav/': nav(),
+      '/ts/': ts(),
+      '/uni/': uni(),
+      '/utils/': utils(),
+      '/vue/': vue()
     }
   }
-}
+})
 
-function nav() {
+function _nav() {
   return [
-    { text: 'Flutter', link: '/flutter/dart' },
-    { text: 'Vue', link: '/vue/' },
-    // { text: 'React', link: '/react/' },
-    { text: 'JS', link: '/js/' },
-    { text: 'TS', link: '/ts/types/' },
-    { text: 'CSS', link: '/css/' },
-    { text: 'Uni', link: '/uni/' },
+    {
+      text: 'Flutter',
+      items: [
+        { text: 'Dart', link: '/dart/' },
+        { text: 'Flutter', link: '/flutter/' }
+      ]
+    },
+    {
+      text: 'Web',
+      items: [
+        { text: 'Vue', link: '/vue/' },
+        { text: 'JavaScript', link: '/js/' },
+        { text: 'TypeScript', link: '/ts/' },
+        { text: 'CSS', link: '/css/' },
+        { text: 'Uniapp', link: '/uni/' }
+      ]
+    },
     { text: 'Utils', link: '/utils/' },
     { text: 'Nav', link: '/nav/favorite' }
   ]

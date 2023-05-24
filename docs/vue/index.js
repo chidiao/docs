@@ -1,4 +1,4 @@
-export function sidebarVue() {
+export function vue() {
   return [
     {
       text: 'Vue',

@@ -166,12 +166,12 @@ class Kun extends Star {
 ```dart
 class Kun extends Star {
   Kun(super.name, super.song);
-  
+
   @override
   void sing() {
     print('不唱了');
   }
-  
+
   void ctrl() {
     super.sing();
   }
@@ -189,7 +189,7 @@ class Kun extends Star {
 ```dart
 abstract class Star {
   sing();
-  
+
   jump();
 }
 
@@ -198,7 +198,7 @@ class Kun extends Star {
   void sing() {
     print('sing');
   }
-  
+
   @override
   void jump() {
     print('jump');
@@ -206,4 +206,4 @@ class Kun extends Star {
 }
 ```
 
-## 多态接口和mixins
+## 多态接口和 mixins

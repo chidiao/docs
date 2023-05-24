@@ -1,4 +1,4 @@
-export function sidebarNav() {
+export function nav() {
   return [
     {
       text: '导航',

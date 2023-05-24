@@ -1,4 +1,4 @@
-export function sidebarUtils() {
+export function utils() {
   return [
     {
       text: 'Utils',

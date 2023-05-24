@@ -1,4 +1,4 @@
-export function sidebarTs() {
+export function ts() {
   return [
     {
       text: '数据类型',

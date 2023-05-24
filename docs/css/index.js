@@ -1,4 +1,4 @@
-export function sidebarCss() {
+export function css() {
   return [
     {
       text: 'CSS',

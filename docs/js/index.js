@@ -1,4 +1,4 @@
-export function sidebarJs() {
+export function js() {
   return [
     {
       text: 'JavaScript',

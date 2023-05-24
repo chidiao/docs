@@ -1,4 +1,4 @@
-export function sidebarUni() {
+export function uni() {
   return [
     {
       text: 'Uni',
