@@ -18,3 +18,11 @@ num number = 3;
 ```dart
 String msg = 'Hello World!';
 ```
+
+## List
+
+```dart
+List list = [];
+List list = <int>[];
+```
+

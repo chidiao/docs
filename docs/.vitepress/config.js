@@ -18,7 +18,7 @@ export default defineConfig({
     siteTitle: 'MyDocs',
     logo: '/logo.jpg',
 
-    outline: 'deep',
+    outline: [2, 3],
     outlineTitle: 'On this page',
 
     nav: _nav(),
