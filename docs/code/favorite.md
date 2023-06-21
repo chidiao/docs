@@ -46,6 +46,8 @@
 
 [Cursor](https://www.cursor.so/)
 
+[代码片段生成工具](https://snippet-generator.app/)
+
 ```sh
 # 官方源
 https://az764295.vo.msecnd.net/stable/xxx.exe

@@ -1,10 +1,14 @@
 import { defineConfig } from 'vitepress'
-import { css } from '../css'
+
+import code from '../code'
+
 import { dart } from '../dart'
 import { flutter } from '../flutter'
-import { js } from '../js'
-import { nav } from '../nav'
+import getx from '../getx'
+
 import { ts } from '../ts'
+import { js } from '../js'
+import { css } from '../css'
 import { uni } from '../uni'
 import { utils } from '../utils'
 import { vue } from '../vue'
@@ -21,41 +25,43 @@ export default defineConfig({
     outline: [2, 3],
     outlineTitle: 'On this page',
 
-    nav: _nav(),
+    nav: getNav(),
     sidebar: {
-      '/css/': css(),
+      '/code/': code(),
       '/dart/': dart(),
       '/flutter/': flutter(),
+      '/getx/': getx(),
+      '/css/': css(),
+      '/vue/': vue(),
       '/js/': js(),
-      '/nav/': nav(),
       '/ts/': ts(),
       '/uni/': uni(),
-      '/utils/': utils(),
-      '/vue/': vue()
+      '/utils/': utils()
     }
   }
 })
 
-function _nav() {
+function getNav() {
   return [
+    { text: 'Code', link: '/code/' },
     {
       text: 'Flutter',
       items: [
         { text: 'Dart', link: '/dart/' },
-        { text: 'Flutter', link: '/flutter/' }
+        { text: 'Flutter', link: '/flutter/' },
+        { text: 'GetX', link: '/getx/' }
       ]
     },
     {
       text: 'Web',
       items: [
+        { text: 'CSS', link: '/css/' },
         { text: 'Vue', link: '/vue/' },
         { text: 'JavaScript', link: '/js/' },
         { text: 'TypeScript', link: '/ts/' },
-        { text: 'CSS', link: '/css/' },
         { text: 'Uniapp', link: '/uni/' }
       ]
     },
-    { text: 'Utils', link: '/utils/' },
-    { text: 'Nav', link: '/nav/favorite' }
+    { text: 'Utils', link: '/utils/' }
   ]
 }

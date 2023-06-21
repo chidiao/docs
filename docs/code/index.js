@@ -1,8 +1,20 @@
-async function msg(title) {
-  console.log(title)
-
-  await new Promise((resolve) => setTimeout(resolve, 5000))
-  return
+export default function () {
+  return [
+    {
+      text: 'Code',
+      items: [
+        { text: 'Start', link: '/code/' },
+        { text: 'Date', link: '/code/date' }
+      ]
+    },
+    {
+      text: '其他',
+      items: [
+        {
+          text: 'tree',
+          link: '/code/tree'
+        }
+      ]
+    }
+  ]
 }
-
-msg('test').then(() => console.log(123))
