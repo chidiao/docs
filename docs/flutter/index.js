@@ -7,6 +7,10 @@ export function flutter() {
         { text: '路由', link: '/flutter/route' },
         { text: 'GetX', link: '/flutter/getx' }
       ]
+    },
+    {
+      text: 'Widgets',
+      items: [{ text: 'ListView', link: '/flutter/listview' }]
     }
   ]
 }

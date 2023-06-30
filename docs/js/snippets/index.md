@@ -1,21 +1,5 @@
 # Snippets
 
-## Dom
-
-<<< @/code/utils/dom.js
-
-## Scroll
-
-<<< @/code/utils/scroll.js
-
-## Form
-
-<<< @/code/utils/form.js
-
-## Function
-
-<<< @/code/utils/function.js
-
 ## 三级联动
 
 [china-division](https://github.com/modood/Administrative-divisions-of-China)

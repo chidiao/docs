@@ -10,10 +10,8 @@ export default function () {
     {
       text: '其他',
       items: [
-        {
-          text: 'tree',
-          link: '/code/tree'
-        }
+        { text: 'tree', link: '/code/tree' },
+        { text: 'Win', link: '/code/windows' }
       ]
     }
   ]

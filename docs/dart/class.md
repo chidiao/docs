@@ -1,123 +1,109 @@
-# 类
+# Class
 
-## 类和默认构造函数
+## 构造函数
 
-```dart
-class Star {
-  late String name;
-  late String song;
-
-  Star(String name, String song) {
-    this.name = name;
-    this.song = song;
-  }
-
-  void sing() {
-    print('${this.song}');
-  }
-}
-
-Star kun = new Star('Kun', '鸡你太美');
-```
-
-## 默认构造函数简写
-
-```dart
-class Star {
-  late String name;
-  late String song;
-
-  Star(this.name, this.song);
-
-  void sing() {
-    print('${this.song}');
-  }
-}
-```
-
-## 命名构造函数
-
-```dart
-class Star {
-  late String name;
-  late String song;
-
-  Star(this.name, this.song);
-
-  Star.ikun(String name, String song) {
-    this.name = name;
-    this.song = song;
-    print('我是ikun!')
-  }
-
-  void sing() {
-    print('${this.song}');
-  }
-}
-
-Star ikun = new Star.ikun('iKun', '鸡你太美');
-```
-
-## 模块化和私有属性
-
-私有属性只有模块化的类才私有
+### 默认构造函数
 
 ::: code-group
 
-```dart [main]
-import 'lib/Star.dart';
+```dart [简写]
+class Star {
+  late String name;
+  late int age;
 
-void main() {
-  Star kun = new Star('Kun');
+  Star(this.name, this.age);
 
-  kun._name;	// error
+  void sing() {
+    print('sing');
+  }
 }
 ```
 
-```dart [Star]
+```dart [默认]
 class Star {
-  late String _name;
+  late String name;
+  late int age;
 
-  Star(this._name);
+  Star(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  void sing() {
+    print('sing');
+  }
 }
 ```
 
 :::
 
-## getter 和 setter
-
-(计算属性)
+### 命名构造函数
 
 ```dart
-class Rect {
-  late num width;
-  late num height;
+class Star {
+  late String name;
+  late int age;
 
-  Rect(this.width, this.height);
-
-  get area {
-    return this.width * this.height;
+  Star() {
+    print('Star');
   }
 
-  set areaHeight(value) {
-    this.height = value;
+  Star.Kun() {
+    print('Kun');
   }
 }
-
-Rect rect = new Rect(5, 6);
-rect.areaHeight = 7;
-print(a.area);
 ```
 
-## 静态属性和静态方法
+## 属性和方法
 
-静态方法只能访问静态属性和静态方法
+### getter 和 setter
 
-非静态方法全部都能访问
+计算属性！
 
-访问静态属性和方法不要加 `this`
+```dart
+class Star {
+  late String firstName;
+  late String lastName;
 
-`this` 指向该类创建的实例对象
+  Star(this.firstName, this.lastName);
+
+  String get fullName {
+    return '$firstName $lastName';
+  }
+
+  void set fullName(String fullName) {
+    List<String> names = fullName.split(' ');
+    this.firstName = names[0];
+    this.lastName = names[1];
+  }
+}
+```
+
+### 私有属性和方法
+
+外部无法访问这些私有属性和方法，只有类里边可以相互调用。
+
+```dart
+class Star {
+  late bool _isBlack;
+
+  Star(this._isBlack);
+
+  void _jump() {
+    print('jump inside');
+  }
+}
+```
+
+### 静态属性和方法
+
+静态方法只能访问静态属性和静态方法，因为没有实例化
+
+非静态方法可以访问所有属性和方法
+
+访问静态属性和方法不需要加 `this`
+
+因为 `this` 指向的是类创建的实例对象，而不是类本身
 
 ```dart
 class Star {
@@ -133,77 +119,75 @@ Star.sing();
 
 ## 继承
 
-```dart
+### 构造函数
+
+::: code-group
+
+```dart [简写]
 class Kun extends Star {
-  late String ball;
+  late bool isBlack;
 
-  Kun(String name, String ball) : super(name) {
-    this.ball = ball;
-  }
+  Kun(super.name, super.age, this.isBlack);
+}
+```
 
-  void play() {
-    print(this.ball);
+```dart [默认]
+class Kun extends Star {
+  late bool isBlack;
+
+  Kun(String name, int age, bool isBlack) : super(name, age) {
+    this.isBlack = isBlack;
   }
 }
 ```
 
-简写
+:::
+
+### 覆写和调用
 
 ```dart
 class Kun extends Star {
-  late String ball;
+  late bool isBlack;
 
-  Kun(super.name, String ball);
-
-  void play() {
-    print(this.ball);
-  }
-}
-```
-
-覆写和调用
-
-```dart
-class Kun extends Star {
-  Kun(super.name, super.song);
+  Kun(super.name, super.age, this.isBlack);
 
   @override
   void sing() {
-    print('不唱了');
+    print('sing a song');
   }
 
   void ctrl() {
     super.sing();
+    print('jump rap ball');
   }
 }
 ```
 
-## 抽象类
+### 抽象类
 
-定义标准，约束子类。
+抽象类中没有方法体的方法就是抽象方法
 
-抽象类定义抽象方法，抽象类不能被实例化。
-
-子类必须覆写抽象方法。
+抽象类的抽象方法需要子类去实现
 
 ```dart
-abstract class Star {
-  sing();
-
-  jump();
+// 抽象类
+abstract class Bird {
+  fly();
 }
 
-class Kun extends Star {
+// 继承
+class Eagle extends Bird {
   @override
-  void sing() {
-    print('sing');
+  fly() {
+    print('我是鹰，我是鸟类，我需要飞行!');
   }
+}
 
+// 接口
+class Plane implements Bird {
   @override
-  void jump() {
-    print('jump');
+  fly() {
+    print('我是飞机，我需要飞行，但我不是鸟类');
   }
 }
 ```
-
-## 多态接口和 mixins
