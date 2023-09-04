@@ -1,4 +1,4 @@
-export function uni() {
+export default function () {
   return [
     {
       text: 'Uni',

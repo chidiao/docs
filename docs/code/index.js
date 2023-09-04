@@ -4,7 +4,8 @@ export default function () {
       text: 'Code',
       items: [
         { text: 'Start', link: '/code/' },
-        { text: 'Date', link: '/code/date' }
+        { text: 'Date', link: '/code/date' },
+        { text: 'Color', link: '/code/color' }
       ]
     },
     {

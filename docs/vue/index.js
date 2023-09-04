@@ -1,4 +1,4 @@
-export function vue() {
+export default function () {
   return [
     {
       text: 'Vue',

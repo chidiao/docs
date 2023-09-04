@@ -1,4 +1,4 @@
-export function js() {
+export default function () {
   return [
     {
       text: 'JavaScript',

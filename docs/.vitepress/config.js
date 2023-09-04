@@ -1,19 +1,18 @@
-import { defineConfig } from 'vitepress'
-
 import code from '../code'
 
-import { dart } from '../dart'
-import { flutter } from '../flutter'
+import dart from '../dart'
+import flutter from '../flutter'
 import getx from '../getx'
 
-import { ts } from '../ts'
-import { js } from '../js'
-import { css } from '../css'
-import { uni } from '../uni'
-import { utils } from '../utils'
-import { vue } from '../vue'
+import js from '../js'
+import ts from '../ts'
+import css from '../css'
+import uni from '../uni'
+import vue from '../vue'
 
-export default defineConfig({
+import utils from '../utils'
+
+export default {
   lang: 'zh',
   title: 'MyDocs',
   description: 'Code',
@@ -39,7 +38,7 @@ export default defineConfig({
       '/utils/': utils()
     }
   }
-})
+}
 
 function getNav() {
   return [
@@ -58,7 +57,7 @@ function getNav() {
         { text: 'CSS', link: '/css/' },
         { text: 'Vue', link: '/vue/' },
         { text: 'JavaScript', link: '/js/' },
-        { text: 'TypeScript', link: '/ts/' },
+        { text: 'TypeScript', link: '/ts/types/' },
         { text: 'Uniapp', link: '/uni/' }
       ]
     },

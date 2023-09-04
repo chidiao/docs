@@ -1,4 +1,4 @@
-export function ts() {
+export default function () {
   return [
     {
       text: '数据类型',

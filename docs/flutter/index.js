@@ -1,11 +1,10 @@
-export function flutter() {
+export default function () {
   return [
     {
       text: 'Flutter',
       items: [
         { text: '安装', link: '/flutter/install' },
-        { text: '路由', link: '/flutter/route' },
-        { text: 'GetX', link: '/flutter/getx' }
+        { text: '路由', link: '/flutter/route' }
       ]
     },
     {

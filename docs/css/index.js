@@ -1,4 +1,4 @@
-export function css() {
+export default function () {
   return [
     {
       text: 'CSS',

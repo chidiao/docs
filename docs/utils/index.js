@@ -1,4 +1,4 @@
-export function utils() {
+export default function () {
   return [
     {
       text: 'Utils',

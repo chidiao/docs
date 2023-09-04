@@ -1,4 +1,4 @@
-export function dart() {
+export default function () {
   return [
     {
       text: 'Dart',
