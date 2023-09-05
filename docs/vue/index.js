@@ -3,9 +3,6 @@ export default function () {
     {
       text: 'Vue',
       items: [
-        { text: '开始', link: '/vue/' },
-        { text: '组件', link: '/vue/components' },
-        { text: 'state', link: '/vue/state' },
         { text: 'ref 和 reactive', link: '/vue/ref' },
         { text: 'computed 和 watch', link: '/vue/cw' },
         { text: '生命周期', link: '/vue/cycle' },
@@ -13,6 +10,14 @@ export default function () {
         { text: '修饰符', link: '/vue/modifier' },
         { text: '样式', link: '/vue/style' },
         { text: '问题', link: '/vue/qa' }
+      ]
+    },
+    {
+      text: '组件',
+      items: [
+        { text: '组件', link: '/vue/components' },
+        { text: 'Props', link: '/vue/props' },
+        { text: 'Emits', link: '/vue/emits' }
       ]
     },
     {
@@ -28,7 +33,8 @@ export default function () {
         { text: 'Vuex', link: '/vue/vuex' },
         { text: 'Pinia', link: '/vue/pinia' },
         { text: 'Router', link: '/vue/router' },
-        { text: 'I18n', link: '/vue/i18n' }
+        { text: 'I18n', link: '/vue/i18n' },
+        { text: 'Bak', link: '/vue/bak' }
       ]
     }
   ]

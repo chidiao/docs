@@ -9,6 +9,7 @@ import ts from '../ts'
 import css from '../css'
 import uni from '../uni'
 import vue from '../vue'
+import nuxt from '../nuxt'
 
 import utils from '../utils'
 
@@ -58,7 +59,8 @@ function getNav() {
         { text: 'Vue', link: '/vue/' },
         { text: 'JavaScript', link: '/js/' },
         { text: 'TypeScript', link: '/ts/types/' },
-        { text: 'Uniapp', link: '/uni/' }
+        { text: 'Uniapp', link: '/uni/' },
+        { text: 'Nuxt', link: '/nuxt/' }
       ]
     },
     { text: 'Utils', link: '/utils/' }
