@@ -1,22 +1,28 @@
-import code from '../code'
+import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 
+import code from '../code'
 import dart from '../dart'
 import flutter from '../flutter'
 import getx from '../getx'
-
 import js from '../js'
 import ts from '../ts'
 import css from '../css'
 import uni from '../uni'
 import vue from '../vue'
 import nuxt from '../nuxt'
-
 import utils from '../utils'
 
 export default {
   lang: 'zh',
   title: 'MyDocs',
   description: 'Code',
+
+  markdown: {
+    config(md) {
+      md.use(containerPreview)
+      md.use(componentPreview)
+    }
+  },
 
   themeConfig: {
     siteTitle: 'MyDocs',

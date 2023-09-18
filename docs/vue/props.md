@@ -70,25 +70,6 @@ withDefaults(defineProps<Props>(), {
 
 复杂类型?
 
-### 书写规范
-
-- 组件名使用大驼峰：提高可读性，区分原生 HTML 元素。
-- 模板内 props 使用 kebab-case：和 HTML attribute 保持一致。
-
-```html
-<MyBlog :is-hot="false"></MyBlog>
-```
-
-- 组件内 props 使用小驼峰：作为一个合法的 JavaScript 标识符。
-
-```vue
-<script setup>
-defineProps({
-  isHot: Boolean
-})
-</script>
-```
-
 ### 其他
 
 ```html

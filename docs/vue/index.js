@@ -9,6 +9,7 @@ export default function () {
         { text: '指令', link: '/vue/directives' },
         { text: '修饰符', link: '/vue/modifier' },
         { text: '样式', link: '/vue/style' },
+        { text: 'v-for', link: '/vue/v-for' },
         { text: '问题', link: '/vue/qa' }
       ]
     },
@@ -17,14 +18,9 @@ export default function () {
       items: [
         { text: '组件', link: '/vue/components' },
         { text: 'Props', link: '/vue/props' },
-        { text: 'Emits', link: '/vue/emits' }
-      ]
-    },
-    {
-      text: '指令',
-      items: [
-        { text: 'v-for', link: '/vue/v-for' },
-        { text: 'v-model', link: '/vue/v-model' }
+        { text: 'Emits', link: '/vue/emits' },
+        { text: 'Slot', link: '/vue/slot' },
+        { text: 'v-model', link: '/vue/vmodel' }
       ]
     },
     {
