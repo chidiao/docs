@@ -18,7 +18,6 @@ export default function () {
       items: [
         { text: 'Yarn', link: '/utils/node' },
         { text: 'Prettier', link: '/utils/prettier' },
-        { text: 'Git', link: '/utils/git' },
         { text: 'VScode', link: '/utils/vscode' },
         { text: 'Vite', link: '/utils/build/vite' },
         { text: 'Parcel', link: '/utils/build/parcel' }

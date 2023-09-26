@@ -14,7 +14,7 @@
   height: var(--status-bar-height);
   // 内容区域到顶部的距离
   top: var(--window-top);
-  // 内容取药到底部的距离
+  // 内容区域到底部的距离
   bottom: var(--window-bottom);
 }
 

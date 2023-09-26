@@ -27,23 +27,10 @@ export default {
   themeConfig: {
     siteTitle: 'MyDocs',
     logo: '/logo.jpg',
-
     outline: [2, 3],
     outlineTitle: 'On this page',
-
     nav: getNav(),
-    sidebar: {
-      '/code/': code(),
-      '/dart/': dart(),
-      '/flutter/': flutter(),
-      '/getx/': getx(),
-      '/css/': css(),
-      '/vue/': vue(),
-      '/js/': js(),
-      '/ts/': ts(),
-      '/uni/': uni(),
-      '/utils/': utils()
-    }
+    sidebar: getSidebar()
   }
 }
 
@@ -61,14 +48,44 @@ function getNav() {
     {
       text: 'Web',
       items: [
-        { text: 'CSS', link: '/css/' },
         { text: 'Vue', link: '/vue/' },
         { text: 'JavaScript', link: '/js/' },
         { text: 'TypeScript', link: '/ts/types/' },
-        { text: 'Uniapp', link: '/uni/' },
-        { text: 'Nuxt', link: '/nuxt/' }
+        { text: 'Uniapp', link: '/uni/' }
       ]
+    },
+    {
+      text: 'Nuxt',
+      link: '/nuxt/'
+    },
+    {
+      text: 'Style',
+      items: [{ text: 'CSS', link: '/css/' }]
     },
     { text: 'Utils', link: '/utils/' }
   ]
+}
+
+function getSidebar() {
+  const sidebar = {
+    '/code/': code(),
+    '/dart/': dart(),
+    '/flutter/': flutter(),
+    '/getx/': getx(),
+    '/css/': css(),
+    '/vue/': vue(),
+    '/js/': js(),
+    '/ts/': ts(),
+    '/uni/': uni(),
+    '/nuxt/': nuxt(),
+    '/utils/': utils()
+  }
+
+  return sidebar
+}
+
+export interface DocConfig {
+  nav: string
+  sidebar: []
+  dir: string
 }

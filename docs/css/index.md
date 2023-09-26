@@ -6,7 +6,7 @@ hero:
   actions:
     - theme: brand
       text: Go Docs
-      link: /guide/what-is-vitepress
+      link: /css/background
 
 features:
   - title: animista
