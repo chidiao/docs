@@ -10,6 +10,7 @@ export default function () {
         { text: '修饰符', link: '/vue/modifier' },
         { text: '样式', link: '/vue/style' },
         { text: 'v-for', link: '/vue/v-for' },
+
         { text: '问题', link: '/vue/qa' }
       ]
     },
@@ -24,12 +25,18 @@ export default function () {
       ]
     },
     {
+      text: '动画',
+      items: [
+        { text: 'Transition', link: '/vue/transition' },
+        { text: 'TransitionGroup', link: '/vue/transitionGroup' }
+      ]
+    },
+    {
       text: '全家桶',
       items: [
         { text: 'Vuex', link: '/vue/vuex' },
         { text: 'Pinia', link: '/vue/pinia' },
         { text: 'Router', link: '/vue/router' },
-        { text: 'I18n', link: '/vue/i18n' },
         { text: 'Bak', link: '/vue/bak' }
       ]
     }

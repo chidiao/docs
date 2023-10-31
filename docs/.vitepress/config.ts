@@ -1,9 +1,8 @@
 import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
-
 import code from '../code'
 import dart from '../dart'
 import flutter from '../flutter'
-import getx from '../getx'
+import pub from '../pub'
 import js from '../js'
 import ts from '../ts'
 import css from '../css'
@@ -42,7 +41,7 @@ function getNav() {
       items: [
         { text: 'Dart', link: '/dart/' },
         { text: 'Flutter', link: '/flutter/' },
-        { text: 'GetX', link: '/getx/' }
+        { text: 'Pub', link: '/pub/' }
       ]
     },
     {
@@ -50,7 +49,7 @@ function getNav() {
       items: [
         { text: 'Vue', link: '/vue/' },
         { text: 'JavaScript', link: '/js/' },
-        { text: 'TypeScript', link: '/ts/types/' },
+        { text: 'TypeScript', link: '/ts/' },
         { text: 'Uniapp', link: '/uni/' }
       ]
     },
@@ -60,7 +59,7 @@ function getNav() {
     },
     {
       text: 'Style',
-      items: [{ text: 'CSS', link: '/css/' }]
+      items: [{ text: 'CSS', link: '/css/bak' }]
     },
     { text: 'Utils', link: '/utils/' }
   ]
@@ -68,10 +67,6 @@ function getNav() {
 
 function getSidebar() {
   const sidebar = {
-    '/code/': code(),
-    '/dart/': dart(),
-    '/flutter/': flutter(),
-    '/getx/': getx(),
     '/css/': css(),
     '/vue/': vue(),
     '/js/': js(),
@@ -80,12 +75,10 @@ function getSidebar() {
     '/nuxt/': nuxt(),
     '/utils/': utils()
   }
+  const configs = [code, dart, flutter, pub]
+  configs.forEach((config) => {
+    Object.assign(sidebar, config.sidebar)
+  })
 
   return sidebar
-}
-
-export interface DocConfig {
-  nav: string
-  sidebar: []
-  dir: string
 }
