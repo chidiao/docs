@@ -59,23 +59,15 @@ function getNav() {
     },
     {
       text: 'Style',
-      items: [{ text: 'CSS', link: '/css/bak' }]
+      items: [{ text: 'CSS', link: '/css/' }]
     },
     { text: 'Utils', link: '/utils/' }
   ]
 }
 
 function getSidebar() {
-  const sidebar = {
-    '/css/': css(),
-    '/vue/': vue(),
-    '/js/': js(),
-    '/ts/': ts(),
-    '/uni/': uni(),
-    '/nuxt/': nuxt(),
-    '/utils/': utils()
-  }
-  const configs = [code, dart, flutter, pub]
+  const sidebar = {}
+  const configs = [code, dart, flutter, pub, vue, js, ts, css, nuxt, uni, utils]
   configs.forEach((config) => {
     Object.assign(sidebar, config.sidebar)
   })

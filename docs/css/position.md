@@ -1,50 +1,80 @@
 # Position
 
-[position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
 
-- static 静态
-
+- static 静态，也就是非定位元素
 - relative 相对定位
-
 - absolute 绝对定位
-
-- fixed 固定定位
-
+- fixed 绝对定位，也叫固定定位
 - sticky 粘性定位
+
+除了 `static` 都叫定位元素
 
 ## position
 
 ### static
 
-`static` 是 `非定位元素`
+正常文档流布局
 
-其余四种都是 `定位元素`
-
-元素使用正常的布局行为
-
-此时 `top`、`right`、`bottom`、`left` 和 `z-index` 属性均无效
+此时 `top`, `right`, `bottom`, `left` 和 `z-index` 属性无效
 
 ### relative
 
-正常文档流，保留原空间，留白
+正常文档流布局，保留元素空间
 
-相对于自身文档流的位置，进行定位和偏移
+相对于自身文档流位置进行定位和偏移
 
 ### absolute
 
-脱离文档流，不保留原空间，不留白
+元素脱离文档流，不保留元素空间
 
-相对于最近的 `定位元素(祖先)` ，进行定位和偏移
+相对于最近的 `定位元素祖先` 进行定位和偏移
 
 ### fixed
 
-脱离文档流，不保留原空间，不留白
+元素脱离文档流，不保留元素空间
 
-相对于屏幕视口 `viewport` ，进行定位和偏移
+相对于屏幕视口 `viewport` 进行定位和偏移
+
+::: code-group
+
+```scss [基于视口]
+.parent {
+  width: 375px;
+
+  .fixed {
+    width: 100%;
+    position: fixed;
+  }
+}
+
+// width: 100vw
+// 基于viewport，和祖先元素没有关系
+// 宽度借助max-width等方式来解决吧
+```
+
+```scss [基于祖先]
+.parent {
+  width: 375px;
+  transform: scale(1);
+
+  .fixed {
+    width: 100%;
+    position: fixed;
+  }
+}
+
+// width: 375px
+// 祖先元素以下属性不为none时，基于该祖先元素
+// transform、perspective、filter、backdrop-filter
+// 此时等效于absolute了，并没有fixed效果
+```
+
+:::
 
 ### sticky
 
-正常文档流，保留原空间，留白
+正常文档流布局，保留元素空间
 
 可以当作 `relative` + `fixed`
 
@@ -64,10 +94,8 @@
   bottom: auto;
 }
 
-// 1. height 未指定或auto时，两者同时生效
-// 2. height 被指定时，top 优先生效，bottom 会被忽略
-// 3. height 被指定时，top：auto时，bottom生效
-
+// 无height时，同时生效
+// 有height时，top优先于bottom
 // 仅对定位元素生效
 ```
 
@@ -79,7 +107,8 @@
   right: auto;
 }
 
-// left 优先于 right
+// 无width时，同时生效
+// 有width时，left优先于right
 // 仅对定位元素生效
 ```
 

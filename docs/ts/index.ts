@@ -1,8 +1,12 @@
-export default function () {
-  return [
-    {
-      text: 'Typescript',
-      items: [{ text: 'Index', link: '/ts/' }]
-    }
-  ]
+const config = {
+  sidebar: {
+    '/ts/': [
+      {
+        text: 'Typescript',
+        items: [{ text: 'Index', link: '/ts/' }]
+      }
+    ]
+  }
 }
+
+export default config
