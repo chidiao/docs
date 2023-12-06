@@ -33,6 +33,10 @@ const config = {
         ]
       },
       {
+        text: '配置',
+        items: [{ text: 'proxy', link: '/vue/proxy' }]
+      },
+      {
         text: '全家桶',
         items: [
           { text: 'Vuex', link: '/vue/vuex' },

@@ -1,28 +1,6 @@
 # 编程导航
 
-## 素材
-
-- [IconPark - 字节图标库](https://iconpark.oceanengine.com/)
-
-- [Picsum - 占位图](https://picsum.photos/)
-
-- [unDraw - 矢量图](https://undraw.co/illustrations)
-
-- [Error404 - 模板页面](https://error404.fun/)
-
-- [Dribbble - 设计灵感](https://dribbble.com/)
-
 ## CSS
-
-- [Animista - CSS 动画](https://animista.net/)
-
-- [Animate - CSS 动画](https://github.com/animate-css/animate.css)
-
-- [ShapeDividers - 自定义形状](https://www.shapedivider.app/)
-
-- [Normalize - CSS resets](https://github.com/necolas/normalize.css)
-
-- [Hover - CSS](https://github.com/IanLunn/Hover/)
 
 ## 插件
 

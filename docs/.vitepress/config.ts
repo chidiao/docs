@@ -5,11 +5,11 @@ import flutter from '../flutter'
 import pub from '../pub'
 import js from '../js'
 import ts from '../ts'
-import css from '../css'
-import uni from '../uni'
+import npm from '../npm'
 import vue from '../vue'
 import nuxt from '../nuxt'
-import utils from '../utils'
+import uni from '../uni'
+import css from '../css'
 
 export default {
   lang: 'zh',
@@ -41,33 +41,38 @@ function getNav() {
       items: [
         { text: 'Dart', link: '/dart/' },
         { text: 'Flutter', link: '/flutter/' },
-        { text: 'Pub', link: '/pub/' }
+        { text: 'Package', link: '/pub/' }
       ]
     },
     {
-      text: 'Web',
+      text: 'JavaScript',
       items: [
-        { text: 'Vue', link: '/vue/' },
         { text: 'JavaScript', link: '/js/' },
         { text: 'TypeScript', link: '/ts/' },
+        { text: 'Package', link: '/npm/' }
+      ]
+    },
+    {
+      text: 'Vue',
+      items: [
+        { text: 'Vue', link: '/vue/' },
+        { text: 'Nuxt', link: '/nuxt/' },
         { text: 'Uniapp', link: '/uni/' }
       ]
     },
     {
-      text: 'Nuxt',
-      link: '/nuxt/'
-    },
-    {
       text: 'Style',
-      items: [{ text: 'CSS', link: '/css/' }]
-    },
-    { text: 'Utils', link: '/utils/' }
+      items: [
+        { text: 'CSS', link: '/css/icons' },
+        { text: 'SCSS', link: '/scss/' }
+      ]
+    }
   ]
 }
 
 function getSidebar() {
   const sidebar = {}
-  const configs = [code, dart, flutter, pub, vue, js, ts, css, nuxt, uni, utils]
+  const configs = [code, dart, flutter, pub, vue, js, ts, npm, css, nuxt, uni]
   configs.forEach((config) => {
     Object.assign(sidebar, config.sidebar)
   })

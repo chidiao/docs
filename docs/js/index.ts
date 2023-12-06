@@ -33,7 +33,6 @@ const config = {
           { text: '其他', link: '/js/other' },
           { text: '代码段', link: '/js/snippets/' },
           { text: 'Canvas', link: '/js/canvas' },
-          { text: 'jQuery', link: '/js/jquery' },
           { text: 'Node.js', link: '/js/node' }
         ]
       }

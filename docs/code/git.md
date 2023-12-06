@@ -8,7 +8,7 @@ git config --global user.name "孙颖洲"
 git config --global user.email "sunyz94123@qq.com"
 
 # 生成公钥(公钥名是可以随意指定的)
-ssh-keygen -t rsa -C 'mgb'
+ssh-keygen -t rsa -C 'rmb'
 
 # 测试公钥
 ssh -T git@gitee.com
@@ -17,7 +17,7 @@ ssh -T git@gitee.com
 git remote add origin sunyz.git
 
 # 配置默认推送
-git push -u origin master
+git push -u origin main
 ```
 
 ## 提交
@@ -112,7 +112,23 @@ git clone <url> <name>
 
 ## 分支
 
-## Error
+## degit
+
+[degit](https://github.com/Rich-Harris/degit)
+
+一个简单的项目脚手架，只克隆最新代码，而不是整个仓库
+
+```sh
+yarn global add degit
+```
+
+```sh
+# 克隆某个分支
+degit https://github.com/nuxt/starter#v3 myapp
+degit https://github.com/nuxt/starter#ui myapp
+```
+
+## error
 
 **SSL certificate problem: unable to get local issuer certificate**
 

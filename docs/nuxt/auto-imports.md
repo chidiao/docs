@@ -79,7 +79,7 @@ export { foo } from './more/foo'
 export { bar } from './more/bar'
 ```
 
-## @utils
+## @/utils
 
 自动导入此目录中的任何方法和变量
 
@@ -88,4 +88,3 @@ export { bar } from './more/bar'
 export const FOO = 'foo'
 export const print = () => console.log(FOO)
 ```
-

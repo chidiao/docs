@@ -12,7 +12,8 @@ const config = {
         text: 'Utils',
         items: [
           { text: 'Git', link: '/code/git' },
-          { text: 'i18n', link: '/code/i18n' }
+          { text: 'i18n', link: '/code/i18n' },
+          { text: 'config', link: '/code/config' }
         ]
       }
     ]
