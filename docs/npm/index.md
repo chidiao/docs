@@ -1,7 +1,5 @@
 # 编程导航
 
-## CSS
-
 ## 插件
 
 - [ChinaDivision - 中国省市区数据](https://github.com/modood/Administrative-divisions-of-China)

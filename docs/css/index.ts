@@ -23,7 +23,8 @@ const config = {
         text: 'Layout',
         items: [
           { text: 'position', link: '/css/position' },
-          { text: 'flex', link: '/css/flex' }
+          { text: 'flex', link: '/css/flex' },
+          { text: 'grid', link: '/css/grid' }
         ]
       },
       {

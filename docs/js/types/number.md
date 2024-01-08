@@ -66,6 +66,4 @@ parseFloat('12.3.4') // 12.3
 
 ## Math
 
-[Math](../math)
-
 ## 精度损失

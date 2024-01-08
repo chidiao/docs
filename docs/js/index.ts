@@ -20,7 +20,15 @@ const config = {
       },
       {
         text: 'Types',
-        items: [{ text: 'Number', link: '/js/types/number' }]
+        items: [
+          { text: 'Index', link: '/js/types/' },
+          { text: 'Number', link: '/js/types/number' },
+          { text: 'Array', link: '/js/types/array' },
+          { text: 'String', link: '/js/types/string' },
+          { text: 'Object', link: '/js/types/object' },
+          { text: 'Map', link: '/js/types/map' },
+          { text: 'Set', link: '/js/types/set' }
+        ]
       },
       {
         text: 'Extend',

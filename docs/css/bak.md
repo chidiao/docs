@@ -365,11 +365,7 @@ $height: $width + 10px;
 
 - [filter](./filter)
 
-- [transition](./animate)
-
 - [transform](./transform)
-
-- [animate](./animate)
 
 - 渐变
 

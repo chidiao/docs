@@ -2,8 +2,6 @@
 
 ## 构建项目
 
-[Vite 构建项目](../utils/build/vite#vue)
-
 ::: code-group
 
 ```bash [vite]
