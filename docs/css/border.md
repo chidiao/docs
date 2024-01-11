@@ -28,17 +28,22 @@
 
 ## Style
 
-```scss
-// 简写
-.box {
-  border-style: none; // 默认值
-  border-style: dashed solid;
-}
+<Demo>
+  <div class="flex space-x-4">
+    <div
+      class="border-4 border-blue-500 px-4 rounded"
+      :class="['border-' + style]"
+      v-for="style in ['solid',  'dashed', 'dotted','double']"
+    >
+      {{ style }}
+    </div>
+  </div>
+</Demo>
 
-// 单独
+```scss
 .box {
-  border-top-style: solid;
-  border-right-style: solid;
+  border-style: none;
+  border-style: solid;
 }
 
 // none 是默认值，所以只指定 width 和 color 也是无效的

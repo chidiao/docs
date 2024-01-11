@@ -1,6 +1,6 @@
-import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 import code from '../code'
 import dart from '../dart'
+import demos from '../demos'
 import flutter from '../flutter'
 import pub from '../pub'
 import js from '../js'
@@ -16,20 +16,17 @@ export default {
   title: 'MyDocs',
   description: 'Code',
 
-  markdown: {
-    config(md) {
-      md.use(containerPreview)
-      md.use(componentPreview)
-    }
-  },
-
   themeConfig: {
     siteTitle: 'MyDocs',
     logo: '/logo.jpg',
     outline: [2, 3],
     outlineTitle: 'On this page',
     nav: getNav(),
-    sidebar: getSidebar()
+    sidebar: getSidebar(),
+    editLink: {
+      pattern: 'https://github.com/chidiao/mydocs/tree/main/docs/:path',
+      text: 'View on GitHub'
+    }
   }
 }
 
@@ -64,7 +61,8 @@ function getNav() {
       text: 'Style',
       items: [
         { text: 'CSS', link: '/css/icons' },
-        { text: 'SCSS', link: '/scss/' }
+        { text: 'SCSS', link: '/scss/' },
+        { text: 'Demos', link: '/demos/' }
       ]
     }
   ]
@@ -72,7 +70,7 @@ function getNav() {
 
 function getSidebar() {
   const sidebar = {}
-  const configs = [code, dart, flutter, pub, vue, js, ts, npm, css, nuxt, uni]
+  const configs = [code, dart, demos, flutter, pub, vue, js, ts, npm, css, nuxt, uni]
   configs.forEach((config) => {
     Object.assign(sidebar, config.sidebar)
   })

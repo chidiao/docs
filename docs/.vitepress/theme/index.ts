@@ -1,11 +1,10 @@
-import './tailwind.css'
 import DefaultTheme from 'vitepress/theme'
-import { AntDesignContainer } from '@vitepress-demo-preview/component'
-import '@vitepress-demo-preview/component/dist/style.css'
+import DemoContainer from './demoContainer.vue'
+import './tailwind.css'
 
 export default {
-  ...DefaultTheme,
+  extends: DefaultTheme,
   enhanceApp({ app }) {
-    app.component('demo-preview', AntDesignContainer)
+    app.component('Demo', DemoContainer)
   }
 }
