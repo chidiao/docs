@@ -112,7 +112,7 @@ git clone <url> <name>
 
 ## 分支
 
-## degit
+## Degit
 
 [degit](https://github.com/Rich-Harris/degit)
 
@@ -128,12 +128,25 @@ degit https://github.com/nuxt/starter#v3 myapp
 degit https://github.com/nuxt/starter#ui myapp
 ```
 
-## error
+## Error
 
-**SSL certificate problem: unable to get local issuer certificate**
+### SSL certificate problem
+
+`SSL certificate problem: unable to get local issuer certificate`
 
 解决：关闭 `SSL` 验证
 
 ```sh
 git config --global http.sslVerify false
+```
+
+### Failed to connet to port 443
+
+`Failed to connect to github.com port 443`
+
+解决：配置代理和梯子代理一致
+
+```sh
+git config --global http.proxy 127.0.0.1:7890
+git config --global https.proxy 127.0.0.1:7890
 ```

@@ -1,6 +1,6 @@
 # 收藏夹
 
-# GPT
+## GPT
 
 [Openai](https://openai.com/)
 

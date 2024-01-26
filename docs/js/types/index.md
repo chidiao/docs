@@ -14,7 +14,7 @@
 
 ### String
 
-[String](/ts/types/string)
+[String]()
 
 字符串。
 

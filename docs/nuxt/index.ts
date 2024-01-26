@@ -4,7 +4,7 @@ const config = {
       {
         text: 'Nuxt',
         items: [
-          { text: 'start', link: '/nuxt/' },
+          { text: 'Start', link: '/nuxt/' },
           { text: 'fetch', link: '/nuxt/fetch' },
           { text: 'i18n', link: '/nuxt/i18n' }
         ]

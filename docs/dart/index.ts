@@ -1,5 +1,8 @@
+import pub from './pub'
+
 const config = {
   sidebar: {
+    '/dart/pub': pub,
     '/dart/': [
       {
         text: 'Dart',

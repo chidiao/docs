@@ -13,7 +13,8 @@ const config = {
         items: [
           { text: 'Git', link: '/code/git' },
           { text: 'i18n', link: '/code/i18n' },
-          { text: 'config', link: '/code/config' }
+          { text: 'Config', link: '/code/config/' },
+          { text: '收藏夹', link: '/code/favorite' }
         ]
       }
     ]

@@ -46,11 +46,11 @@ npm i -g yarn
 ```sh
 yarn config get registry
 yarn config set registry https://registry.yarnpkg.com
-yarn config set registry https://registry.npm.taobao.org
+yarn config set registry https://registry.npmmirror.com
 
 npm config get registry
 npm config set registry https://registry.npmjs.org
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com
 ```
 
 ### 环境变量

@@ -2,10 +2,8 @@ import code from '../code'
 import dart from '../dart'
 import demos from '../demos'
 import flutter from '../flutter'
-import pub from '../pub'
 import js from '../js'
 import ts from '../ts'
-import npm from '../npm'
 import vue from '../vue'
 import nuxt from '../nuxt'
 import uni from '../uni'
@@ -38,7 +36,7 @@ function getNav() {
       items: [
         { text: 'Dart', link: '/dart/' },
         { text: 'Flutter', link: '/flutter/' },
-        { text: 'Package', link: '/pub/' }
+        { text: 'Packages', link: '/dart/pub/' }
       ]
     },
     {
@@ -46,7 +44,8 @@ function getNav() {
       items: [
         { text: 'JavaScript', link: '/js/' },
         { text: 'TypeScript', link: '/ts/' },
-        { text: 'Package', link: '/npm/' }
+        { text: 'Snippets', link: '/js/snippets/' },
+        { text: 'Packages', link: '/js/npm/' }
       ]
     },
     {
@@ -70,7 +69,7 @@ function getNav() {
 
 function getSidebar() {
   const sidebar = {}
-  const configs = [code, dart, demos, flutter, pub, vue, js, ts, npm, css, nuxt, uni]
+  const configs = [code, dart, demos, flutter, vue, js, ts, css, nuxt, uni]
   configs.forEach((config) => {
     Object.assign(sidebar, config.sidebar)
   })

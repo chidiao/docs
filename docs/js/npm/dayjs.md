@@ -1,6 +1,6 @@
 # Dayjs
 
-[Date](/ts/types/date)
+[Date]()
 
 [Dayjs](https://dayjs.gitee.io/zh-CN/)
 

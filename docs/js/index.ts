@@ -1,5 +1,10 @@
+import snippets from './snippets'
+import npm from './npm'
+
 const config = {
   sidebar: {
+    '/js/snippets': snippets,
+    '/js/npm': npm,
     '/js/': [
       {
         text: 'JavaScript',
@@ -21,7 +26,7 @@ const config = {
       {
         text: 'Types',
         items: [
-          { text: 'Index', link: '/js/types/' },
+          { text: 'Types', link: '/js/types/' },
           { text: 'Number', link: '/js/types/number' },
           { text: 'Array', link: '/js/types/array' },
           { text: 'String', link: '/js/types/string' },
@@ -39,9 +44,7 @@ const config = {
         items: [
           { text: '变量', link: '/js/var' },
           { text: '其他', link: '/js/other' },
-          { text: '代码段', link: '/js/snippets/' },
-          { text: 'Canvas', link: '/js/canvas' },
-          { text: 'Node.js', link: '/js/node' }
+          { text: 'Canvas', link: '/js/canvas' }
         ]
       }
     ]
