@@ -25,3 +25,10 @@
 degit https://github.com/nuxt/starter#v3 myapp
 degit https://github.com/nuxt/starter#ui myapp
 ```
+
+## 直接下载
+
+```sh
+# tar
+https://github.com/nuxt/starter/blob/templates/templates/v3.json
+```

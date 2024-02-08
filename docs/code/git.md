@@ -62,22 +62,35 @@ git commit -m 'init'
 2. git commit -m 'del'
 ```
 
-## 回退
+## 回滚
 
-回退可以指定版本：
+`HEAD` 当前版本，`HEAD^` 上一个，`HEAD^^` 上上个，`HEAD~100` 上 100 个
 
-`HEAD` 当前版本，`HEAD^` 上一个，`HEAD^^` 上上个，`HEAD~100` 上 100 个。
-
-也可以指定 `commit id` ，并不需要输完整。
+产看记录
 
 ```sh
 # 查看记录
 git log
 git log --pretty=oneline
+```
 
-# 回退到指定版本
+本地回滚
+
+```sh
+# 回滚到指定commit
+git reset --hard 82102bb0894419d5bf374093351692d148b0edc6
+git reset --hard 82102bb
+
+# 回滚到上个commit或多个
 git reset --hard HEAD^
-git reset --hard 1094a
+```
+
+覆盖远程
+
+```sh
+# 强制推送到远程
+git push origin HEAD --force
+git push --force
 ```
 
 ## 远程

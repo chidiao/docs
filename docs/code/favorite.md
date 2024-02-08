@@ -28,6 +28,8 @@
 
 [Snipaste](https://zh.snipaste.com/)
 
+[pixpinapp](https://pixpinapp.com/)
+
 [Utools](https://www.u-tools.cn/)
 
 [Lively](https://www.rocksdanister.com/lively/)
