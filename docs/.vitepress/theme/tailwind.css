@@ -5,3 +5,11 @@
 body::-webkit-scrollbar {
   display: none;
 }
+
+.my-btn {
+  @apply ring-1 ring-gray-200 py-1 px-2 rounded cursor-pointer;
+}
+
+.my-btn.active {
+  @apply ring-blue-400;
+}

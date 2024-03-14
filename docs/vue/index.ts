@@ -1,5 +1,10 @@
+import routerSidebar from './router'
+import piniaSidebar from './pinia'
+
 const config = {
   sidebar: {
+    ...routerSidebar,
+    ...piniaSidebar,
     '/vue/': [
       {
         text: 'Vue',
@@ -11,7 +16,6 @@ const config = {
           { text: '修饰符', link: '/vue/modifier' },
           { text: '样式', link: '/vue/style' },
           { text: 'v-for', link: '/vue/v-for' },
-
           { text: '问题', link: '/vue/qa' }
         ]
       },
@@ -35,15 +39,6 @@ const config = {
       {
         text: '配置',
         items: [{ text: 'proxy', link: '/vue/proxy' }]
-      },
-      {
-        text: '全家桶',
-        items: [
-          { text: 'Vuex', link: '/vue/vuex' },
-          { text: 'Pinia', link: '/vue/pinia' },
-          { text: 'Router', link: '/vue/router' },
-          { text: 'Bak', link: '/vue/bak' }
-        ]
       }
     ]
   }

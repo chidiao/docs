@@ -14,6 +14,7 @@ const config = {
           { text: 'Git', link: '/code/git' },
           { text: 'i18n', link: '/code/i18n' },
           { text: 'Config', link: '/code/config/' },
+          { text: 'DST', link: '/code/dst' },
           { text: '收藏夹', link: '/code/favorite' }
         ]
       }

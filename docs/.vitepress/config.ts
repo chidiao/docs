@@ -51,9 +51,19 @@ function getNav() {
     {
       text: 'Vue',
       items: [
-        { text: 'Vue', link: '/vue/' },
-        { text: 'Nuxt', link: '/nuxt/' },
-        { text: 'Uniapp', link: '/uni/' }
+        {
+          items: [
+            { text: 'Vue', link: '/vue/' },
+            { text: 'Router', link: '/vue/router/' },
+            { text: 'Pinia', link: '/vue/pinia/pinia' }
+          ]
+        },
+        {
+          items: [
+            { text: 'Nuxt', link: '/nuxt/' },
+            { text: 'Uniapp', link: '/uni/' }
+          ]
+        }
       ]
     },
     {

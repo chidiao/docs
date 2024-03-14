@@ -10,4 +10,3 @@ defineEmits(['update:title'])
 ```html
 <MyBlog v-model:title="title"></MyBlog>
 ```
-
