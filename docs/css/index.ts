@@ -1,10 +1,24 @@
 const config = {
+  nav: {
+    text: 'Style',
+    items: [
+      { text: 'CSS', link: '/css/background/' },
+      { text: 'Utils', link: '/css/utils/' },
+      { text: 'Demos', link: '/demos/' }
+    ]
+  },
   sidebar: {
-    '/css/': [
+    '/css/utils': [
       {
-        text: 'Assets',
-        items: [{ text: 'icons', link: '/css/icons' }]
-      },
+        text: 'Utils',
+        items: [
+          { text: 'Assets', link: '/css/utils/' },
+          { text: 'Scss', link: '/css/utils/scss' },
+          { text: 'EasyLess', link: '/css/utils/easy-less' }
+        ]
+      }
+    ],
+    '/css/': [
       {
         text: 'CSS',
         items: [

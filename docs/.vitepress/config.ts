@@ -29,52 +29,7 @@ export default {
 }
 
 function getNav() {
-  return [
-    { text: 'Code', link: '/code/' },
-    {
-      text: 'Flutter',
-      items: [
-        { text: 'Dart', link: '/dart/' },
-        { text: 'Flutter', link: '/flutter/' },
-        { text: 'Packages', link: '/dart/pub/' }
-      ]
-    },
-    {
-      text: 'JavaScript',
-      items: [
-        { text: 'JavaScript', link: '/js/' },
-        { text: 'TypeScript', link: '/ts/' },
-        { text: 'Snippets', link: '/js/snippets/' },
-        { text: 'Packages', link: '/js/npm/' }
-      ]
-    },
-    {
-      text: 'Vue',
-      items: [
-        {
-          items: [
-            { text: 'Vue', link: '/vue/' },
-            { text: 'Router', link: '/vue/router/' },
-            { text: 'Pinia', link: '/vue/pinia/pinia' }
-          ]
-        },
-        {
-          items: [
-            { text: 'Nuxt', link: '/nuxt/' },
-            { text: 'Uniapp', link: '/uni/' }
-          ]
-        }
-      ]
-    },
-    {
-      text: 'Style',
-      items: [
-        { text: 'CSS', link: '/css/icons' },
-        { text: 'SCSS', link: '/scss/' },
-        { text: 'Demos', link: '/demos/' }
-      ]
-    }
-  ]
+  return [code.nav, flutter.nav, js.nav, vue.nav, css.nav]
 }
 
 function getSidebar() {

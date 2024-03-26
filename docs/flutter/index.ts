@@ -1,4 +1,12 @@
 const config = {
+  nav: {
+    text: 'Flutter',
+    items: [
+      { text: 'Dart', link: '/dart/' },
+      { text: 'Flutter', link: '/flutter/' },
+      { text: 'Packages', link: '/dart/pub/' }
+    ]
+  },
   sidebar: {
     '/flutter/': [
       {

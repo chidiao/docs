@@ -1,8 +1,20 @@
+import http from './http'
 import snippets from './snippets'
 import npm from './npm'
 
 const config = {
+  nav: {
+    text: 'JavaScript',
+    items: [
+      { text: 'JavaScript', link: '/js/' },
+      { text: 'TypeScript', link: '/ts/' },
+      { text: 'Http', link: '/js/http/' },
+      { text: 'Node', link: '/js/npm/' },
+      { text: 'Snippets', link: '/js/snippets/' }
+    ]
+  },
   sidebar: {
+    '/js/http': http,
     '/js/snippets': snippets,
     '/js/npm': npm,
     '/js/': [

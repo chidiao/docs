@@ -1,4 +1,5 @@
 const config = {
+  nav: { text: 'Code', link: '/code/' },
   sidebar: {
     '/code/': [
       {

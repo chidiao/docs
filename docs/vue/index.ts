@@ -2,6 +2,24 @@ import routerSidebar from './router'
 import piniaSidebar from './pinia'
 
 const config = {
+  nav: {
+    text: 'Vue',
+    items: [
+      {
+        items: [
+          { text: 'Vue', link: '/vue/' },
+          { text: 'Router', link: '/vue/router/' },
+          { text: 'Pinia', link: '/vue/pinia/pinia' }
+        ]
+      },
+      {
+        items: [
+          { text: 'Nuxt', link: '/nuxt/' },
+          { text: 'Uniapp', link: '/uni/' }
+        ]
+      }
+    ]
+  },
   sidebar: {
     ...routerSidebar,
     ...piniaSidebar,
