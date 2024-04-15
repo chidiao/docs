@@ -1,5 +1,13 @@
 # Nuxt
 
+[nuxt.com](https://nuxt.com/)
+
+[modules](https://nuxt.com/modules)
+
+[ui](https://ui.nuxt.com/)
+
+[i18n](https://i18n.nuxtjs.org/)
+
 ## nuxi
 
 [nuxt.com](https://nuxt.com/docs/getting-started/installation)

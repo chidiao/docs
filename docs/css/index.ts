@@ -2,7 +2,7 @@ const config = {
   nav: {
     text: 'Style',
     items: [
-      { text: 'CSS', link: '/css/background/' },
+      { text: 'CSS', link: '/css/' },
       { text: 'Utils', link: '/css/utils/' },
       { text: 'Demos', link: '/demos/' }
     ]
@@ -22,6 +22,7 @@ const config = {
       {
         text: 'CSS',
         items: [
+          { text: 'Start', link: '/css/' },
           { text: 'Selector', link: '/css/selector' },
           { text: 'Background', link: '/css/background/' },
           { text: 'Borders', link: '/css/borders/' },

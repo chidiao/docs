@@ -1,5 +1,4 @@
-import routerSidebar from './router'
-import piniaSidebar from './pinia'
+import utils from './utils'
 
 const config = {
   nav: {
@@ -8,8 +7,7 @@ const config = {
       {
         items: [
           { text: 'Vue', link: '/vue/' },
-          { text: 'Router', link: '/vue/router/' },
-          { text: 'Pinia', link: '/vue/pinia/pinia' }
+          { text: 'Utils', link: '/vue/utils/router' }
         ]
       },
       {
@@ -21,8 +19,7 @@ const config = {
     ]
   },
   sidebar: {
-    ...routerSidebar,
-    ...piniaSidebar,
+    ...utils,
     '/vue/': [
       {
         text: 'Vue',
