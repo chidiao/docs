@@ -8,5 +8,6 @@
 .my-demo {
   background: rgba(255, 255, 255, 0.1);
   padding: 16px;
+  color: var(--vp-c-text-1);
 }
 </style>

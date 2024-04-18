@@ -2,6 +2,8 @@
 
 ## 插件
 
+- [CocoMessage - 轻量级 Toast](https://github.com/TheWindRises-2/coco-message)
+
 - [ChinaDivision - 中国省市区数据](https://github.com/modood/Administrative-divisions-of-China)
 
 - [uaDevice - UA 解析 设备识别](https://github.com/fex-team/ua-device)
@@ -21,10 +23,6 @@
 - [Squoosh - 图片压缩](https://squoosh.app/)
 
 - [Carbon - 代码截图](https://carbon.now.sh/)
-
-## 玩具
-
-- [Alpine.js - 轻量级框架](https://alpinejs.dev/)
 
 ## 其他
 

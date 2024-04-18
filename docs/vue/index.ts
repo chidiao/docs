@@ -4,18 +4,10 @@ const config = {
   nav: {
     text: 'Vue',
     items: [
-      {
-        items: [
-          { text: 'Vue', link: '/vue/' },
-          { text: 'Utils', link: '/vue/utils/router' }
-        ]
-      },
-      {
-        items: [
-          { text: 'Nuxt', link: '/nuxt/' },
-          { text: 'Uniapp', link: '/uni/' }
-        ]
-      }
+      { text: 'Vue', link: '/vue/' },
+      { text: 'Utils', link: '/vue/utils/router' },
+      { text: 'Nuxt', link: '/nuxt/' },
+      { text: 'Uniapp', link: '/uni/' }
     ]
   },
   sidebar: {

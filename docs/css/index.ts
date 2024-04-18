@@ -35,6 +35,10 @@ const config = {
         ]
       },
       {
+        text: 'Text',
+        items: [{ text: 'Text Overflow', link: '/css/text-overflow' }]
+      },
+      {
         text: 'Layout',
         items: [
           { text: 'Position', link: '/css/position' },

@@ -8,7 +8,7 @@ const config = {
     items: [
       { text: 'JavaScript', link: '/js/' },
       { text: 'TypeScript', link: '/ts/' },
-      { text: 'Http', link: '/js/http/' },
+      { text: 'Http', link: '/js/http/cors' },
       { text: 'Utils', link: '/js/utils/' },
       { text: 'Snippets', link: '/js/snippets/' }
     ]

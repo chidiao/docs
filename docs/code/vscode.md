@@ -1,5 +1,7 @@
 # vscode
 
+## Solutions
+
 ### 禁止运行脚本
 
 管理员身份运行 vscode
@@ -14,14 +16,23 @@ get-ExecutionPolicy
 # RemoteSigned
 ```
 
-### Auto Closing Tags
+## Settings
 
-auto closing tags
+### Auto Closing
+
+自动闭合标签括号等，默认
 
 ### Linked Editing
 
-auto rename tags
+闭合标签同步修改
 
-### Bracket Pair Colorization
+### Word Wrap
 
-括号对着色
+文字换行，视觉换行，实际不换行
+
+```json
+{
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120
+}
+```
