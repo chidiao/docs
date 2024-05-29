@@ -1,57 +1,49 @@
-const config = {
-  nav: {
-    text: 'Style',
-    items: [
-      { text: 'CSS', link: '/css/' },
-      { text: 'Utils', link: '/css/utils/' },
-      { text: 'Demos', link: '/demos/' }
-    ]
-  },
-  sidebar: {
-    '/css/utils': [
-      {
-        text: 'Utils',
-        items: [
-          { text: 'Assets', link: '/css/utils/' },
-          { text: 'Scss', link: '/css/utils/scss' },
-          { text: 'EasyLess', link: '/css/utils/easy-less' }
-        ]
-      }
-    ],
-    '/css/': [
-      {
-        text: 'CSS',
-        items: [
-          { text: 'Start', link: '/css/' },
-          { text: 'Selector', link: '/css/selector' },
-          { text: 'Background', link: '/css/background/' },
-          { text: 'Borders', link: '/css/borders/' },
-          { text: 'Filter', link: '/css/filter' },
-          { text: 'text', link: '/css/text' },
-          { text: 'box', link: '/css/box' },
-          { text: 'clip-path', link: '/css/clip-path' },
-          { text: 'function', link: '/css/function' },
-          { text: 'transform', link: '/css/transform' }
-        ]
-      },
-      {
-        text: 'Text',
-        items: [{ text: 'Text Overflow', link: '/css/text-overflow' }]
-      },
-      {
-        text: 'Layout',
-        items: [
-          { text: 'Position', link: '/css/position' },
-          { text: 'Flex', link: '/css/flex' },
-          { text: 'Grid', link: '/css/grid' }
-        ]
-      },
-      {
-        text: 'Animate',
-        items: [{ text: 'animation', link: '/css/animation' }]
-      }
-    ]
-  }
+export default {
+  '/css/utils': [
+    {
+      text: 'Utils',
+      items: [
+        { text: 'Assets', link: '/css/utils/' },
+        { text: 'Scss', link: '/css/utils/scss' },
+        { text: 'EasyLess', link: '/css/utils/easy-less' }
+      ]
+    }
+  ],
+  '/css/': [
+    {
+      text: 'CSS',
+      items: [
+        { text: 'Start', link: '/css/' },
+        { text: 'Selector', link: '/css/selector' },
+        { text: 'Background', link: '/css/background/' },
+        { text: 'Borders', link: '/css/borders/' },
+        { text: 'Filter', link: '/css/filter' },
+        { text: 'text', link: '/css/text' },
+        { text: 'box', link: '/css/box' },
+        { text: 'clip-path', link: '/css/clip-path' },
+        { text: 'function', link: '/css/function' },
+        { text: 'transform', link: '/css/transform' }
+      ]
+    },
+    {
+      text: 'Text',
+      items: [{ text: 'Text Overflow', link: '/css/text-overflow' }]
+    },
+    {
+      text: 'Layout',
+      items: [
+        { text: 'Position', link: '/css/position' },
+        { text: 'Flex', link: '/css/flex' },
+        { text: 'Grid', link: '/css/grid/' }
+      ]
+    },
+    {
+      text: 'Animate',
+      items: [{ text: 'animation', link: '/css/animation' }]
+    },
+    {
+      text: 'More',
+      items: [{ text: 'Scss', link: '/css/scss' }]
+    }
+  ]
 }
-
-export default config
