@@ -125,6 +125,22 @@ git clone <url> <name>
 
 ## 分支
 
+## 规范
+
+commit 主题
+
+- `feat` : 新增功能
+- `fix` : 修复 bug
+- `docs` : 文档变更
+- `style` : 代码风格变动（不影响代码逻辑）
+- `refactor` : 代码重构
+- `perf` : 性能优化
+- `test` : 添加或修改测试
+- `chore` : 杂项（构建过程或辅助工具变更）
+- `build` : 构建系统或外部依赖变更
+- `ci` : 持续集成配置变更
+- `revert` : 回滚
+
 ## Degit
 
 [degit](https://github.com/Rich-Harris/degit)

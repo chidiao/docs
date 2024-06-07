@@ -1,42 +1,73 @@
 # Nuxt
 
-[nuxt.com](https://nuxt.com/)
-
-[modules](https://nuxt.com/modules)
-
-[ui](https://ui.nuxt.com/)
-
-[i18n](https://i18n.nuxtjs.org/)
-
-## nuxi
-
-[nuxt.com](https://nuxt.com/docs/getting-started/installation)
-
-`nuxi` 初始化项目失败可以尝试修改 `hosts`
+[nuxt](https://nuxt.com/docs/getting-started/installation)
 
 ```sh
-# hosts
-185.199.108.133 raw.githubusercontent.com
-185.199.109.133 raw.githubusercontent.com
-185.199.110.133 raw.githubusercontent.com
-185.199.111.133 raw.githubusercontent.com
+npx nuxi@latest init <project-name>
 ```
 
-## degit
-
-[starter](https://github.com/nuxt/starter)
-
-通过拉取模板来初始化项目
+脚手架创建失败可以打开命令行提供的链接手动下载
 
 ```sh
-# degit
-degit https://github.com/nuxt/starter#v3 myapp
-degit https://github.com/nuxt/starter#ui myapp
+https://raw.githubusercontent.com/nuxt/starter/templates/templates/v3.json
 ```
 
-## 直接下载
+```json
+{
+  "name": "v3",
+  "defaultDir": "nuxt-app",
+  "url": "https://nuxt.com",
+  "tar": "https://codeload.github.com/nuxt/starter/tar.gz/refs/heads/v3"
+}
+```
+
+## Start
+
+### ui
+
+[ui](https://ui.nuxt.com/getting-started/installation)
 
 ```sh
-# tar
-https://github.com/nuxt/starter/blob/templates/templates/v3.json
+npx nuxi@latest module add ui
+```
+
+```js
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui'],
+  colorMode: {
+    preference: 'light'
+  }
+})
+```
+
+### svgo
+
+修改默认导入，否则是按 `iconfont` 处理的，带有默认样式
+
+```sh
+npx nuxi@latest module add nuxt-svgo
+```
+
+```js
+export default defineNuxtConfig({
+  modules: ['nuxt-svgo'],
+  svgo: {
+    autoImportPath: false,
+    defaultImport: 'component'
+  }
+})
+```
+
+### i18n
+
+[i18n](https://i18n.nuxtjs.org/docs/getting-started)
+
+```sh
+npx nuxi@latest module add i18n
+```
+
+```js
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/i18n']
+})
 ```
