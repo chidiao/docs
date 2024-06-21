@@ -6,24 +6,24 @@ export default {
     {
       text: 'Vue',
       items: [
+        { text: 'v-for 和 v-if', link: '/vue/v-for-if' },
         { text: 'ref 和 reactive', link: '/vue/ref' },
         { text: 'computed 和 watch', link: '/vue/cw' },
         { text: '生命周期', link: '/vue/cycle' },
         { text: '指令', link: '/vue/directives' },
         { text: '修饰符', link: '/vue/modifier' },
         { text: '样式', link: '/vue/style' },
-        { text: 'v-for', link: '/vue/v-for' },
         { text: '问题', link: '/vue/qa' }
       ]
     },
     {
-      text: '组件',
       items: [
         { text: '组件', link: '/vue/components' },
         { text: 'Props', link: '/vue/props' },
         { text: 'Emits', link: '/vue/emits' },
         { text: 'Slot', link: '/vue/slot' },
-        { text: 'v-model', link: '/vue/vmodel' }
+        { text: 'v-model', link: '/vue/v-model' },
+
       ]
     },
     {
