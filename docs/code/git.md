@@ -179,3 +179,21 @@ git config --global http.sslVerify false
 git config --global http.proxy 127.0.0.1:7890
 git config --global https.proxy 127.0.0.1:7890
 ```
+
+### Connection reset by 20.205.243.166 port 22
+
+ssh 可能需要重新授权（该方案并不确切，可以尝试）
+
+```sh
+ssh -T -p 443 git@ssh.github.com
+```
+
+```
+The authenticity of host '[ssh.github.com]:443 ([20.205.243.160]:443)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This host key is known by the following other names/addresses:
+    C:\Users\Sunyz/.ssh/known_hosts:1: github.com
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[ssh.github.com]:443' (ED25519) to the list of known hosts.
+Hi chidiao! You've successfully authenticated, but GitHub does not provide shell access.
+```

@@ -28,7 +28,7 @@ export default [
     ]
   },
   {
-    text: 'Style',
+    text: 'Web',
     items: [
       { text: 'Html', link: '/html/video' },
       { text: 'CSS', link: '/css/' }
