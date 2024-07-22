@@ -15,19 +15,15 @@ export default {
       items: [
         { text: 'Start', link: '/css/' },
         { text: 'Selector', link: '/css/selector' },
+        { text: 'Text', link: '/css/text' },
         { text: 'Background', link: '/css/background/' },
         { text: 'Borders', link: '/css/borders/' },
         { text: 'Filter', link: '/css/filter' },
-        { text: 'text', link: '/css/text' },
         { text: 'box', link: '/css/box' },
         { text: 'clip-path', link: '/css/clip-path' },
         { text: 'function', link: '/css/function' },
         { text: 'transform', link: '/css/transform' }
       ]
-    },
-    {
-      text: 'Text',
-      items: [{ text: 'Text Overflow', link: '/css/text-overflow' }]
     },
     {
       text: 'Layout',

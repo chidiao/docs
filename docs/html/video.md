@@ -10,18 +10,7 @@
 </video>
 ```
 
-多个视频源，按顺序读取，直到第一个支持的格式，类似于字体
-
-需要提供 `url` 和 `type` 视频类型
-
-```html
-<video>
-  <source src="video.webm" type="video/webm" />
-  <source src="video.mp4" type="video/mp4" />
-</video>
-```
-
-属性
+### 属性
 
 `loop` ：循环播放
 
@@ -34,6 +23,28 @@
 `poster` ：预览图
 
 `playsinline` ：行内播放，而不是全屏
+
+### source
+
+多个视频源，按顺序读取，直到第一个支持的格式，类似于字体
+
+需要提供 `url` 和 `type` 视频类型
+
+```html
+<video>
+  <source src="video.webm" type="video/webm" />
+  <source src="video.mp4" type="video/mp4" />
+</video>
+```
+
+### 响应式
+
+```html
+<video>
+  <source src="@/assets/img/mb.mp4" type="video/mp4" media="(max-width: 768px)" />
+  <source src="@/assets/img/pc.mp4" type="video/mp4" />
+</video>
+```
 
 ### 自动播放
 
@@ -78,7 +89,7 @@ const config = {
 
 自定义 icons
 
-播放按钮分中心和控制栏两处，而且需要注意导入svg的格式
+播放按钮分中心和控制栏两处，而且需要注意导入 svg 的格式
 
 ```js
 import playBtn from '@/assets/svg/play.svg?raw'
