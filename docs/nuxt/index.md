@@ -3,7 +3,7 @@
 [nuxt](https://nuxt.com/docs/getting-started/installation)
 
 ```sh
-npx nuxi@latest init <project-name>
+npx nuxi@latest init <app>
 ```
 
 脚手架创建失败可以打开命令行提供的链接手动下载
@@ -23,13 +23,26 @@ https://raw.githubusercontent.com/nuxt/starter/templates/templates/v3.json
 
 ## Start
 
+```sh
+yarn add @nuxt/ui @nuxtjs/i18n nuxt-svgo
+```
+
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui', '@nuxtjs/i18n', 'nuxt-svgo'],
+  colorMode: {
+    preference: 'light'
+  },
+  svgo: {
+    autoImportPath: false,
+    defaultImport: 'component'
+  }
+})
+```
+
 ### ui
 
 [ui](https://ui.nuxt.com/getting-started/installation)
-
-```sh
-npx nuxi@latest module add ui
-```
 
 ```js
 export default defineNuxtConfig({
@@ -40,13 +53,19 @@ export default defineNuxtConfig({
 })
 ```
 
+### i18n
+
+[i18n](https://i18n.nuxtjs.org/docs/getting-started)
+
+```js
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/i18n']
+})
+```
+
 ### svgo
 
 修改默认导入，否则是按 `iconfont` 处理的，带有默认样式
-
-```sh
-npx nuxi@latest module add nuxt-svgo
-```
 
 ```js
 export default defineNuxtConfig({
@@ -55,19 +74,5 @@ export default defineNuxtConfig({
     autoImportPath: false,
     defaultImport: 'component'
   }
-})
-```
-
-### i18n
-
-[i18n](https://i18n.nuxtjs.org/docs/getting-started)
-
-```sh
-npx nuxi@latest module add i18n
-```
-
-```js
-export default defineNuxtConfig({
-  modules: ['@nuxtjs/i18n']
 })
 ```

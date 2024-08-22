@@ -16,13 +16,18 @@ export default {
         { text: 'Start', link: '/css/' },
         { text: 'Selector', link: '/css/selector' },
         { text: 'Text', link: '/css/text' },
-        { text: 'Background', link: '/css/background/' },
         { text: 'Borders', link: '/css/borders/' },
-        { text: 'Filter', link: '/css/filter' },
         { text: 'box', link: '/css/box' },
         { text: 'clip-path', link: '/css/clip-path' },
         { text: 'function', link: '/css/function' },
         { text: 'transform', link: '/css/transform' }
+      ]
+    },
+    {
+      items: [
+        { text: 'Background', link: '/css/background/' },
+        { text: 'Filter', link: '/css/filter' },
+        { text: 'Mask', link: '/css/mask/' }
       ]
     },
     {
