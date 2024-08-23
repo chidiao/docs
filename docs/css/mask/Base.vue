@@ -5,12 +5,12 @@
     <span class="font-bold text-5xl">+</span>
 
     <div class="size-32">
-      <img src="./heart.svg" class="size-full" />
+      <img src="/svg/heart.svg" class="size-full" />
     </div>
 
     <span class="font-bold text-5xl">=</span>
 
-    <div :class="[box]" style="mask-image: url('./heart.svg')"></div>
+    <div :class="[box]" style="mask-image: url('/svg/heart.svg')"></div>
   </div>
 </template>
 

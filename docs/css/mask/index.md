@@ -15,7 +15,7 @@ import GradientBorder from './GradientBorder.vue'
 
 ```css
 .mask {
-  mask-image: url('./heart.svg');
+  mask-image: url('/svg/heart.svg');
 }
 ```
 
@@ -33,7 +33,7 @@ import GradientBorder from './GradientBorder.vue'
 }
 
 .mask {
-  mask-image: url('./heart.svg');
+  mask-image: url('/svg/heart.svg');
 }
 ```
 
