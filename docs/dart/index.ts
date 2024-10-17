@@ -1,7 +1,4 @@
-import pub from './pub'
-
 export default {
-  '/dart/pub': pub,
   '/dart/': [
     {
       text: 'Dart',
@@ -11,6 +8,14 @@ export default {
         { text: 'Class', link: '/dart/class' },
         { text: 'Model', link: '/dart/model' },
         { text: 'Function', link: '/dart/function' }
+      ]
+    },
+    {
+      text: 'Pub',
+      items: [
+        { text: 'EasyRefresh', link: '/dart/easyRefresh' },
+        { text: 'SmartDialog', link: '/dart/smartDialog' },
+        { text: 'NetworkImage', link: '/dart/networkImage' }
       ]
     }
   ]

@@ -12,7 +12,6 @@ export default {
         { text: '生命周期', link: '/vue/cycle' },
         { text: '指令', link: '/vue/directives' },
         { text: '修饰符', link: '/vue/modifier' },
-        { text: '样式', link: '/vue/style' },
         { text: '问题', link: '/vue/qa' }
       ]
     },
@@ -22,13 +21,13 @@ export default {
         { text: 'Props', link: '/vue/props' },
         { text: 'Emits', link: '/vue/emits' },
         { text: 'Slot', link: '/vue/slot' },
-        { text: 'v-model', link: '/vue/v-model' },
-
+        { text: 'v-model', link: '/vue/v-model' }
       ]
     },
     {
-      text: '动画',
+      text: 'Styles',
       items: [
+        { text: 'CSS', link: '/vue/css' },
         { text: 'Transition', link: '/vue/transition' },
         { text: 'TransitionGroup', link: '/vue/transitionGroup' }
       ]

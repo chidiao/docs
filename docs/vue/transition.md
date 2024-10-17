@@ -1,5 +1,53 @@
 # Transition
 
+## CSS
+
+动画过程
+
+```html
+<Transition>
+  <!-- 元素插入之前/隐藏 -->
+  <div class="xx-enter-from xx-enter-active"><div>
+
+  <!-- 元素插入后，动画过渡期间 -->
+  <div class="xx-enter-active xx-enter-to"><div>
+
+  <!-- 动画过渡完毕 -->
+  <div class=""><div>
+
+  <!-- 动画过渡前 -->
+  <div class="xx-leave-from xx-leave-active"><div>
+
+  <!-- 动画过渡期间 -->
+  <div class="xx-leave-active xx-leave-to"><div>
+
+  <!-- 动画过渡完毕，元素被移除/隐藏 -->
+  <div class=""><div>
+</Transition>
+```
+
+```scss
+// 动画前添加，动画后移除，应用于整个动画周期
+// 用来控制 transition：时间，延迟，曲线等
+.xx-enter-active,
+.xx-leave-active {
+  transition: all 0.3s;
+}
+
+// 只用来控制状态
+.xx-enter-from,
+.xx-leave-to {
+  opacity: 0;
+}
+
+.xx-enter-to,
+.xx-leave-from {
+  opacity: 1;
+}
+```
+
+### Transition
+
 ## css 动画
 
 [animista](https://animista.net/)

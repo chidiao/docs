@@ -4,8 +4,7 @@ export default [
     text: 'Flutter',
     items: [
       { text: 'Dart', link: '/dart/' },
-      { text: 'Flutter', link: '/flutter/' },
-      { text: 'Packages', link: '/dart/pub/' }
+      { text: 'Flutter', link: '/flutter/' }
     ]
   },
   {
