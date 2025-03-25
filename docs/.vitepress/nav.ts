@@ -18,6 +18,10 @@ export default [
     ]
   },
   {
+    text: 'Node',
+    link: '/node/gulp'
+  },
+  {
     text: 'Vue',
     items: [
       { text: 'Vue', link: '/vue/' },

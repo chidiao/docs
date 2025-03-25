@@ -1,4 +1,4 @@
-# EasyLess
+## EasyLess
 
 [easy-less](https://marketplace.visualstudio.com/items?itemName=mrcrowl.easy-less)
 

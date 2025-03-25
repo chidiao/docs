@@ -1,15 +1,5 @@
 # 收藏夹
 
-## GPT
-
-[Openai](https://openai.com/)
-
-[ChatGPT](https://chat.openai.com/)
-
-[ChatBot](https://chatbot.theb.ai/)
-
-[OpenMao](http://www.openmao.com/)
-
 ## 资源
 
 [鹏少资源网](https://vip.jokerps.com/)

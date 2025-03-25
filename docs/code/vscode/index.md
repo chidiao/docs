@@ -1,6 +1,8 @@
-# vscode
+# VScode
 
-## Solutions
+<!--@include: ./shortcut.md-->
+
+## 报错
 
 ### 禁止运行脚本
 
@@ -16,7 +18,7 @@ get-ExecutionPolicy
 # RemoteSigned
 ```
 
-## Settings
+## 设置
 
 ### Auto Closing
 

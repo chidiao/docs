@@ -1,7 +1,7 @@
 export default {
   '/uni/': [
     {
-      text: 'Uni',
+      text: 'Uniapp',
       items: [
         { text: 'uniapp', link: '/uni/' },
         { text: 'global', link: '/uni/global' },
@@ -15,6 +15,13 @@ export default {
         { text: '登录', link: '/uni/login' },
         { text: '支付', link: '/uni/pay' },
         { text: '插件', link: '/uni/plugin' }
+      ]
+    },
+    {
+      text: 'Project',
+      items: [
+        { text: 'dir', link: '/uni/dir' },
+        { text: 'pages.json', link: '/uni/pages.json' }
       ]
     }
   ]

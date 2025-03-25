@@ -19,9 +19,8 @@ export default {
     {
       text: 'Vscode',
       items: [
-        { text: 'Vscode', link: '/code/vscode/' },
-        { text: 'i18n', link: '/code/vscode/i18n' },
-        { text: 'EasyLess', link: '/code/vscode/easy-less' }
+        { text: '快捷使用', link: '/code/vscode/' },
+        { text: '插件', link: '/code/vscode/plugin' }
       ]
     }
   ]

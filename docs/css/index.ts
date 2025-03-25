@@ -1,19 +1,10 @@
 export default {
-  '/css/utils': [
-    {
-      text: 'Utils',
-      items: [
-        { text: 'Assets', link: '/css/utils/' },
-        { text: 'Scss', link: '/css/utils/scss' },
-        { text: 'EasyLess', link: '/css/utils/easy-less' }
-      ]
-    }
-  ],
   '/css/': [
     {
       text: 'CSS',
       items: [
         { text: 'Start', link: '/css/' },
+        { text: 'Utils', link: '/css/utils' },
         { text: 'Selector', link: '/css/selector' },
         { text: 'Text', link: '/css/text' },
         { text: 'Borders', link: '/css/borders/' },

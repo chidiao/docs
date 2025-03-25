@@ -19,5 +19,15 @@ export default {
   ...nuxt,
   ...uni,
   ...html,
-  ...css
+  ...css,
+  '/node/': [
+    {
+      text: 'Node',
+      items: [
+        { text: 'Node.js', link: '/node/node' },
+        { text: 'package.json', link: '/node/package' },
+        { text: 'Gulp', link: '/node/gulp' }
+      ]
+    }
+  ]
 }
