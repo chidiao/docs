@@ -1,5 +1,5 @@
 export default {
-  '/uni/': [
+  sidebar: [
     {
       text: 'Uniapp',
       items: [

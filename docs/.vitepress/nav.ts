@@ -26,8 +26,7 @@ export default [
     items: [
       { text: 'Vue', link: '/vue/' },
       { text: 'Utils', link: '/vue/utils/router' },
-      { text: 'Nuxt', link: '/nuxt/' },
-      { text: 'Uniapp', link: '/uni/' }
+      { text: 'Nuxt', link: '/nuxt/' }
     ]
   },
   {
@@ -36,5 +35,9 @@ export default [
       { text: 'Html', link: '/html/video' },
       { text: 'CSS', link: '/css/' }
     ]
+  },
+  {
+    text: 'Uniapp',
+    link: '/uni/'
   }
 ]

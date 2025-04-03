@@ -1,5 +1,5 @@
 export default {
-  '/css/': [
+  sidebar: [
     {
       text: 'CSS',
       items: [
@@ -25,8 +25,24 @@ export default {
       text: 'Layout',
       items: [
         { text: 'Position', link: '/css/position' },
-        { text: 'Flex', link: '/css/flex' },
-        { text: 'Grid', link: '/css/grid/' }
+        {
+          text: 'Flex',
+          collapsed: true,
+          items: [
+            { text: 'Index', link: '/css/flex/' },
+            { text: 'Container', link: '/css/flex/container' },
+            { text: 'Item', link: '/css/flex/item' }
+          ]
+        },
+        {
+          text: 'Grid',
+          collapsed: true,
+          items: [
+            { text: 'Index', link: '/css/grid/' },
+            { text: 'Container', link: '/css/grid/container' },
+            { text: 'Item', link: '/css/grid/item' }
+          ]
+        }
       ]
     },
     {

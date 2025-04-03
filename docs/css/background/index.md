@@ -6,7 +6,28 @@ import BackgroundPosition2 from './BackgroundPosition2.vue'
 import BackgroundSize from './BackgroundSize.vue'
 </script>
 
-`Position` 和 `Size` 写法和顺序是固定的
+## image / repeat
+
+可以是图片也可以是渐变色
+
+<div class="flex space-x-4">
+  <div class="size-32 rounded" style="background-image: linear-gradient(135deg, #17ead9, #6078ea)"></div>
+  <div class="size-32 rounded bg-cover" style="background-image: url('https://picsum.photos/id/10/200/300')"></div>
+  <div class="size-32 rounded" style="background-image: linear-gradient(135deg, #42e695, #3bb2b8)"></div>
+  <div
+    class="size-32 rounded"
+    style="
+      background-image: linear-gradient(#eee 1px, transparent 1px),
+        linear-gradient(90deg, #eee 1px, transparent 1px);
+      background-position: center;
+      background-size: 20px 20px;
+    "
+  ></div>
+</div>
+
+## position / size
+
+`position` 和 `size` 写法和顺序是固定的
 
 ```scss
 .box {
@@ -14,17 +35,7 @@ import BackgroundSize from './BackgroundSize.vue'
 }
 ```
 
-## Background Image
-
-可以是图片也可以是渐变色
-
-<div class="flex space-x-4">
-  <div class="size-32 rounded" style="background-image: linear-gradient(135deg, #17ead9, #6078ea);"></div>
-  <div class="size-32 rounded bg-cover" style="background-image: url('https://picsum.photos/id/10/200/300');"></div>
-  <div class="size-32 rounded" style="background-image: linear-gradient(135deg, #42e695, #3bb2b8);"></div>
-</div>
-
-## Background Position
+## Position
 
 ```scss
 .box {
@@ -53,17 +64,13 @@ import BackgroundSize from './BackgroundSize.vue'
 // 偏移在哪个关键字的后面就是谁的偏移
 ```
 
-## Background Size
+## Size
 
 这个值是用来设置背景图片的尺寸的，和容器无关
 
 <BackgroundSize />
 
-## Background Repeat
-
-## Background Color
-
-## Background Clip
+## Clip
 
 用来设置背景的可填充范围
 
@@ -90,7 +97,7 @@ import BackgroundSize from './BackgroundSize.vue'
 }
 ```
 
-## Background Origin
+## Origin
 
 用来设置背景的起始位置
 
@@ -118,7 +125,7 @@ import BackgroundSize from './BackgroundSize.vue'
         bg-[url('https://picsum.photos/id/10/100')] bg-clip-border bg-origin-padding"
 ></div>
 
-## Background Attachment
+## Attachment
 
 ```scss
 .box {

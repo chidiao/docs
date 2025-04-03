@@ -5,9 +5,12 @@ import js from '../js'
 import ts from '../ts'
 import vue from '../vue'
 import nuxt from '../nuxt'
-import uni from '../uni'
+
 import html from '../html'
 import css from '../css'
+
+import uni from '../uni'
+import wx from '../wx'
 
 export default {
   ...code,
@@ -17,9 +20,7 @@ export default {
   ...ts,
   ...vue,
   ...nuxt,
-  ...uni,
   ...html,
-  ...css,
   '/node/': [
     {
       text: 'Node',
@@ -29,5 +30,8 @@ export default {
         { text: 'Gulp', link: '/node/gulp' }
       ]
     }
-  ]
+  ],
+  '/css/': [...css.sidebar],
+  '/uni/': [...uni.sidebar, ...wx.sidebar],
+  '/wx/': [...uni.sidebar, ...wx.sidebar]
 }
