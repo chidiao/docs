@@ -1,4 +1,6 @@
 import code from '../code'
+import win from '../win'
+
 import dart from '../dart'
 import flutter from '../flutter'
 import js from '../js'
@@ -14,6 +16,7 @@ import wx from '../wx'
 
 export default {
   ...code,
+  '/win/': [...win.sidebar],
   ...dart,
   ...flutter,
   ...js,
