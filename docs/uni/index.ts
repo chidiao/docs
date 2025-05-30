@@ -18,10 +18,15 @@ export default {
       ]
     },
     {
-      text: 'Project',
+      text: 'Config',
       items: [
-        { text: 'dir', link: '/uni/dir' },
-        { text: 'pages.json', link: '/uni/pages.json' }
+        { text: 'pages.json', link: '/uni/config/pages.json' }
+      ]
+    },
+    {
+      text: 'Ui',
+      items: [
+        { text: '下拉刷新', link: '/uni/ui/pullDownRefresh' }
       ]
     }
   ]
