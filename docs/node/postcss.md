@@ -15,17 +15,16 @@ postcss src/css -d dist/css -w
 
 ## Plugins
 
-```bash
-yarn add -D autoprefixer
+### 两种配置方式
+
+```js
+// postcss.config.mjs
+export default {
+  plugins: {
+    autoprefixer: {}
+  }
+}
 ```
-
-命令调用
-
-```bash
-postcss input.css -o output.css -u autoprefixer
-```
-
-配置调用
 
 ```js
 // postcss.config.js
@@ -36,7 +35,41 @@ module.exports = {
 }
 ```
 
-## Rem
+### 常用插件
+
+| 插件                 | 功能             | 描述                           |
+| -------------------- | ---------------- | ------------------------------ |
+| postcss-import       | 导入代码，模块化 | 合并 `@import` 引入的 CSS 文件 |
+| @tailwindcss/postcss | tailwindcss      |                                |
+| autoprefixer         | 兼容性，前缀     |                                |
+| cssnano              | 压缩 CSS         |                                |
+
+```bash
+yarn add -D tailwindcss @tailwindcss/postcss postcss
+yarn add -D postcss-import autoprefixer cssnano
+```
+
+```js
+// postcss.config.mjs
+export default {
+  plugins: {
+    'postcss-import': {},
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+    cssnano: {}
+  }
+}
+```
+
+### 命令方式调用
+
+```bash
+postcss input.css -o output.css -u autoprefixer
+```
+
+## 其他
+
+### Rem
 
 [腾讯 Rem 布局](https://tgideas.qq.com/doc/frontend/spec/m/layout.html)
 
@@ -60,7 +93,7 @@ module.exports = {
 })(window, document)
 ```
 
-## postcss-pxtorem
+### postcss-pxtorem
 
 ```bash
 yarn add -D postcss-pxtorem

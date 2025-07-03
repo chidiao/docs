@@ -30,7 +30,8 @@ export default {
       items: [
         { text: 'Node.js', link: '/node/node' },
         { text: 'package.json', link: '/node/package' },
-        { text: 'Gulp', link: '/node/gulp' }
+        { text: 'Gulp', link: '/node/gulp' },
+        { text: 'PostCSS', link: '/node/postcss' }
       ]
     }
   ],
