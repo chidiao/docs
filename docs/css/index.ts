@@ -11,7 +11,8 @@ export default {
         { text: 'box', link: '/css/box' },
         { text: 'clip-path', link: '/css/clip-path' },
         { text: 'function', link: '/css/function' },
-        { text: 'transform', link: '/css/transform' }
+        { text: 'transform', link: '/css/transform' },
+        { text: 'SafeArea', link: '/css/safe-area' }
       ]
     },
     {
