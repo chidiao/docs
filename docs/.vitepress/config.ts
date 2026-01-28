@@ -1,10 +1,15 @@
 import nav from './nav'
 import sidebar from './sidebar'
+import UnoCSS from 'unocss/vite'
 
 export default {
   lang: 'zh',
   title: 'MyDocs',
   description: 'Code',
+
+  vite: {
+    plugins: [UnoCSS()]
+  },
 
   themeConfig: {
     siteTitle: 'MyDocs',

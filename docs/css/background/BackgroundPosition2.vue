@@ -25,15 +25,51 @@
     </div>
 
     <div class="flex mt-4 space-x-4">
-      <div class="my-btn" :class="{ active: pos.x == 0 }" @click="pos.x = 0">left</div>
-      <div class="my-btn" :class="{ active: pos.x == 50 }" @click="pos.x = 50">center</div>
-      <div class="my-btn" :class="{ active: pos.x == 100 }" @click="pos.x = 100">right</div>
+      <div
+        class="ring-1 py-1 px-2 rounded cursor-pointer"
+        :class="pos.x == 0 ? 'ring-blue-400' : 'ring-gray-200'"
+        @click="pos.x = 0"
+      >
+        left
+      </div>
+      <div
+        class="ring-1 py-1 px-2 rounded cursor-pointer"
+        :class="pos.x == 50 ? 'ring-blue-400' : 'ring-gray-200'"
+        @click="pos.x = 50"
+      >
+        center
+      </div>
+      <div
+        class="ring-1 py-1 px-2 rounded cursor-pointer"
+        :class="pos.x == 100 ? 'ring-blue-400' : 'ring-gray-200'"
+        @click="pos.x = 100"
+      >
+        right
+      </div>
     </div>
 
     <div class="flex mt-4 space-x-4">
-      <div class="my-btn" :class="{ active: pos.y == 0 }" @click="pos.y = 0">top</div>
-      <div class="my-btn" :class="{ active: pos.y == 50 }" @click="pos.y = 50">center</div>
-      <div class="my-btn" :class="{ active: pos.y == 100 }" @click="pos.y = 100">bottom</div>
+      <div
+        class="ring-1 py-1 px-2 rounded cursor-pointer"
+        :class="pos.y == 0 ? 'ring-blue-400' : 'ring-gray-200'"
+        @click="pos.y = 0"
+      >
+        top
+      </div>
+      <div
+        class="ring-1 py-1 px-2 rounded cursor-pointer"
+        :class="pos.y == 50 ? 'ring-blue-400' : 'ring-gray-200'"
+        @click="pos.y = 50"
+      >
+        center
+      </div>
+      <div
+        class="ring-1 py-1 px-2 rounded cursor-pointer"
+        :class="pos.y == 100 ? 'ring-blue-400' : 'ring-gray-200'"
+        @click="pos.y = 100"
+      >
+        bottom
+      </div>
     </div>
   </div>
 </template>

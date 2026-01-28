@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import DemoContainer from './demoContainer.vue'
-import './tailwind.css'
+import 'uno.css'
+import './custom.css'
 
 export default {
   extends: DefaultTheme,

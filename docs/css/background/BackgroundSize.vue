@@ -6,7 +6,14 @@
     ></div>
 
     <div class="flex mt-4 space-x-4">
-      <div class="my-btn" :class="{ active: size == s }" v-for="s in sizes" @click="size = s">{{ s }}</div>
+      <div
+        class="ring-1 py-1 px-2 rounded cursor-pointer"
+        :class="size === s ? 'ring-blue-400' : 'ring-gray-200'"
+        v-for="s in sizes"
+        @click="size = s"
+      >
+        {{ s }}
+      </div>
     </div>
   </div>
 </template>
