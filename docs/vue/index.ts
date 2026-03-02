@@ -25,11 +25,13 @@ export default {
       ]
     },
     {
-      text: 'Styles',
+      text: 'Style',
       items: [
-        { text: 'CSS', link: '/vue/css' },
-        { text: 'Transition', link: '/vue/transition' },
-        { text: 'TransitionGroup', link: '/vue/transitionGroup' }
+        { text: 'Class & Style', link: '/vue/style' },
+        { text: 'Scoped', link: '/vue/style/scoped' },
+        { text: 'v-bind', link: '/vue/style/v-bind' },
+        { text: 'Transition', link: '/vue/style/transition' },
+        { text: 'TransitionGroup', link: '/vue/style/transitionGroup' }
       ]
     },
     {
