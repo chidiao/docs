@@ -3,6 +3,7 @@ import win from '../win'
 
 import dart from '../dart'
 import flutter from '../flutter'
+
 import js from '../js'
 import ts from '../ts'
 import vue from '../vue'
@@ -13,6 +14,8 @@ import css from '../css'
 
 import uni from '../uni'
 import wx from '../wx'
+
+import qa from '../qa'
 
 export default {
   ...code,
@@ -37,5 +40,6 @@ export default {
   ],
   '/css/': [...css.sidebar],
   '/uni/': [...uni.sidebar, ...wx.sidebar],
-  '/wx/': [...uni.sidebar, ...wx.sidebar]
+  '/wx/': [...uni.sidebar, ...wx.sidebar],
+  ...qa
 }
