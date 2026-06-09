@@ -2,12 +2,14 @@ export default [
   {
     text: 'JavaScript',
     items: [
+      { text: 'index', link: '/qa/js/' },
       { text: '类型', link: '/qa/js/type' },
       { text: '闭包', link: '/qa/js/closure' },
       { text: '原型', link: '/qa/js/prototype' },
       { text: '网络', link: '/qa/js/http' },
       { text: '事件循环', link: '/qa/js/eventLoop' },
-      { text: '性能', link: '/qa/js/performance' }
+      { text: '性能', link: '/qa/js/performance' },
+      { text: '对象', link: '/qa/js/object' },
     ]
   }
 ]
