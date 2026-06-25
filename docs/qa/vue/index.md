@@ -152,3 +152,24 @@ watchEffect(async (onCleanup) => {
 ## key的作用
 
 标识节点唯一性，能唯一识别每个节点。
+
+## v-if 和 v-for
+
+不建议在同一个元素上同时使用，会导致性能浪费和语法错误
+
+vue2
+
+v-for > v-if
+
+性能浪费：无论条件是否成立，都会先完整遍历数组再执行过滤。数组越大，开销越大
+
+vue3
+
+v-if > v-for
+
+语法错误：v-if 先执行，无法访问 v-for item 的变量，报错 not defined
+
+建议
+
+- 计算属性过滤后在 v-for
+- v-if 移到外层容器上
