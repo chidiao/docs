@@ -1,4 +1,6 @@
-export default [
+import type { DefaultTheme } from 'vitepress'
+
+const items: DefaultTheme.SidebarItem[] = [
   {
     text: 'Utils',
     items: [
@@ -10,3 +12,9 @@ export default [
     ]
   }
 ]
+
+const sidebar: DefaultTheme.Sidebar = {
+  '/js/utils/': items
+}
+
+export default sidebar

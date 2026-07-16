@@ -1,23 +1,27 @@
-import code from '../code'
-import win from '../win'
+import type { DefaultTheme } from 'vitepress'
 
-import dart from '../dart'
-import flutter from '../flutter'
+import code from '../code/sidebar'
+import win from '../win/sidebar'
 
-import js from '../js'
-import ts from '../ts'
-import vue from '../vue'
-import nuxt from '../nuxt'
+import dart from '../dart/sidebar'
+import flutter from '../flutter/sidebar'
 
-import html from '../html'
-import css from '../css'
+import js from '../js/sidebar'
+import ts from '../ts/sidebar'
+import vue from '../vue/sidebar'
+import nuxt from '../nuxt/sidebar'
 
-import uni from '../uni'
-import wx from '../wx'
+import html from '../html/sidebar'
+import css from '../css/sidebar'
+import node from '../node/sidebar'
 
-export default {
+import getx from '../getx/sidebar'
+import uni from '../uni/sidebar'
+import wx from '../wx/sidebar'
+
+const sidebar: DefaultTheme.Sidebar = {
   ...code,
-  '/win/': [...win.sidebar],
+  ...win,
   ...dart,
   ...flutter,
   ...js,
@@ -25,18 +29,11 @@ export default {
   ...vue,
   ...nuxt,
   ...html,
-  '/node/': [
-    {
-      text: 'Node',
-      items: [
-        { text: 'Node.js', link: '/node/node' },
-        { text: 'package.json', link: '/node/package' },
-        { text: 'Gulp', link: '/node/gulp' },
-        { text: 'PostCSS', link: '/node/postcss' }
-      ]
-    }
-  ],
-  '/css/': [...css.sidebar],
-  '/uni/': [...uni.sidebar, ...wx.sidebar],
-  '/wx/': [...uni.sidebar, ...wx.sidebar]
+  ...node,
+  ...css,
+  ...getx,
+  ...uni,
+  ...wx
 }
+
+export default sidebar
