@@ -1,8 +1,8 @@
 import type { DefaultTheme } from 'vitepress'
 
-import http from './http/sidebar'
-import snippets from './snippets/sidebar'
-import utils from './utils/sidebar'
+import http from './http/sidebar.ts'
+import snippets from './snippets/sidebar.ts'
+import utils from './utils/sidebar.ts'
 
 const items: DefaultTheme.SidebarItem[] = [
   {

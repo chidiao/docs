@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-import utils from './utils/sidebar'
+import utils from './utils/sidebar.ts'
 
 const items: DefaultTheme.SidebarItem[] = [
   {

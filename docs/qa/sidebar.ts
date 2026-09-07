@@ -1,12 +1,12 @@
 import type { DefaultTheme } from 'vitepress'
 
-import code from './code/sidebar'
-import css from './css/sidebar'
-import feat from './feat/sidebar'
-import html from './html/sidebar'
-import js from './js/sidebar'
-import ts from './ts/sidebar'
-import vue from './vue/sidebar'
+import code from './code/sidebar.ts'
+import css from './css/sidebar.ts'
+import feat from './feat/sidebar.ts'
+import html from './html/sidebar.ts'
+import js from './js/sidebar.ts'
+import ts from './ts/sidebar.ts'
+import vue from './vue/sidebar.ts'
 
 const htmlCssSidebar: DefaultTheme.SidebarItem[] = [...html, ...css]
 
