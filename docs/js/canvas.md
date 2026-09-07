@@ -2,8 +2,6 @@
 
 [教程](https://www.runoob.com/w3cnote/html5-canvas-intro.html)
 
-
-
 ```html
 <canvas id="cs" width="300" height="300"></canvas>
 ```
@@ -12,16 +10,12 @@
 
 建议永远不要使用 `css` 属性来设置 `<canvas>` 的宽高。
 
-
-
 ## 开始
 
 ```js
 let canvas = document.getElementById('cs')
 let ctx = canvas.getContext('2d')
 ```
-
-
 
 ## 绘制
 
@@ -39,8 +33,6 @@ ctx.strokeRect(x, y, width, height)
 ctx.clearRect(x, y, width, height)
 ```
 
-
-
 ### 样式
 
 ```js
@@ -48,16 +40,12 @@ ctx.fillStyle = 'red'
 ctx.strokeStyle = 'red'
 ```
 
-
-
 ### 绘制
 
 ```js
 ctx.fill()
 ctx.stroke()
 ```
-
-
 
 ### 图像
 
@@ -73,4 +61,3 @@ img.onload = () => {
 ctx.drawImage(img, x, y, width, height)
 ctx.drwaImage(img, sx, sy, swidth, sheight, x, y, width, height)
 ```
-

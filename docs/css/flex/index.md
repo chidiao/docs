@@ -1,45 +1,33 @@
-# FlexBox
+# Flex
 
-### Margin
+## Flex Item
 
-利用 `margin` 来模拟实现 `justify-self`
+### basis
 
-左右对齐
+### flex
 
-<div class="w-full flex space-x-2 text-xs text-white">
-  <div class="p-4 bg-blue-500 rounded">left</div>
-  <div class="p-4 bg-blue-500 rounded">left</div>
-  <div class="p-4 bg-blue-500 rounded" style="margin-right: auto">left</div>
-  <div class="p-4 bg-blue-500 rounded">right</div>
-  <div class="p-4 bg-blue-500 rounded">right</div>
-</div>
-
-```html{4}
-<div class="flex-row justify-start">
-  <div class="item">left</div>
-  <div class="item">left</div>
-  <div class="item" style="margin-right: auto">left</div>
-  <div class="item">right</div>
-  <div class="item">right</div>
-</div>
+```scss
+.flex-initial {
+  flex: <grow> <shrink> <basis>;
+  flex: 0 1 auto;
+}
 ```
 
-左中右对齐
+简写
 
-<div class="w-full flex justify-start  space-x-2 text-xs text-white">
-  <div class="p-4 bg-blue-500 rounded">left</div>
-  <div class="p-4 bg-blue-500 rounded">left</div>
-  <div class="p-4 bg-blue-500 rounded" style="margin: 0 auto">center</div>
-  <div class="p-4 bg-blue-500 rounded">right</div>
-  <div class="p-4 bg-blue-500 rounded">right</div>
-</div>
+```scss
+.flex-1 {
+  flex: 1;
+  flex: 1 1 0%;
+}
 
-```html{4}
-<div class="flex-row justify-start">
-  <div class="item">left</div>
-  <div class="item">left</div>
-  <div class="item" style="margin: 0 auto">center</div>
-  <div class="item">right</div>
-  <div class="item">right</div>
-</div>
+.flex-auto {
+  flex: auto;
+  flex: 1 1 auto;
+}
+
+.flex-none {
+  flex: none;
+  flex: 0 0 auto;
+}
 ```

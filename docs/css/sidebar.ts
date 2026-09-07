@@ -28,10 +28,10 @@ const items: DefaultTheme.SidebarItem[] = [
     items: [
       { text: 'Position', link: '/css/position' },
       {
-        text: 'Flex',
+        text: 'flex',
         collapsed: true,
         items: [
-          { text: 'Index', link: '/css/flex/' },
+          { text: 'Index', link: '/css/flex/demo' },
           { text: 'Container', link: '/css/flex/container' },
           { text: 'Item', link: '/css/flex/item' }
         ]
@@ -44,7 +44,8 @@ const items: DefaultTheme.SidebarItem[] = [
           { text: 'Container', link: '/css/grid/container' },
           { text: 'Item', link: '/css/grid/item' }
         ]
-      }
+      },
+      { text: 'flex', link: '/css/flex/' }
     ]
   },
   {

@@ -11,10 +11,10 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@unocss/preset-wind4": "^66.7.5",
+    "@unocss/preset-wind4": "^66.10.0",
     "sass": "^1.101.0",
-    "unocss": "^66.7.5",
-    "vitepress": "^2.0.0-alpha.18",
-    "vue": "^3.5.40"
+    "unocss": "^66.10.0",
+    "vitepress": "^2.0.0-alpha.20",
+    "vue": "^3.5.42"
   }
 }
