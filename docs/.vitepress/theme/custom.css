@@ -1,3 +1,13 @@
 ﻿body::-webkit-scrollbar {
   display: none;
 }
+
+.qa-mode .VPNavBar .VPNavMenu,
+.qa-mode .VPNavScreen .VPNavMenu,
+.qa-mode .VPNavBarExtra {
+  display: none !important;
+}
+
+.QaNavScreen {
+  border-bottom: 1px solid var(--vp-c-divider);
+}

@@ -1,4 +1,6 @@
-export default [
+import type { DefaultTheme } from 'vitepress'
+
+const nav: DefaultTheme.NavItem[] = [
   { text: 'Code', link: '/code/' },
   {
     text: 'Flutter',
@@ -41,3 +43,5 @@ export default [
     link: '/uni/'
   }
 ]
+
+export default nav

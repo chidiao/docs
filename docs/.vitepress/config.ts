@@ -1,8 +1,9 @@
-import nav from './nav'
-import sidebar from './sidebar'
+import { defineConfig } from 'vitepress'
+import nav from './nav.ts'
+import sidebar from './sidebar.ts'
 import UnoCSS from 'unocss/vite'
 
-export default {
+export default defineConfig({
   lang: 'zh',
   title: 'MyDocs',
   description: 'Code',
@@ -14,8 +15,7 @@ export default {
   themeConfig: {
     siteTitle: 'MyDocs',
     logo: '/logo.jpg',
-    outline: [2, 3],
-    outlineTitle: 'On this page',
+    outline: { level: [2, 3], label: 'On this page' },
     nav: nav,
     sidebar: sidebar,
     editLink: {
@@ -23,4 +23,4 @@ export default {
       text: 'View on GitHub'
     }
   }
-}
+})
