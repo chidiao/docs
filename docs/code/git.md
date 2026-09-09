@@ -1,139 +1,102 @@
 # Git
 
-## 创建全新分支
+## Remote
 
-完完全全的新分支，不继承任何历史
+### 设置远程仓库
 
 ```sh
-git checkout --orphan <新分支名>
+# 添加仓库
+git remote add <name> <url>
+
+# 主仓库（origin）
+git remote add origin <url>
+
+# 多个仓库
+git remote add another <url>
+
+# 修改地址
+git remote set-url <name> <url>
+
+# 移除仓库
+git remote remove <name>
+
+# 查看仓库信息
+git remote
+git remote -v
 ```
 
-## 配置
+### 推送远程仓库
+
+```sh
+# 推送本地 A 到远程 A
+git push origin A
+git push origin A:A
+
+# 推送本地 A 到远程 B
+git push origin A:B
+
+# 该命令与当前所在哪个分支没有关系
+# 必须同时指定本地和远程分支名，只写一个为简写
+```
+
+### 分支和推送
+
+```sh
+# main 分支
+git checkout main
+
+# 设置 main → origin/main
+git push -u origin main
+
+# 推送 main → origin/main
+git push
+
+# 每个分支需要单独配置上游
+git checkout dev
+git push
+# ❌ fatal: The current branch dev has no upstream branch.
+
+# dev 分支
+git checkout dev
+
+# 设置 dev → origin/dev
+git push -u origin dev
+
+# 推送 dev → origin/dev
+git push
+
+# 查看配置的上游信息
+git branch -vv
+```
+
+## 配置公钥
 
 ```sh
 # 全局配置
 git config --global user.name "孙颖洲"
 git config --global user.email "sunyz94123@qq.com"
 
-# 生成公钥(公钥名是可以随意指定的)
+# 生成公钥（公钥名是可以随意指定的）
 ssh-keygen -t rsa -C 'rmb'
 
 # 测试公钥
 ssh -T git@gitee.com
-
-# 配置远程仓库
-git remote add origin sunyz.git
-
-# 配置默认推送
-git push -u origin main
 ```
 
-## 提交
+## 覆盖远程分支
 
 ```sh
-# 初始化仓库
-git init
+# 强制覆盖分支
+git push origin <branch> --force
 
-# 查看修改状态
-git status
+# 1.把旧代码备份
+git push origin main:bak
 
-# 产看修改内容
-git diff
-
-# 撤销修改(工作区)
-git checkout -- <file>
-
-# 提交修改到暂存区
-git add <file>
-git add .
-
-# 从暂存区撤销提交
-git restore <file>
-
-# 提交暂存区到仓库
-git commit -m <msg>
-git commit -m 'init'
+# 2.强制推送新代码及记录
+git push origin main:main --force
 ```
 
-删除文件
-
-删除工作区中的文件，版本库中仍存有文件，提交到暂存，同步修改。
-
-使用 `git rm` 等效于，删除加提交到暂存。
-
-```sh
-1. <delete> <file>
-2. git add <file>
-3. git commit -m 'del'
-
-1. git rm <file>
-2. git commit -m 'del'
-```
-
-## 回滚
-
-`HEAD` 当前版本，`HEAD^` 上一个，`HEAD^^` 上上个，`HEAD~100` 上 100 个
-
-产看记录
-
-```sh
-# 查看记录
-git log
-git log --pretty=oneline
-```
-
-本地回滚
-
-```sh
-# 回滚到指定commit
-git reset --hard 82102bb0894419d5bf374093351692d148b0edc6
-git reset --hard 82102bb
-
-# 回滚到上个commit或多个
-git reset --hard HEAD^
-```
-
-覆盖远程
-
-```sh
-# 强制推送到远程
-git push origin HEAD --force
-git push --force
-```
-
-## 远程
-
-```sh
-# 查看远程仓库
-git remote -v
-
-# 添加远程仓库
-git remote add <name> <url>
-git remote add test test.git
-
-# 移除远程仓库
-git remote remove <name>
-git remote remove test
-
-# 拉取
-git fetch <remote>
-git fetch origin
-
-# 推送
-git push <remote> <branch>
-git push origin master
-
-# 配置默认推送
-git push -u origin master
-git push
-
-# 克隆
-git clone <url> <name>
-```
-
-## 分支
-
-## 规范
+## 提交规范
 
 commit 主题
 
@@ -153,17 +116,7 @@ commit 主题
 
 [degit](https://github.com/Rich-Harris/degit)
 
-一个简单的项目脚手架，只克隆最新代码，而不是整个仓库
-
-```sh
-yarn global add degit
-```
-
-```sh
-# 克隆某个分支
-degit https://github.com/nuxt/starter#v3 myapp
-degit https://github.com/nuxt/starter#ui myapp
-```
+一个简单的项目脚手架，只克隆最新代码，而不是整个仓库（不包含git记录）
 
 ## Error
 

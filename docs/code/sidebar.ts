@@ -21,7 +21,7 @@ const items: DefaultTheme.SidebarItem[] = [
     text: 'Vscode',
     items: [
       { text: '快捷使用', link: '/code/vscode/' },
-      { text: '插件', link: '/code/vscode/plugin' }
+      { text: '插件', link: '/code/vscode/extensions' }
     ]
   }
 ]
