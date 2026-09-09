@@ -8,37 +8,17 @@ hero:
 
 features:
   - icon: 🚀
-    title: 鹏少资源网
-    details: 资源聚合网站。
-    link: https://vip.jokerps.com/
-    linkText: 访问
-    target: _blank
+    title: Vue 生态
+    details: Vue 相关的文档、工具和资源合集。
+    link: /nav/vue
 
-  - icon: 🎨
-    title: tailbits
-    details: Tailwind 组件与设计资源。
-    link: https://www.tailbits.com/
-    linkText: 访问
-    target: _blank
+  - icon: ⚛️
+    title: React 生态
+    details: React 相关的文档、工具和资源合集。
+    link: /nav/react
 
-  - icon: ⚡
-    title: vue-hooks-plus
-    details: Vue Hooks 工具库（GitHub）。
-    link: https://github.com/InhiblabCore/vue-hooks-plus
-    linkText: 访问
-    target: _blank
-
-  - icon: 🔖
-    title: NavNav+
-    details: 网址导航合集网站。
-    link: https://navnav.co/
-    linkText: 访问
-    target: _blank
-
-  - icon: 🪄
-    title: vue3-lenis
-    details: 平滑滚动 Lenis 的 Vue3 集成示例。
-    link: https://lenis.darkroom.engineering/
-    linkText: 访问
-    target: _blank
+  - icon: 🛠️
+    title: 开发工具
+    details: 前端开发常用的工具和网站。
+    link: /nav/tools
 ---

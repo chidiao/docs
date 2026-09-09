@@ -6,10 +6,12 @@
 
 - [Options](https://prettier.io/docs/en/options.html)
 
-- <a href="./config/.prettierrc" download=".prettierrc">Download</a>
+- <a href="/config/.prettierrc.json" download=".prettierrc">Download</a>
 
-<<< ./.prettierrc{json}
+<<< ../../public/config/.prettierrc.json
 
 ## jsconfig.json
 
-<<< ./jsconfig.json
+- <a href="/config/jsconfig.json" download="jsconfig.json">Download</a>
+
+<<< ../../public/config/jsconfig.json

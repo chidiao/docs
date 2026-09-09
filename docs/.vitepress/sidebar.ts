@@ -19,6 +19,8 @@ import getx from '../getx/sidebar.ts'
 import uni from '../uni/sidebar.ts'
 import wx from '../wx/sidebar.ts'
 
+import nav from '../nav/sidebar.ts'
+
 import qa from '../qa/sidebar.ts'
 
 const sidebar: DefaultTheme.Sidebar = {
@@ -36,6 +38,7 @@ const sidebar: DefaultTheme.Sidebar = {
   ...getx,
   ...uni,
   ...wx,
+  ...nav,
   ...qa
 }
 

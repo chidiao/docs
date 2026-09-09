@@ -64,4 +64,10 @@ features:
     details: 生命周期、路由、登录、支付、插件、配置和微信小程序技巧。
     link: /uni/
     linkText: 进入 Uniapp
+
+  - icon: 🔖
+    title: 收藏夹
+    details: 常用资源与工具网站合集导航。
+    link: /nav/
+    linkText: 进入导航
 ---
