@@ -13,15 +13,15 @@ const items: DefaultTheme.SidebarItem[] = [
     items: [
       { text: 'Git', link: '/code/git' },
       { text: 'Config', link: '/code/config/' },
-      { text: 'DST', link: '/code/dst' },
       { text: '收藏夹', link: '/code/favorite' }
     ]
   },
   {
-    text: 'Vscode',
+    text: 'IDE',
     items: [
-      { text: '快捷使用', link: '/code/vscode/' },
-      { text: '插件', link: '/code/vscode/extensions' }
+      { text: '概览', link: '/code/ide/' },
+      { text: 'VScode', link: '/code/ide/vscode' },
+      { text: '常用插件', link: '/code/ide/ext' }
     ]
   }
 ]

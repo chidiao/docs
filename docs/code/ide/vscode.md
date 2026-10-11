@@ -1,3 +1,5 @@
+# VScode
+
 ## 快捷键
 
 | 快捷键                | 功能                         |
@@ -10,3 +12,19 @@
 |                       |                              |
 | `ctrl` + `/`          | 单行注释                     |
 | `alt` + `shift` + `a` | 手动任意位置插入光标         |
+
+## 报错
+
+### 禁止运行脚本
+
+管理员身份运行 vscode
+
+```bash
+# 执行
+set-ExecutionPolicy RemoteSigned
+
+# 查验
+get-ExecutionPolicy
+# Restricted
+# RemoteSigned
+```
