@@ -1,8 +1,8 @@
 import type { DefaultTheme } from 'vitepress'
 
-import http from './http/sidebar.ts'
-import snippets from './snippets/sidebar.ts'
-import utils from './utils/sidebar.ts'
+import { items as http } from './http/sidebar.ts'
+import { items as snippets } from './snippets/sidebar.ts'
+import { items as utils } from './utils/sidebar.ts'
 
 const items: DefaultTheme.SidebarItem[] = [
   {
@@ -48,11 +48,13 @@ const items: DefaultTheme.SidebarItem[] = [
   }
 ]
 
+const shared: DefaultTheme.SidebarItem[] = [...http, ...utils, ...snippets]
+
 const sidebar: DefaultTheme.Sidebar = {
   '/js/': items,
-  ...http,
-  ...utils,
-  ...snippets
+  '/js/http/': shared,
+  '/js/utils/': shared,
+  '/js/snippets/': shared
 }
 
 export default sidebar

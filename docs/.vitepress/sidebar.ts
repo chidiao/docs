@@ -1,44 +1,38 @@
 import type { DefaultTheme } from 'vitepress'
 
-import code from '../code/sidebar.ts'
-import win from '../win/sidebar.ts'
-
-import dart from '../dart/sidebar.ts'
-import flutter from '../flutter/sidebar.ts'
-
 import js from '../js/sidebar.ts'
 import ts from '../ts/sidebar.ts'
-import vue from '../vue/sidebar.ts'
-import nuxt from '../nuxt/sidebar.ts'
-
 import html from '../html/sidebar.ts'
 import css from '../css/sidebar.ts'
+
+import vue from '../vue/sidebar.ts'
+import nuxt from '../nuxt/sidebar.ts'
+import react from '../react/sidebar.ts'
 import node from '../node/sidebar.ts'
 
-import getx from '../getx/sidebar.ts'
+import flutter from '../flutter/sidebar.ts'
 import uni from '../uni/sidebar.ts'
-import wx from '../wx/sidebar.ts'
 
-import nav from '../nav/sidebar.ts'
+import code from '../code/sidebar.ts'
 
+import me from '../me/sidebar.ts'
+import skills from '../skills/sidebar.ts'
 import qa from '../qa/sidebar.ts'
 
 const sidebar: DefaultTheme.Sidebar = {
-  ...code,
-  ...win,
-  ...dart,
-  ...flutter,
   ...js,
   ...ts,
+  ...html,
+  ...css,
   ...vue,
   ...nuxt,
-  ...html,
+  ...react,
   ...node,
-  ...css,
-  ...getx,
+  ...flutter,
   ...uni,
-  ...wx,
-  ...nav,
+  ...code,
+  ...me,
+  ...skills,
   ...qa
 }
 

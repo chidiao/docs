@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-const items: DefaultTheme.SidebarItem[] = [
+export const items: DefaultTheme.SidebarItem[] = [
   {
     text: '小程序',
     items: [
@@ -10,8 +10,4 @@ const items: DefaultTheme.SidebarItem[] = [
   }
 ]
 
-const sidebar: DefaultTheme.Sidebar = {
-  '/wx/': items
-}
-
-export default sidebar
+export default { '/wx/': items } satisfies DefaultTheme.Sidebar

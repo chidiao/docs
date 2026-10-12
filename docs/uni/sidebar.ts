@@ -1,6 +1,8 @@
 import type { DefaultTheme } from 'vitepress'
 
-const items: DefaultTheme.SidebarItem[] = [
+import { items as wx } from '../wx/sidebar.ts'
+
+const uni: DefaultTheme.SidebarItem[] = [
   {
     text: 'Uniapp',
     items: [
@@ -28,8 +30,9 @@ const items: DefaultTheme.SidebarItem[] = [
   }
 ]
 
-const sidebar: DefaultTheme.Sidebar = {
-  '/uni/': items
-}
+const items: DefaultTheme.SidebarItem[] = [...uni, ...wx]
 
-export default sidebar
+export default {
+  '/uni/': items,
+  '/wx/': items
+} satisfies DefaultTheme.Sidebar

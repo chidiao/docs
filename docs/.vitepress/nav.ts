@@ -3,44 +3,30 @@ import type { DefaultTheme } from 'vitepress'
 const nav: DefaultTheme.NavItem[] = [
   { text: 'Code', link: '/code/' },
   {
-    text: 'Flutter',
-    items: [
-      { text: 'Dart', link: '/dart/' },
-      { text: 'Flutter', link: '/flutter/' }
-    ]
-  },
-  {
-    text: 'JavaScript',
+    text: '语言基础',
     items: [
       { text: 'JavaScript', link: '/js/' },
       { text: 'TypeScript', link: '/ts/' },
-      { text: 'Http', link: '/js/http/cors' },
-      { text: 'Utils', link: '/js/utils/' },
-      { text: 'Snippets', link: '/js/snippets/' }
-    ]
-  },
-  {
-    text: 'Node',
-    link: '/node/gulp'
-  },
-  {
-    text: 'Vue',
-    items: [
-      { text: 'Vue', link: '/vue/' },
-      { text: 'Utils', link: '/vue/utils/router' },
-      { text: 'Nuxt', link: '/nuxt/' }
-    ]
-  },
-  {
-    text: 'Web',
-    items: [
-      { text: 'Html', link: '/html/video' },
+      { text: 'HTML', link: '/html/video' },
       { text: 'CSS', link: '/css/' }
     ]
   },
   {
-    text: 'Uniapp',
-    link: '/uni/'
+    text: 'Web 前端',
+    items: [
+      { text: 'Vue', link: '/vue/' },
+      { text: 'Nuxt', link: '/nuxt/' },
+      { text: 'React', link: '/react/' },
+      { text: 'JS 扩展', link: '/js/utils/' },
+      { text: 'Node', link: '/node/gulp' }
+    ]
+  },
+  {
+    text: '跨端开发',
+    items: [
+      { text: 'Flutter', link: '/flutter/' },
+      { text: 'UniApp', link: '/uni/' }
+    ]
   }
 ]
 

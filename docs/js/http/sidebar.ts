@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-const items: DefaultTheme.SidebarItem[] = [
+export const items: DefaultTheme.SidebarItem[] = [
   {
     text: 'Http',
     items: [
@@ -22,8 +22,4 @@ const items: DefaultTheme.SidebarItem[] = [
   }
 ]
 
-const sidebar: DefaultTheme.Sidebar = {
-  '/js/http/': items
-}
-
-export default sidebar
+export default { '/js/http/': items } satisfies DefaultTheme.Sidebar

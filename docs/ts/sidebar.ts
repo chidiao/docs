@@ -5,7 +5,7 @@ const items: DefaultTheme.SidebarItem[] = [
     text: 'Typescript',
     items: [
       { text: 'Index', link: '/ts/' },
-      { text: '类型', link: '/ts/types/' }
+      { text: '类型', link: '/ts/types' }
     ]
   }
 ]

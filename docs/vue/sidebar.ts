@@ -27,7 +27,7 @@ const items: DefaultTheme.SidebarItem[] = [
   {
     text: 'Style',
     items: [
-      { text: 'Class & Style', link: '/vue/style' },
+      { text: 'Class & Style', link: '/vue/style/' },
       { text: 'Scoped', link: '/vue/style/scoped' },
       { text: 'v-bind', link: '/vue/style/v-bind' },
       { text: 'Transition', link: '/vue/style/transition' },

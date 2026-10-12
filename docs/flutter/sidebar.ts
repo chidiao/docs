@@ -1,6 +1,9 @@
 import type { DefaultTheme } from 'vitepress'
 
-const items: DefaultTheme.SidebarItem[] = [
+import { items as dart } from '../dart/sidebar.ts'
+import { items as getx } from '../getx/sidebar.ts'
+
+const flutter: DefaultTheme.SidebarItem[] = [
   {
     text: 'Flutter',
     items: [
@@ -14,8 +17,10 @@ const items: DefaultTheme.SidebarItem[] = [
   }
 ]
 
-const sidebar: DefaultTheme.Sidebar = {
-  '/flutter/': items
-}
+const items: DefaultTheme.SidebarItem[] = [...flutter, ...dart, ...getx]
 
-export default sidebar
+export default {
+  '/flutter/': items,
+  '/dart/': items,
+  '/getx/': items
+} satisfies DefaultTheme.Sidebar

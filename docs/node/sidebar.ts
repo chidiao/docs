@@ -13,7 +13,7 @@ const items: DefaultTheme.SidebarItem[] = [
   },
   {
     text: 'Express',
-    items: [{ text: 'Express', link: '/node/express' }]
+    items: [{ text: 'Express', link: '/node/express/' }]
   }
 ]
 
