@@ -1,7 +1,5 @@
 import type { DefaultTheme } from 'vitepress'
 
-import { items as win } from '../win/sidebar.ts'
-
 const items: DefaultTheme.SidebarItem[] = [
   {
     text: 'Code',
@@ -14,24 +12,21 @@ const items: DefaultTheme.SidebarItem[] = [
     text: 'Utils',
     items: [
       { text: 'Git', link: '/code/git' },
-      { text: 'Config', link: '/code/config/' },
-      { text: '收藏夹', link: '/code/favorite' }
+      { text: 'Config', link: '/code/config/' }
     ]
   },
   {
     text: 'IDE',
     items: [
-      { text: '概览', link: '/code/ide/' },
+      { text: '总览', link: '/code/ide/' },
       { text: 'VScode', link: '/code/ide/vscode' },
-      { text: '常用插件', link: '/code/ide/ext' }
+      { text: '常用插件', link: '/nav/ide-plugin' }
     ]
-  },
-  ...win
+  }
 ]
 
 const sidebar: DefaultTheme.Sidebar = {
-  '/code/': items,
-  '/win/': items
+  '/code/': items
 }
 
 export default sidebar

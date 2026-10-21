@@ -15,8 +15,9 @@ import uni from '../uni/sidebar.ts'
 
 import code from '../code/sidebar.ts'
 
+import nav from '../nav/sidebar.ts'
+
 import me from '../me/sidebar.ts'
-import skills from '../skills/sidebar.ts'
 import qa from '../qa/sidebar.ts'
 
 const sidebar: DefaultTheme.Sidebar = {
@@ -31,8 +32,8 @@ const sidebar: DefaultTheme.Sidebar = {
   ...flutter,
   ...uni,
   ...code,
+  ...nav,
   ...me,
-  ...skills,
   ...qa
 }
 

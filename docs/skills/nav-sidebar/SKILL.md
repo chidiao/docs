@@ -3,7 +3,7 @@ name: nav-sidebar
 description: 本项目（VitePress）顶部导航（nav）与侧栏（sidebar）的配置规则：sidebar 组织与合并、nav 显隐与公用约定、新增目录流程。修改 nav/sidebar 前必读。
 ---
 
-# Nav 与 Sidebar 配置规范
+# 网站导航配置
 
 ## 规则
 
@@ -40,12 +40,12 @@ description: 本项目（VitePress）顶部导航（nav）与侧栏（sidebar）
 
 - 每个目录一个 `sidebar.ts`，导出命名 `items` 与默认路由表 `{ '/<dir>/': items }`。
 - 子目录可各自维护 `sidebar.ts`，由父级 `import` 后 `...spread` 合并（见 `js/sidebar.ts`、`vue/sidebar.ts`、`qa/sidebar.ts`）。
-- 隐藏目录（`me`、`skills`）同样提供并注册 sidebar，仅不写入 nav。
+- 隐藏目录（`me`）同样提供并注册 sidebar，仅不写入 nav。
 - **公用 sidebar**：每个目录各自维护 `sidebar.ts`（配置不搬到别处）；宿主目录 `import { items as <child> }` 后合并进自己的 `items`，再把同一组 `items` 映射到多个路由 key。
   - `wx`（小程序）→ `uni/sidebar.ts` 合并 `wx` 的 `items`，映射 `'/uni/'`、`'/wx/'`。
   - `dart`、`getx` → `flutter/sidebar.ts` 合并二者的 `items`，映射 `'/flutter/'`、`'/dart/'`、`'/getx/'`。
-  - `win` → `code/sidebar.ts` 合并 `win` 的 `items`，映射 `'/code/'`、`'/win/'`（nav 仅保留 `/code/` 根入口）。
-- 链接使用绝对路径（如 `/code/ide/ext`），目录首页用带斜杠的 `/xxx/`。
+  - `skills` → `nav/sidebar.ts` 合并 `skills` 的 `items`，映射 `'/nav/'`、`'/skills/'`（收藏夹组在上）。
+- 链接使用绝对路径（如 `/code/ide/vscode`），目录首页用带斜杠的 `/xxx/`。
 
 ## Root sidebar 导入排序
 
@@ -55,4 +55,4 @@ description: 本项目（VitePress）顶部导航（nav）与侧栏（sidebar）
 2. 同组内，**公用 sidebar 的宿主目录**（有 nav 入口者）排在前面，其余随意。
 3. 末尾 `sidebar` 合并（`...spread`）沿用相同顺序，但不保留空行。
 
-分组顺序：语言基础 → Web 前端 → 跨端开发 → 工具（`code`）→ 隐藏 / 独立（`me`、`skills`、`qa`）。
+分组顺序：语言基础 → Web 前端 → 跨端开发 → 工具（`code`）→ 收藏夹（`nav`）→ 隐藏 / 独立（`me`、`qa`）。

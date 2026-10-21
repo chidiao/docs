@@ -2,4 +2,6 @@
 
 记录本项目的配置规范与约定。
 
-- [Nav 与 Sidebar 配置规范](./nav-sidebar/SKILL)
+- [收藏](./bookmark/SKILL)
+- [网站导航配置](./nav-sidebar/SKILL)
+- [链接条目](./link-entry/SKILL)

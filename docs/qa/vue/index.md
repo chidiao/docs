@@ -153,6 +153,53 @@ watchEffect(async (onCleanup) => {
 
 标识节点唯一性，能唯一识别每个节点。
 
+## 异步更新
+
+vue 的视图，dom 更新是异步的
+
+`$nextTick(callback)`
+
+```js
+let methods = {
+  fn1() {
+    this.list.push('new obj')
+    fn()
+    // 此时如果获取 dom 元素，结果则为更新前的结果
+  },
+  fn2() {
+    this.list.push('new obj')
+    this.list.push('new obj')
+    this.list.push('new obj')
+
+    this.$nextTick(() => {
+      fn()
+      // 此时如果获取 dom 元素，结果才是更新后的结果
+      // 虽然数据多次更新，但 nextTick 只会触发一次回调
+    })
+  }
+}
+```
+
+## keep-alive
+
+内置组件，组件缓存，避免重新渲染
+
+钩子函数：`activated` 、`deactivated`
+
+## SSR
+
+`Server-Side Rendering` 服务端渲染
+
+优点：
+
+`seo` 优化
+
+首屏渲染优化
+
+其他：
+
+`Prerender SPA Plugin` 预渲染
+
 ## v-if 和 v-for
 
 不建议在同一个元素上同时使用，会导致性能浪费和语法错误

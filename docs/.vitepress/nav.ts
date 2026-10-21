@@ -14,7 +14,7 @@ const nav: DefaultTheme.NavItem[] = [
   {
     text: 'Web 前端',
     items: [
-      { text: 'Vue', link: '/vue/' },
+      { text: 'Vue', link: '/vue/v-for-if' },
       { text: 'Nuxt', link: '/nuxt/' },
       { text: 'React', link: '/react/' },
       { text: 'JS 扩展', link: '/js/utils/' },
@@ -27,7 +27,8 @@ const nav: DefaultTheme.NavItem[] = [
       { text: 'Flutter', link: '/flutter/' },
       { text: 'UniApp', link: '/uni/' }
     ]
-  }
+  },
+  { text: '收藏夹', link: '/nav/' }
 ]
 
 export default nav

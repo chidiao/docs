@@ -11,8 +11,7 @@ const items: DefaultTheme.SidebarItem[] = [
       { text: 'computed 和 watch', link: '/vue/cw' },
       { text: '生命周期', link: '/vue/cycle' },
       { text: '指令', link: '/vue/directives' },
-      { text: '修饰符', link: '/vue/modifier' },
-      { text: '问题', link: '/vue/qa' }
+      { text: '修饰符', link: '/vue/modifier' }
     ]
   },
   {
