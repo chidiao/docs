@@ -45,7 +45,7 @@ description: 本项目（VitePress）顶部导航（nav）与侧栏（sidebar）
   - `wx`（小程序）→ `uni/sidebar.ts` 合并 `wx` 的 `items`，映射 `'/uni/'`、`'/wx/'`。
   - `dart`、`getx` → `flutter/sidebar.ts` 合并二者的 `items`，映射 `'/flutter/'`、`'/dart/'`、`'/getx/'`。
   - `skills` → `nav/sidebar.ts` 合并 `skills` 的 `items`，映射 `'/nav/'`、`'/skills/'`（收藏夹组在上）。
-- 链接使用绝对路径（如 `/code/ide/vscode`），目录首页用带斜杠的 `/xxx/`。
+- 链接使用绝对路径（如 `/code/git`），目录首页用带斜杠的 `/xxx/`。
 
 ## Root sidebar 导入排序
 

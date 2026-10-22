@@ -6,7 +6,8 @@ const items: DefaultTheme.SidebarItem[] = [
     items: [
       { text: '总览', link: '/me/' },
       { text: '经历', link: '/me/experience' },
-      { text: '简历', link: '/me/resume' }
+      { text: '简历', link: '/me/resume' },
+      { text: '项目经验', link: '/me/project' }
     ]
   }
 ]

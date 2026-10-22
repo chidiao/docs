@@ -14,6 +14,10 @@ const items: DefaultTheme.SidebarItem[] = [
   {
     text: 'Express',
     items: [{ text: 'Express', link: '/node/express/' }]
+  },
+  {
+    text: 'NestJS',
+    items: [{ text: 'NestJS', link: '/node/nest/' }]
   }
 ]
 
